@@ -10,7 +10,7 @@ site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: Md Zahidul Hasan # add your name
-author-img: david-freeman.jpg # add your photo
+author-img: https://avatars.githubusercontent.com/u/110337193?s=400&u=d78eb10a12f567cf5d9c283cdfa076bded35cb39&v=4 #david-freeman.jpg # add your photo
 about-author: I am a lecturer at the Department of Computer Science and Engineering, BRAC University, Bangladesh. # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
