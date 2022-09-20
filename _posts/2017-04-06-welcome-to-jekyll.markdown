@@ -5,22 +5,10 @@ date: 2017-04-06 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: Behistun_inscription_reliefs.jpg # Add image post (optional)
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+I was reading about this Persian Satrap called Bagdates l. Bagdates is the Greek spelling for his name. His other name is Baydad. And also while reading about the Achaemenid empire, I came to know about the "Behistun" inscriptions. Behistun is a modern persian word. It's old persian form is 'Bagastana' meaning 'place(astana) of the gods(bag)'. The avestan word for god is bag which is the same as the sanskrit word "bhag(ভগ)" meaning god. The "dad" from "baydad" means "given" in sanskrit. "da" is the root for the word "donate" in sanskrit. It's noun form is "dan". Actually the word "donate" has the same root. "dadati" means "he gives", "dadami" means "I give", "dadasi" means "you give". "dad" in bangla is "dadta -> datta (দত্ত)" meaning "given". "bagdates" means "ভগদত্ত ", "god-given". There is no confusion about it because there was another king called "Mithradates" and his name means "given by Mithra", which in bangla will be "মিত্রদত্ত". And this reminded me of the king "ভগদত্ত" from Mahabharata who was a foreign king and was leading a confederation of foreign armies in Mahabharat. Actually his name sounds too close to the Iraqi capital Baghdad which I googled up and from wikipedia I am sure that my etymology for the word "baghdad /baydad/bagdates" is correct for which I am very elated. So, one could say the capital of Iraq is "ভগদত্ত"। Actually the word "খোদাদাদ" means the same thing. Khoda is the persian word for "lord". And is used as an epithet to Ahura Mazda, the god of the Zoroastrian faith.
+Now, let's turn to the etymology for "astana" or "stana" or "sthana". The sanskrit root for "stay" is "stha". The words "stay", "state", "station", "stationary", "stable", "static", "স্থান", "স্থিতি", "স্থবির", "স্থির" etc all come from the same word root "sta". Pakistan, Hindustan, Sakastan, Sistan, Uzbekistan, Turkeministan, Turkistan, Kurdistan, Tajikistan, Kyrgyzstan, Kazakhstan, Beluchistan etc all these countries or places have stan as a prefix which means place because all of these countries were part of Iran or Aryan realm and they used to speak an earlier form of sanskrit languages. 
+The word "বেহেশত" which means "heaven" came from the avestan word "vahista" which means "best" became "wahist" in middle persian and then became "behest" in new persian. "Behest" is a homophone of the word "behistun" and finally means "best place". And it also means "abode of the ahura mazda". Ahura mazda is the creator god of the zoroastrian faith. So, "behest" means "best place" , "place of the gods".
+Also, off topic but an interesting fact is that the english word "paradise" comes from old persian "paridaidam" which means "enclosed area". "pari" means "around" and is responsible for words like "perimeter" or "পরিধি", "পরিসীমা"। 
+"Dheig" means "to set up". পরিধি = পরি + √ ধা + ই। "dam" means "wall", "barrier". The english word "dam" comes from this. So, paradise is a walled area. In the old persian empires, enclosed gardens used to be called paradise.
+So, ভগদত্ত could be an indian king or a king from a larger vedic realm which spanned to Iran and beyond. I have found some vedic kings in ancient persian dynasties which I will write about later.
