@@ -1,8 +1,6 @@
 title: Hello World! I am Zadid!
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  This is a personal blog. I write about whatever interests me. Hope my thoughts will help others gain some perspectives as well.
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://zahidul-hasan.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
@@ -11,7 +9,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Md Zahidul Hasan # add your name
 author-img: pic.jpg #david-freeman.jpg # add your photo
-about-author: I am a lecturer at the Department of Computer Science and Engineering, BRAC University, Bangladesh. # add description
+about-author: Lecturer, Department of Computer Science and Engineering, BRAC University, Bangladesh. # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
 social-github: artemsheludko # add your Github handle
