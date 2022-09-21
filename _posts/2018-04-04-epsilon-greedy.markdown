@@ -33,7 +33,7 @@ So, the expected regret per round in the good event is, $$E[R_{i}] \leq Pr(explo
 $$= \epsilon_{t} + (1-\epsilon_{t}) \sqrt{\frac{8k}{t\epsilon_{t}} log(n)}$$    
 $$\leq  \epsilon_{t} + \sqrt{\frac{8k}{t\epsilon_{t}} log(n)}$$   
 The above bound is minimized by the choice $\epsilon_{t} = 2^{\frac{1}{3}} k^{\frac{1}{3}} t^{\frac{-1}{3}} log(n)^{\frac{1}{3}}$.   
-Then we get, $$E[R_{i}] \leq (2^{\frac{1}{3}} + 2^{\frac{1}{3}}) k^{\frac{1}{3}} t^{\frac{-1}{3}} log(n)^{\frac{1}{3}} $$  
+Then we get, $$E[R_{i}] \leq (2^{\frac{1}{3}} + 2^{\frac{4}{3}}) k^{\frac{1}{3}} t^{\frac{-1}{3}} log(n)^{\frac{1}{3}} $$  
 So, the expected simple regret over both good and bad events is,  
 $$
 E[R(t)] = Pr(G) E[R(t)|G] + Pr(G^{c}) E[R(t)|G^{c}]
