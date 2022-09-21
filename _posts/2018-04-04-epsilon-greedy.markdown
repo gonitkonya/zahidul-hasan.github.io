@@ -24,8 +24,8 @@ $$\mu_{j} \leq \bar \mu_{j}(t-1) + \sqrt{\frac{2}{n_{j}(t-1)} log(n)}$$
 $$\mu_{i} \geq \bar \mu_{i}(t-1) - \sqrt{\frac{2}{n_{i}(t-1)} log(n)}$$  
 so, $$\mu_{j} - \mu_{i} \leq \bar \mu_{j}(t-1) - \bar \mu_{i}(t-1) + \sqrt{\frac{2}{n_{j}(t-1)} log(n)} + \sqrt{\frac{2}{n_{i}(t-1)} log(n)}$$  
 Since, $i$ is the chosen arm at round $t$, so $\bar \mu_{j}(t-1) - \bar \mu_{i}(t-1) \leq 0$, so we have,  
-$$\delta_{i} = \mu_{j} - \mu_{i} \leq \sqrt{\frac{2}{n_{j}(t-1)} log(n)} + \sqrt{\frac{2}{n_{i}(t-1)} log(n)}$$     
-Now, let's try to find an upper bound for the expected value of this $\delta_{i}$.    
+$$\Delta_{i} = \mu_{j} - \mu_{i} \leq \sqrt{\frac{2}{n_{j}(t-1)} log(n)} + \sqrt{\frac{2}{n_{i}(t-1)} log(n)}$$     
+Now, let's try to find an upper bound for the expected value of this $\Delta_{i}$.    
 $$E[\Delta_{i}] \leq \sqrt{\frac{2}{ E[n_{j}(t-1)]} log(n)} + \sqrt{\frac{2}{E[n_{i}(t-1)]} log(n)}$$  
 $$E[n_{i}(t-1)] = \sum_{t}^{} Pr(exploration) \frac{1}{k} + Pr(exploitation) Pr(i\space being\space the\space best\space arm\space at\space round\space t) \geq t\epsilon_{t}/k$$   
 so, $$E[\Delta_{i}] \leq \sqrt{\frac{8k}{t\epsilon_{t}} log(n)}$$  
