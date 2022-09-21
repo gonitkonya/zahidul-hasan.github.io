@@ -20,30 +20,30 @@ Let's look at the simple regret of a particular round $t$. If $n$ is sufficientl
 Let's define the good event $G$. In the good event, for all of the arms, the mean reward stays within the confidence bound of the sample mean reward. That is, for all rounds $t$ and for all arms $i$, $|\bar \mu_{i}(t-1) - \mu_{i}| \leq \sqrt{\frac{2}{n_{i}(t-1)} log(n)}$
 We know that, $Pr(G) \geq 1 - \frac{1}{n^{2}}$.  
 In the good event, let's say at round $t$, arm $i$ is the apparently best arm and arm $j$ is the truly optimal arm. We know for sure that,  
-$$\mu_{j} \leq \bar \mu_{j}(t-1) + \sqrt{\frac{2}{n_{j}(t-1)} log(n)}$$
-$$\mu_{i} \geq \bar \mu_{i}(t-1) - \sqrt{\frac{2}{n_{i}(t-1)} log(n)}$$
-so, $$\mu_{j} - \mu_{i} \leq \bar \mu_{j}(t-1) - \bar \mu_{i}(t-1) + \sqrt{\frac{2}{n_{j}(t-1)} log(n)} + \sqrt{\frac{2}{n_{i}(t-1)} log(n)}$$
+$$\mu_{j} \leq \bar \mu_{j}(t-1) + \sqrt{\frac{2}{n_{j}(t-1)} log(n)}$$  
+$$\mu_{i} \geq \bar \mu_{i}(t-1) - \sqrt{\frac{2}{n_{i}(t-1)} log(n)}$$  
+so, $$\mu_{j} - \mu_{i} \leq \bar \mu_{j}(t-1) - \bar \mu_{i}(t-1) + \sqrt{\frac{2}{n_{j}(t-1)} log(n)} + \sqrt{\frac{2}{n_{i}(t-1)} log(n)}$$  
 Since, $i$ is the chosen arm at round $t$, so $\bar \mu_{j}(t-1) - \bar \mu_{i}(t-1) \leq 0$, so we have,  
-$$\delta_{i} = \mu_{j} - \mu_{i} \leq \sqrt{\frac{2}{n_{j}(t-1)} log(n)} + \sqrt{\frac{2}{n_{i}(t-1)} log(n)}$$  
-Now, let's try to find an upper bound for the expected value of this $\delta_{i}$.  
-$$E[\Delta_{i}] \leq \sqrt{\frac{2}{ E\[n_{j}(t-1)\]} log(n)} + \sqrt{\frac{2}{E\[n_{i}(t-1)\]} log(n)}$$
-$$E[n_{i}(t-1)] = \sum_{t}^{} Pr(exploration) \frac{1}{k} + Pr(exploitation) Pr(i\space being\space the\space best\space arm\space at\space round\space t) \geq t\epsilon_{t}/k$$
-so, $$E[\Delta_{i}] \leq \sqrt{\frac{8k}{t\epsilon_{t}} log(n)}$$
-So, the expected regret per round in the good event is, $$E[R_{i}] \leq Pr(exploration)1 + Pr(exploitation)\sqrt{\frac{8k}{t\epsilon_{t}} log(n)}$$
-$$= \epsilon_{t} + (1-\epsilon_{t}) \sqrt{\frac{8k}{t\epsilon_{t}} log(n)}$$
-$$\leq  \epsilon_{t} + \sqrt{\frac{8k}{t\epsilon_{t}} log(n)}$$
-The above bound is minimized by the choice $\epsilon_{t} = 2^{\frac{1}{3}} k^{\frac{1}{3}} t^{\frac{-1}{3}} log(n)^{\frac{1}{3}}$.
-Then we get, $$E[R_{i}] \leq (2^{\frac{1}{3}} + 2^{\frac{1}{3}}) k^{\frac{1}{3}} t^{\frac{-1}{3}} log(n)^{\frac{1}{3}} $$
-So, the expected simple regret over both good and bad events is,
-$$E[R(t)] = Pr(G) E[R(t)|G] + Pr(G^{c}) E[R(t)|G^{c}]$$
-$$\leq (1-\frac{1}{n^2}) k^{\frac{1}{3}} t^{\frac{-1}{3}} log(n)^{\frac{1}{3}} + \frac{1}{n^2} 1$$
-$$\leq k^{\frac{1}{3}} t^{\frac{-1}{3}} log(n)^{\frac{1}{3}}$$
+$$\delta_{i} = \mu_{j} - \mu_{i} \leq \sqrt{\frac{2}{n_{j}(t-1)} log(n)} + \sqrt{\frac{2}{n_{i}(t-1)} log(n)}$$     
+Now, let's try to find an upper bound for the expected value of this $\delta_{i}$.    
+$$E[\Delta_{i}] \leq \sqrt{\frac{2}{ E\[n_{j}(t-1)\]} log(n)} + \sqrt{\frac{2}{E\[n_{i}(t-1)\]} log(n)}$$  
+$$E[n_{i}(t-1)] = \sum_{t}^{} Pr(exploration) \frac{1}{k} + Pr(exploitation) Pr(i\space being\space the\space best\space arm\space at\space round\space t) \geq t\epsilon_{t}/k$$   
+so, $$E[\Delta_{i}] \leq \sqrt{\frac{8k}{t\epsilon_{t}} log(n)}$$  
+So, the expected regret per round in the good event is, $$E[R_{i}] \leq Pr(exploration)1 + Pr(exploitation)\sqrt{\frac{8k}{t\epsilon_{t}} log(n)}$$    
+$$= \epsilon_{t} + (1-\epsilon_{t}) \sqrt{\frac{8k}{t\epsilon_{t}} log(n)}$$    
+$$\leq  \epsilon_{t} + \sqrt{\frac{8k}{t\epsilon_{t}} log(n)}$$   
+The above bound is minimized by the choice $\epsilon_{t} = 2^{\frac{1}{3}} k^{\frac{1}{3}} t^{\frac{-1}{3}} log(n)^{\frac{1}{3}}$.   
+Then we get, $$E[R_{i}] \leq (2^{\frac{1}{3}} + 2^{\frac{1}{3}}) k^{\frac{1}{3}} t^{\frac{-1}{3}} log(n)^{\frac{1}{3}} $$  
+So, the expected simple regret over both good and bad events is,  
+$$E[R(t)] = Pr(G) E[R(t)|G] + Pr(G^{c}) E[R(t)|G^{c}]$$   
+$$\leq (1-\frac{1}{n^2}) k^{\frac{1}{3}} t^{\frac{-1}{3}} log(n)^{\frac{1}{3}} + \frac{1}{n^2} 1$$   
+$$\leq k^{\frac{1}{3}} t^{\frac{-1}{3}} log(n)^{\frac{1}{3}}$$    
 
-So, now we find the expected regret over all rounds,
-$$E[R(n)] = \sum_{1\leq t\leq n} R(t)$$
-$$\leq n E[R(n)]$$
-$$= k^{\frac{1}{3}} n^{\frac{2}{3}} log(n)^{\frac{1}{3}}$$
+So, now we find the expected regret over all rounds,  
+$$E[R(n)] = \sum_{1\leq t\leq n} R(t)$$   
+$$\leq n E[R(n)]$$  
+$$= k^{\frac{1}{3}} n^{\frac{2}{3}} log(n)^{\frac{1}{3}}$$  
 
-So, the epsilon-greedy algorithm has an asymptotic complexity of $\mathcal{O}(k^{\frac{1}{3}} n^{\frac{2}{3}} log(n)^{\frac{1}{3}})$
+So, the epsilon-greedy algorithm has an asymptotic complexity of $\mathcal{O}(k^{\frac{1}{3}} n^{\frac{2}{3}} log(n)^{\frac{1}{3}})$  
 
 
