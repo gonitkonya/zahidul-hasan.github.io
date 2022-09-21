@@ -17,7 +17,7 @@ $\quad\quad$ if $\textbf{failure:}$
 $\quad\quad\quad$ Exploit the best arm so far
 
 Let's look at the simple regret of a particular round $t$. If $n$ is sufficiently large, then at some point, in an exploitation round, only the optimal arm will be used. So, a suboptimal arm being exploited is unlikely. So, most arms are used in the algorithm in the random exploration rounds. Let's say in an exploitation round, a suboptimal arm $a_{i}$ is being used. So, definitely, $\bar u_{i}(t-1) \geq max_{j = 1}^{k} \bar u_{j}(t-1)$.
-Let's define the good event $G$. In the good event, for all of the arms, the mean reward stays within the confidence bound of the sample mean reward. That is, for all rounds $t$ and for all arms $i$, $|\bar \mu_{i}(t-1) - \mu_{i}| \leq \sqrt{\frac{2}{n_{i}(t-1)} log(n)}$
+Let's define the good event $G$. In the good event, for all of the arms, the mean reward stays within the confidence bound of the sample mean reward. That is, for all rounds $t$ and for all arms $i$, $|\bar \mu_{i}(t-1) - \mu_{i}| \leq \sqrt{\frac{2}{n_{i}(t-1)} log(n)}$   
 We know that, $Pr(G) \geq 1 - \frac{1}{n^{2}}$.  
 In the good event, let's say at round $t$, arm $i$ is the apparently best arm and arm $j$ is the truly optimal arm. We know for sure that,  
 $$\mu_{j} \leq \bar \mu_{j}(t-1) + \sqrt{\frac{2}{n_{j}(t-1)} log(n)}$$  
