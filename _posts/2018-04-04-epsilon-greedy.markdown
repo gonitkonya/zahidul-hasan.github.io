@@ -9,5 +9,5 @@ tags: [Js, Conference] # add tag
 
 Previously, we saw that in the ETC algorithm, we first explore all of the arms $m$ times for some $m$, then we choose the best arm from our exploration and use this arm for all the subsequent rounds. But we could severely underperform in the initial exploration phase. So, instead of blindly exploring in the first $km$ rounds, we can spread the uniform exploration over all of the rounds using a coin toss model. For each round $t$, with a probability $\epsilon_{t}$, we explore any arm with a uniform probability of $\frac{1}{k}$, otherwise, we choose the best possible arm from our experience of explorations so far. In this way, we do not run the risk of incurring a heavy regret in the exploration phase and also, eventually our algorithm succeeds to determine the truly optimal arm.
 
-<img src = "https://github.com/Zahidul-Hasan/zahidul-hasan.github.io/tree/master/assets/img/etc.png" >
-![alt text](https://github.com/Zahidul-Hasan/zahidul-hasan.github.io/tree/master/assets/img/etc.png?raw=true)
+<img src = "https://github.com/Zahidul-Hasan/zahidul-hasan.github.io/tree/master/assets/img/etc.jpg" >
+![alt text](https://github.com/Zahidul-Hasan/zahidul-hasan.github.io/tree/master/assets/img/etc.jpg?raw=true)
