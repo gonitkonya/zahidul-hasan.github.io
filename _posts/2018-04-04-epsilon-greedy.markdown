@@ -40,7 +40,7 @@ $$\leq (1-\frac{1}{n^2}) k^{\frac{1}{3}} t^{\frac{-1}{3}} log(n)^{\frac{1}{3}} +
 $$\leq k^{\frac{1}{3}} t^{\frac{-1}{3}} log(n)^{\frac{1}{3}}$$    
 
 So, now we find the expected regret over all rounds,  
-$$E[R(n)] = \sum_{1\leq t\leq n} R(t)$$   
+$$E[R(n)] = E[\sum_{1\leq t\leq n} R(t)]$$   
 $$\leq n E[R(n)]$$  
 $$= k^{\frac{1}{3}} n^{\frac{2}{3}} log(n)^{\frac{1}{3}}$$  
 
