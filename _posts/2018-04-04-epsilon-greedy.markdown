@@ -35,7 +35,9 @@ $$\leq  \epsilon_{t} + \sqrt{\frac{8k}{t\epsilon_{t}} log(n)}$$
 The above bound is minimized by the choice $\epsilon_{t} = 2^{\frac{1}{3}} k^{\frac{1}{3}} t^{\frac{-1}{3}} log(n)^{\frac{1}{3}}$.   
 Then we get, $$E[R_{i}] \leq (2^{\frac{1}{3}} + 2^{\frac{1}{3}}) k^{\frac{1}{3}} t^{\frac{-1}{3}} log(n)^{\frac{1}{3}} $$  
 So, the expected simple regret over both good and bad events is,  
-$$E[R(t)] = Pr(G) E[R(t)|G] + Pr(G^{c}) E[R(t)|G^{c}]$$   
+$$
+E[R(t)] = Pr(G) E[R(t)|G] + Pr(G^{c}) E[R(t)|G^{c}]
+$$   
 $$\leq (1-\frac{1}{n^2}) k^{\frac{1}{3}} t^{\frac{-1}{3}} log(n)^{\frac{1}{3}} + \frac{1}{n^2} 1$$   
 $$\leq k^{\frac{1}{3}} t^{\frac{-1}{3}} log(n)^{\frac{1}{3}}$$    
 
