@@ -22,7 +22,7 @@ $\quad$ pick the arm $i$ that maximizes $UCB_{i}(t-1)$
 $\quad$ update it's sample mean reward and confidence radius   
 $\textbf{end}$   
 
-<strong style="color:red;">>Crude Instance Independent Regret Analysis</strong>: Since, at round $t$, arm $i$, is chosen, so, $UCB_{i}(t-1) \geq max_{1 \leq j \leq k} UCB_{j}(t-1)$. Let's say, arm $j$ is the optimal arm. And like the previous algorithms in the good event, $\mu_{j} \leq \bar \mu_{j}(t-1) + \sqrt{\frac{2}{T_{j}(t-1)} \log{n}}$ and $\mu_{i} \geq \bar \mu_{i}(t-1) - \sqrt{\frac{2}{T_{i}(t-1)} \log{n}}$   
+<strong style="color:red;">Crude Instance Independent Regret Analysis</strong>: Since, at round $t$, arm $i$, is chosen, so, $UCB_{i}(t-1) \geq max_{1 \leq j \leq k} UCB_{j}(t-1)$. Let's say, arm $j$ is the optimal arm. And like the previous algorithms in the good event, $\mu_{j} \leq \bar \mu_{j}(t-1) + \sqrt{\frac{2}{T_{j}(t-1)} \log{n}}$ and $\mu_{i} \geq \bar \mu_{i}(t-1) - \sqrt{\frac{2}{T_{i}(t-1)} \log{n}}$   
 So, $\mu_{j} - \mu_{i} \leq \bar \mu_{j}(t-1) -  \bar \mu_{i}(t-1) + \sqrt{\frac{2}{T_{i}(t-1)} \log{n}} + \sqrt{\frac{2}{T_{j}(t-1)} \log{n}}$   
 But since, $UCB_{i}(t-1) \geq UCB_{j}(t-1)$, so, $\bar \mu_{j}(t-1) -  \bar \mu_{i}(t-1) \leq \sqrt{\frac{2}{T_{i}(t-1)} \log{n}} - \sqrt{\frac{2}{T_{j}(t-1)} \log{n}}$   
 Adding them up, we get $\Delta_{i} = \mu_{j} - \mu_{i} \leq 2\sqrt{\frac{2}{T_{i}(t-1)} \log{n}}$   
