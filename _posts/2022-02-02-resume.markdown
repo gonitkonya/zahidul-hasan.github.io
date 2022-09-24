@@ -8,4 +8,4 @@ img: resume.jpeg # Add image post (optional)
 
 <a href="https://github.com/Zahidul-Hasan/zahidul-hasan.github.io/tree/master/assets/pdfs/CV.pdf" target="_blank">PDF.</a>
 
-<iframe src = "https://github.com/Zahidul-Hasan/zahidul-hasan.github.io/tree/master/assets/pdfs/CV.pdf"> resume </iframe>
+<iframe src = "https://github.com/Zahidul-Hasan/zahidul-hasan.github.io/tree/master/assets/pdfs/CV.pdf&embedded=true"> resume </iframe>
