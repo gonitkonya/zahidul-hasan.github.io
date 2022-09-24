@@ -6,4 +6,4 @@ description: You’ll find this post in your `_posts` directory. Go ahead and ed
 img: resume.jpeg # Add image post (optional)
 ---
 
-<iframe src = "https://drive.google.com/file/d/1LfS4PTuLZQBZX-Xp0sTLAHNNq62wpuMF/view?usp=sharing"> resume </iframe>
+<a href="https://github.com/Zahidul-Hasan/zahidul-hasan.github.io/tree/master/assets/pdfs.CV.pdf" target="_blank">PDF.</a>
