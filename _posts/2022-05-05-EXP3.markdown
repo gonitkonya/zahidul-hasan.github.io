@@ -11,8 +11,11 @@ In the case of stochastic bandits, our estimators such as the sample mean or the
 Here we define the adversarial MAB scenario for today's analysis:
 <ol>
   <li>The bandit has $k$ arms and there are $n$ rounds to the game. </li>
-  <li>$x \in [0,1]^{k\timesn}$ is the reward table that is chosen beforehand.</li>
+  <li>$x \in [0,1]^{n\times k}$ is the reward table that is chosen beforehand.</li>
   <li>The rewards are not fully observable. The algorithm can only observe the reward of the chosen arm.</li>
 </ol>
 
+
+<strong>The weak regret</strong>: It makes sense to define regret in this case in the following manner,  
+$R_{n}(\pi, x) = \sum_{t = 1}^{n} ((max_{1 \leq i \leq k} x_{t,i})- x_{t,A_{t}})$
 
