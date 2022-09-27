@@ -5,3 +5,14 @@ date: 2022-05-05 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: adv.gif # Add image post (optional)
 ---
+
+In the case of stochastic bandits, our estimators such as the sample mean or the upper confidence bound gives a good glimpse of the fixed distributions that the arms are. But in the adversarial setting, we can run into problems if we choose naive algorithms such as $ETC$ or $UCB_{1}$, because in the case of ETC, after the exploration phase, we choose a possible best arm and stick to it. But in the adversial situation, right after we choose that particular arm, we could start getting all zeros. Or in the case of the UCB algorithms, every time we choose the best arm so far, we could get a zero which could in turn decrease it's confidence radius while at the same time reducing it's sample mean. Therefore, we need to re-assess our policies and introduce randomization and reformulate the notion of regret in the case of the adversarial bandits.  
+
+Here we define the adversarial MAB scenario for today's analysis:
+<ol>
+  <li>The bandit has $k$ arms and there are $n$ rounds to the game. </li>
+  <li>$x \in [0,1]^{k\timesn}$ is the reward table that is chosen beforehand.</li>
+  <li>The rewards are not fully observable. The algorithm can only observe the reward of the chosen arm.</li>
+</ol>
+
+
