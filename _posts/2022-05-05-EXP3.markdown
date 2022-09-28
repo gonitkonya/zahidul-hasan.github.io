@@ -17,9 +17,9 @@ Here we define the adversarial MAB scenario for today's analysis:
 
 
 <strong>The weak regret</strong>: It makes sense to define regret in this case in the following manner,  
-$R_{n}(\pi, x) = \sum_{t = 1}^{n} ((max_{1 \leq i \leq k} x_{t,i})- x_{t,A_{t}})$    
+<center>$R_{n}(\pi, x) = \sum_{t = 1}^{n} ((max_{1 \leq i \leq k} x_{t,i})- x_{t,A_{t}})$    </center>
 Each time, comparing the algorithms choice with that of the best choice in round $t$, but this kind of regret is sort of mathematically intractable. So, we define a weaker version of this in the following way: The maximum reward is taken to be the maximum we could achieve if we stuck to one particular arm from the very beginning.    
-$R_{n}(\pi, x) = max_{1 \leq i \leq k} (\sum_{t=1}^{n} x_{t,i} - x_{t,A_{t}})$   
+<center>$R_{n}(\pi, x) = max_{1 \leq i \leq k} (\sum_{t=1}^{n} x_{t,i} - x_{t,A_{t}})$   </center>
 This particular arm that maximizes the first summand is called the <strong>best arm in hindsight</strong>. The bandit literature for adversarial situations uses the word "loss" instead of "reward". So, instead of maximizing the reward, we will be minimizing the loss. And since, the maximum reward we can get is 1, we can define loss in the following way: $y_{t,i} = 1 - x_{t,i}$.    
 
 There are various similar approaches to adversarial bandits starting with <strong>Weighted Majority Algorithm(WMA), Hedge, Exp3, Exp4</strong> etc. Here will only discuss Hedge and Exp3.     
@@ -73,25 +73,27 @@ Then <center>$R_{n, i} = \mathbb{E} [ W_{n,i} - W_{n}]$</center>
 
 Let, <center>$T_{t} = \sum_{i = 1}^{k} e^{\eta W_{t,i}}$</center>      
 So, by definition, <center>$T_{0} = 1$</center>       
-Obviously, $e^{\eta W_{n,i}} \leq \sum_{j = 1}^{k} e^{\eta W_{n, j}} = T_{n} = T_{0} \prod_{t = 1}^{n} \frac{T_{t}}{T_{t-1}} = k \prod_{t = 1}^{n} \frac{T_{t}}{T_{t-1}}$    
-Since, $W_{t,i} = W_{t-1,i} + \bar X_{t,i}$,   
-So, $e^{W_{t,i}} = e^{W_{t-1,i}}  e^{\bar X_{t,i}}$.     
-Then we get, $\frac{T_{t}}{T_{t-1}} = \sum_{j = 1}^{k} \frac{e^{W_{t-1,i}}}{T_{t-1}}  e^{\bar X_{t,i}} = \sum_{j = 1}^{k} p_{t,j} e^{\bar X_{t,i}} $     
-But we know that for all $x \leq 1$, $e^{x} \leq 1 + x + x^{2}$   
-Recall the definition,  $\bar X_{t,i} = 1 - \mathbb{I}$ { $A_{t} = i$ } $\frac{1 - x_{t,i}}{p_{t,i}}$ and it's obvious that $\bar X_{t,i}$ can never be larger than 1. And we also choose $\eta$ in such a way that it $\eta \bar X_{t,i}$ remains less than 1. So,     
- $\frac{T_{t}}{T_{t-1}} \leq \sum_{j = 1}^{n} p_{t,j} +\eta \sum_{j = 1}^{n} p_{t,j} \bar X_{t,j} +\eta^{2} \sum_{j = 1}^{n} p_{t,j} \bar X_{t,j}^{2} \leq e^{\eta \sum_{j = 1}^{n} p_{t,j} \bar X_{t,j} +\eta^{2} \sum_{j = 1}^{n} p_{t,j} \bar X_{t,j}^{2}}$    
- The last inequality follows from the fact that, $e^{x} \geq 1 + x$ for all $x$.   
+Obviously, <center>$e^{\eta W_{n,i}} \leq \sum_{j = 1}^{k} e^{\eta W_{n, j}} = T_{n} = T_{0} \prod_{t = 1}^{n} \frac{T_{t}}{T_{t-1}} = k \prod_{t = 1}^{n} \frac{T_{t}}{T_{t-1}}$</center>    
+Since, <center>$W_{t,i} = W_{t-1,i} + \bar X_{t,i}$,   </center>
+So, <center>$e^{W_{t,i}} = e^{W_{t-1,i}}  e^{\bar X_{t,i}}$.    </center> 
+Then we get, <center>$\frac{T_{t}}{T_{t-1}} = \sum_{j = 1}^{k} \frac{e^{W_{t-1,i}}}{T_{t-1}}  e^{\bar X_{t,i}} = \sum_{j = 1}^{k} p_{t,j} e^{\bar X_{t,i}} $     
+But we know that for all <center> $x \leq 1$, $e^{x} \leq 1 + x + x^{2}$   </center>
+Recall the definition,  <center>$\bar X_{t,i} = 1 - \mathbb{I}$ { $A_{t} = i$ } $\frac{1 - x_{t,i}}{p_{t,i}}$</center>  
+and it's obvious that $\bar X_{t,i}$ can never be larger than 1. And we also choose $\eta$ in such a way that it $\eta \bar X_{t,i}$ remains less than 1. So,     
+ <center>$\frac{T_{t}}{T_{t-1}} \leq \sum_{j = 1}^{n} p_{t,j} +\eta \sum_{j = 1}^{n} p_{t,j} \bar X_{t,j} +\eta^{2} \sum_{j = 1}^{n} p_{t,j} \bar X_{t,j}^{2} \leq e^{\eta \sum_{j = 1}^{n} p_{t,j} \bar X_{t,j} +\eta^{2} \sum_{j = 1}^{n} p_{t,j} \bar X_{t,j}^{2}}$ </center>
+  
+ The last inequality follows from the fact that, <center>$e^{x} \geq 1 + x$ for all $x$</center>.   
  From equation $x$, we find that,    
- $e^{\eta W_{n,i}} \leq k e^{\eta \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,i}\bar X_{t,j} + \eta^{2} \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,i}\bar X_{t,j}^{2} }$    
-  $e^{\eta W_{n,i}} \leq k e^{\eta W_{n} + \eta^{2} \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,j}\bar X_{t,j}^{2} }$    
+ <center>$e^{\eta W_{n,i}} \leq k e^{\eta \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,i}\bar X_{t,j} + \eta^{2} \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,i}\bar X_{t,j}^{2} }$    </center>
+  <center>$e^{\eta W_{n,i}} \leq k e^{\eta W_{n} + \eta^{2} \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,j}\bar X_{t,j}^{2} }$    </center>
 By taking logarithms and dividing both sides by $\eta > 0$,   
-$W_{n,i} - W_{n} \leq \frac{\log{k}}{\eta} + \eta \sum_{t=1}^{n} \sum_{j=1}^{k} p_{t,j} \bar X_{t,j}^{2}$   
+<center>$W_{n,i} - W_{n} \leq \frac{\log{k}}{\eta} + \eta \sum_{t=1}^{n} \sum_{j=1}^{k} p_{t,j} \bar X_{t,j}^{2}$   </center>
 
 Taking expectation on both sides,    
-$R_{n,i} = \mathbb{E} [ W_{n,i} - W_{n} ] \leq \frac{\log{k}}{\eta} + \eta \sum_{i=1}^{n} \mathbb{E}[ \sum_{j=1}^{k} p_{t,j} \bar x_{t,j}^{2}]$   
+<center>$R_{n,i} = \mathbb{E} [ W_{n,i} - W_{n} ] \leq \frac{\log{k}}{\eta} + \eta \sum_{i=1}^{n} \mathbb{E}[ \sum_{j=1}^{k} p_{t,j} \bar x_{t,j}^{2}]$  </center> 
 Since, $\bar x_{t,j}$ and $p_{t,j}$ both are less than 1, so,    
-$\mathbb{E}[ \sum_{j=1}^{k} p_{t,j} \bar x_{t,j}^{2}] \leq \mathbb{E}[ \sum_{j=1}^{k} 1] = k$   
-So, $R_{n,i} \leq \frac{\log{k}}{\eta} + \eta nk$   
+<center> $\mathbb{E}[ \sum_{j=1}^{k} p_{t,j} \bar x_{t,j}^{2}] \leq \mathbb{E}[ \sum_{j=1}^{k} 1] = k$   </center>
+So, <center> $R_{n,i} \leq \frac{\log{k}}{\eta} + \eta nk$   </center>
 In order to minimize this quantity, we choose, $\eta = \sqrt{\frac{\log{k}}{nk}}$.
 So, the regret bound becomes $2\sqrt{nk\log{k}}$  
 
