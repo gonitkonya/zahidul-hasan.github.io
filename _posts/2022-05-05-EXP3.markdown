@@ -67,12 +67,12 @@ By using induction on $t$, we prove that, $\mathbb{E}[ W_{n,i}] = \sum_{t = 1}^{
 <center>$\mathbb{E}[ W_{n,i}] = \sum_{t = 1}^{n-1} x_{t,i} + x_{t,n}$</center>     
 
 We also know that, <center>$X_{t} = \sum_{i = 1}^{k} p_{t,i} \bar X_{t,i}$</center>,     
-So, $\mathbb{E} [ \sum_{t = 1}^{n} X_{t} ] = \mathbb{E} [ \sum_{t = 1}^{n} \sum_{i = 1}^{k} p_{t,i} \bar X_{t,i}] $     
-So, let's define $W_{n} = \sum_{t = 1}^{n} \sum_{i = 1}^{k} p_{t,i} \bar X_{t,i}$    
-Then $R_{n, i} = \mathbb{E} [ W_{n,i} - W_{n}]$    
+So, <center>$\mathbb{E} [ \sum_{t = 1}^{n} X_{t} ] = \mathbb{E} [ \sum_{t = 1}^{n} \sum_{i = 1}^{k} p_{t,i} \bar X_{t,i}] $</center>       
+So, let's define <center>$W_{n} = \sum_{t = 1}^{n} \sum_{i = 1}^{k} p_{t,i} \bar X_{t,i}$</center>    
+Then <center>$R_{n, i} = \mathbb{E} [ W_{n,i} - W_{n}]$</center>        
 
-Let, $T_{t} = \sum_{i = 1}^{k} e^{\eta W_{t,i}}$   
-So, by definition, $T_{0} = 1$  
+Let, <center>$T_{t} = \sum_{i = 1}^{k} e^{\eta W_{t,i}}$</center>      
+So, by definition, <center>$T_{0} = 1$</center>       
 Obviously, $e^{\eta W_{n,i}} \leq \sum_{j = 1}^{k} e^{\eta W_{n, j}} = T_{n} = T_{0} \prod_{t = 1}^{n} \frac{T_{t}}{T_{t-1}} = k \prod_{t = 1}^{n} \frac{T_{t}}{T_{t-1}}$    
 Since, $W_{t,i} = W_{t-1,i} + \bar X_{t,i}$,   
 So, $e^{W_{t,i}} = e^{W_{t-1,i}}  e^{\bar X_{t,i}}$.     
