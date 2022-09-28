@@ -91,7 +91,7 @@ Taking expectation on both sides,
 $R_{n,i} = \mathbb{E} [ W_{n,i} - W_{n} ] \leq \frac{\log{k}}{\eta} + \eta \sum_{i=1}^{n} \mathbb{E}[ \sum_{j=1}^{k} p_{t,j} \bar x_{t,j}^{2}]$   
 Since, $\bar x_{t,j}$ and $p_{t,j}$ both are less than 1, so,    
 $\mathbb{E}[ \sum_{j=1}^{k} p_{t,j} \bar x_{t,j}^{2}] \leq \mathbb{E}[ \sum_{j=1}^{k} 1] \leq k$   
-So, $R_{n,i} \leq \frac{\log_{k}}{\eta} + \eta nk$   
+So, $R_{n,i} \leq \frac{\log{k}}{\eta} + \eta nk$   
 In order to minimize this quantity, we choose, $\eta = \sqrt{\frac{\log{k}}{nk}}$.
 So, the regret bound becomes $2\sqrt{nk\log{k}}$  
 
