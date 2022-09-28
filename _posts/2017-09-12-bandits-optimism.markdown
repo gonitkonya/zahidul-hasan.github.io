@@ -23,11 +23,11 @@ $\quad$ update it's sample mean reward and confidence radius
 $\textbf{end}$   
 
 <strong style="color:red;">Crude Instance Independent Regret Analysis</strong>: Since, at round $t$, arm $i$, is chosen, so, $UCB_{i}(t-1) \geq max_{1 \leq j \leq k} UCB_{j}(t-1)$. Let's say, arm $j$ is the optimal arm. And like the previous algorithms in the good event, $\mu_{j} \leq \bar \mu_{j}(t-1) + \sqrt{\frac{2}{T_{j}(t-1)} \log{n}}$ and $\mu_{i} \geq \bar \mu_{i}(t-1) - \sqrt{\frac{2}{T_{i}(t-1)} \log{n}}$   
-So, $\mu_{j} - \mu_{i} \leq \bar \mu_{j}(t-1) -  \bar \mu_{i}(t-1) + \sqrt{\frac{2}{T_{i}(t-1)} \log{n}} + \sqrt{\frac{2}{T_{j}(t-1)} \log{n}}$   
-But since, $UCB_{i}(t-1) \geq UCB_{j}(t-1)$, so, $\bar \mu_{j}(t-1) -  \bar \mu_{i}(t-1) \leq \sqrt{\frac{2}{T_{i}(t-1)} \log{n}} - \sqrt{\frac{2}{T_{j}(t-1)} \log{n}}$   
-Adding them up, we get $\Delta_{i} = \mu_{j} - \mu_{i} \leq 2\sqrt{\frac{2}{T_{i}(t-1)} \log{n}}$   
-So, for any round $t$, the regret upto round $t$, due to arm $i$, is $R(t:i) \leq \Delta_{i} T_{i}(t-1) \leq \sqrt{8T_{i}(t-1) \log{n}}$  
-So, for all arms, the total regret is $R(t) \leq \sum_{i = 1}^{k} \sqrt{8T_{i}(t-1) \log{n}}$    
-Since, $f(x) = \sqrt{x}$ is concave, so, using Jensen's Inequality, we have, $\frac{1}{k} \sum_{i=1}^{k} \sqrt{T_{i}(t-1)} \leq \sqrt{\frac{1}{k} \sum_{i=1}^{k} T_{i}(t-1)} = \sqrt{\frac{t}{k}}$   
-So, the upper bound for $R(t)$ is $R(t) \leq \sqrt{8 t k \log{n}}$   
+So, <center>$\mu_{j} - \mu_{i} \leq \bar \mu_{j}(t-1) -  \bar \mu_{i}(t-1) + \sqrt{\frac{2}{T_{i}(t-1)} \log{n}} + \sqrt{\frac{2}{T_{j}(t-1)} \log{n}}$   </center>
+But since, <center>$UCB_{i}(t-1) \geq UCB_{j}(t-1)$, so, $\bar \mu_{j}(t-1) -  \bar \mu_{i}(t-1) \leq \sqrt{\frac{2}{T_{i}(t-1)} \log{n}} - \sqrt{\frac{2}{T_{j}(t-1)} \log{n}}$   </center>
+Adding them up, we get <center>$\Delta_{i} = \mu_{j} - \mu_{i} \leq 2\sqrt{\frac{2}{T_{i}(t-1)} \log{n}}$   </center>
+So, for any round $t$, the regret upto round $t$, due to arm $i$, is <center>$R(t:i) \leq \Delta_{i} T_{i}(t-1) \leq \sqrt{8T_{i}(t-1) \log{n}}$  </center>
+So, for all arms, the total regret is <center>$R(t) \leq \sum_{i = 1}^{k} \sqrt{8T_{i}(t-1) \log{n}}$    </center>
+Since, $f(x) = \sqrt{x}$ is concave, so, using Jensen's Inequality, we have, <center>$\frac{1}{k} \sum_{i=1}^{k} \sqrt{T_{i}(t-1)} \leq \sqrt{\frac{1}{k} \sum_{i=1}^{k} T_{i}(t-1)} = \sqrt{\frac{t}{k}}$   </center>
+  So, the upper bound for $R(t)$ is <center>$R(t) \leq \sqrt{8 t k \log{n}}$  </center> 
 So, $R(n) \approx \mathcal{O}(\sqrt{nk\log{n}})$
