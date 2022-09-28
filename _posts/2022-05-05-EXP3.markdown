@@ -56,3 +56,9 @@ $\quad\quad$ observe the cost fore each arm
 $\quad\quad$ update the weight of each arm $a$ as: $w_{t}(a) = w_{t-1}(a) + 1 - \mathbb{I}$ { $A_{t} = i$ } $\frac{1 - x_{t,i}}{p_{t,i}}$    
 <hr>    
 
+
+<strong>Regret Analysis</strong>: The regret analysis of Hedge and Exp3 are very much similar and in fact, the case for Hedge is even easier. So, we only provide the regret analysis of Exp3. Define,   
+$R_{n,i} = \sum_{t = 1}^{n} X_{t,i} - \mathbb{E} [ \sum_{t = 1}^{n} X_{t}=]$   
+So, what we are looking for is $R_{n}(\pi, x) = max_{1 \leq i \leq k} R_{n,i}$ because we want the worst possible regret.  
+By using induction on $t$, we prove that, $\mathbb{E}[ W_{n,i}] = \sum_{t = 1} x_{t,i}$ which easily follows as,     
+$\mathbb{E}[ W_{n,i}] = \mathbb{E}[ W_{n-1,i}] + 1 - \mathbb{E}[ \mathbb{I}$ { $ A_{t} = i $ } $] (1-X_{t}) \frac{1}{p_{t,i}}$ 
