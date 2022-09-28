@@ -75,7 +75,7 @@ Let, $T_{t} = \sum_{i = 1}^{k} e^{\eta W_{t,i}}$, So, by definition,$T_{0} = 1$
 Obviously, <center>$e^{\eta W_{n,i}} \leq \sum_{j = 1}^{k} e^{\eta W_{n, j}} = T_{n} = T_{0} \prod_{t = 1}^{n} \frac{T_{t}}{T_{t-1}} = k \prod_{t = 1}^{n} \frac{T_{t}}{T_{t-1}} \cdots (1) $</center>    
 Since, <center>$W_{t,i} = W_{t-1,i} + \bar X_{t,i}$,   </center>
 So, <center>$e^{W_{t,i}} = e^{W_{t-1,i}}  e^{\bar X_{t,i}}$.    </center> 
-Then we get, <center>$\frac{T_{t}}{T_{t-1}} = \sum_{j = 1}^{k} \frac{e^{W_{t-1,i}}}{T_{t-1}}  e^{\bar X_{t,i}} = \sum_{j = 1}^{k} p_{t,j} e^{\bar X_{t,i}} $     
+Then we get, <center>$\frac{T_{t}}{T_{t-1}} = \sum_{j = 1}^{k} \frac{e^{W_{t-1,i}}}{T_{t-1}}  e^{\bar X_{t,i}} = \sum_{j = 1}^{k} p_{t,j} e^{\bar X_{t,i}} $</center>        
 But we know that for all <center> $x \leq 1$, $e^{x} \leq 1 + x + x^{2}$   </center>
 Recall the definition,  <center>$\bar X_{t,i} = 1 - \mathbb{I}$ { $A_{t} = i$ } $\frac{1 - x_{t,i}}{p_{t,i}}$</center>  
 and it's obvious that $\bar X_{t,i}$ can never be larger than 1. And we also choose $\eta$ in such a way that it $\eta \bar X_{t,i}$ remains less than 1. So,     
