@@ -32,7 +32,7 @@ $\quad \textbf{Initialization}:$ for each arm $a$, set $W_{1}(a) = 1$
 $\quad$ for each round $t$:    
 $\quad\quad$ let, $p_{t}(a) = \frac{w_{t}(a)}{\sum_{a = 1}^{k} w_{t}(a)}$     
 $\quad\quad$ sample one arm $a_{t}$ from the given distribution $p_{t}$ and exploit it    
-$\quad\quad$ observe the cost fore each arm      
+$\quad\quad$ observe the cost for each arm      
 $\quad\quad$ update the weight of each arm $a$ as: $w_{t+1}(a) = w_{t}(a) (1-\epsilon)^{cost_{t}(a)}$     
 <hr>    
 This algorithm seems fairly intuitive. So, is Exp3 except the concept of <strong>Weighted estimators</strong> that are fake estimators of the reward in round $t$, if we chose arm $i$. And it is defined as follows:    
@@ -52,7 +52,7 @@ $\quad \textbf{Initialization}:$ for each arm $a$, set $W_{0}(a) = 0$
 $\quad$ for each round $t$:    
 $\quad\quad$ let, $p_{t,a} = \frac{e^{\eta w_{t}(a)}}{ \sum_{i = 1}^{k} e^{\eta w_{t-1}(i)}}$    
 $\quad\quad$ sample one arm $a_{t}$ from the given distribution $p_{t}$ and exploit it    
-$\quad\quad$ observe the cost fore each arm      
+$\quad\quad$ observe the cost for each arm      
 $\quad\quad$ update the weight of each arm $a$ as: $w_{t}(a) = w_{t-1}(a) + 1 - \mathbb{I}$ { $A_{t} = i$ } $\frac{1 - x_{t,i}}{p_{t,i}}$    
 <hr>    
 
