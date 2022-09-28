@@ -71,9 +71,8 @@ So, <center>$\mathbb{E} [ \sum_{t = 1}^{n} X_{t} ] = \mathbb{E} [ \sum_{t = 1}^{
 So, let's define <center>$W_{n} = \sum_{t = 1}^{n} \sum_{i = 1}^{k} p_{t,i} \bar X_{t,i}$</center>    
 Then <center>$R_{n, i} = \mathbb{E} [ W_{n,i} - W_{n}]$</center>        
 
-Let, <center>$T_{t} = \sum_{i = 1}^{k} e^{\eta W_{t,i}}$</center>      
-So, by definition, <center>$T_{0} = 1$</center>       
-Obviously, <center>$e^{\eta W_{n,i}} \leq \sum_{j = 1}^{k} e^{\eta W_{n, j}} = T_{n} = T_{0} \prod_{t = 1}^{n} \frac{T_{t}}{T_{t-1}} = k \prod_{t = 1}^{n} \frac{T_{t}}{T_{t-1}}$</center>    
+Let, $T_{t} = \sum_{i = 1}^{k} e^{\eta W_{t,i}}$, So, by definition,$T_{0} = 1$    
+Obviously, <center>$e^{\eta W_{n,i}} \leq \sum_{j = 1}^{k} e^{\eta W_{n, j}} = T_{n} = T_{0} \prod_{t = 1}^{n} \frac{T_{t}}{T_{t-1}} = k \prod_{t = 1}^{n} \frac{T_{t}}{T_{t-1}} \cdots (1) $</center>    
 Since, <center>$W_{t,i} = W_{t-1,i} + \bar X_{t,i}$,   </center>
 So, <center>$e^{W_{t,i}} = e^{W_{t-1,i}}  e^{\bar X_{t,i}}$.    </center> 
 Then we get, <center>$\frac{T_{t}}{T_{t-1}} = \sum_{j = 1}^{k} \frac{e^{W_{t-1,i}}}{T_{t-1}}  e^{\bar X_{t,i}} = \sum_{j = 1}^{k} p_{t,j} e^{\bar X_{t,i}} $     
@@ -83,7 +82,7 @@ and it's obvious that $\bar X_{t,i}$ can never be larger than 1. And we also cho
  <center>$\frac{T_{t}}{T_{t-1}} \leq \sum_{j = 1}^{n} p_{t,j} +\eta \sum_{j = 1}^{n} p_{t,j} \bar X_{t,j} +\eta^{2} \sum_{j = 1}^{n} p_{t,j} \bar X_{t,j}^{2} \leq e^{\eta \sum_{j = 1}^{n} p_{t,j} \bar X_{t,j} +\eta^{2} \sum_{j = 1}^{n} p_{t,j} \bar X_{t,j}^{2}}$ </center>
   
  The last inequality follows from the fact that, <center>$e^{x} \geq 1 + x$ for all $x$</center>.   
- From equation $x$, we find that,    
+ From inequality $(1)$, we find that,    
  <center>$e^{\eta W_{n,i}} \leq k e^{\eta \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,i}\bar X_{t,j} + \eta^{2} \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,i}\bar X_{t,j}^{2} }$    </center>
   <center>$e^{\eta W_{n,i}} \leq k e^{\eta W_{n} + \eta^{2} \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,j}\bar X_{t,j}^{2} }$    </center>
 By taking logarithms and dividing both sides by $\eta > 0$,   
