@@ -63,7 +63,7 @@ So, what we are looking for is $R_{n}(\pi, x) = max_{1 \leq i \leq k} R_{n,i}$ b
 By using induction on $t$, we prove that, $\mathbb{E}[ W_{n,i}] = \sum_{t = 1}^{n} x_{t,i}$ which easily follows as,     
 $\mathbb{E}[ W_{n,i}] = \mathbb{E}[ W_{n-1,i}] + 1 - \mathbb{E}[ \mathbb{I}$ { $ A_{n} = i $ } $] (1-X_{n}) \frac{1}{p_{n,i}}$      
 $\mathbb{E}[ W_{n,i}] = \mathbb{E}[ W_{n-1,i}] + 1 - p_{n,i} (1-X_{n}) \frac{1}{p_{n,i}}$     
-$\mathbb{E}[ W_{n,i}] = \sum_{t = 1}^{n-1} x_{t,i} + 1 - p_{n,i} (1-X_{n}) \frac{1}{p_{n,i}}$      
+\[$\mathbb{E}[ W_{n,i}] = \sum_{t = 1}^{n-1} x_{t,i} + 1 - p_{n,i} (1-X_{n}) \frac{1}{p_{n,i}}$\]      
 $$\mathbb{E}[ W_{n,i}] = \sum_{t = 1}^{n-1} x_{t,i} + x_{t,n}$$     
 
 We also know that, $X_{t} = \sum_{i = 1}^{k} p_{t,i} \bar X_{t,i}$,     
