@@ -73,4 +73,18 @@ Then $R_{n, i} = \mathbb{E} [ W_{n,i} - W_{n}]$
 
 Let, $T_{t} = \sum_{i = 1}^{k} e^{\eta W_{t,i}}$   
 So, by definition, $T_{0} = 1$  
-Obviously, $e^{\eta W_{n,i}} \leq \sum{j = 1}^{k} e^{\eta W_{n, j}} = T_{n} = T_{0} \prod_{t = 1}^{n} \frac{T_{t}}{T_{t-1}}$ 
+Obviously, $e^{\eta W_{n,i}} \leq \sum{j = 1}^{k} e^{\eta W_{n, j}} = T_{n} = T_{0} \prod_{t = 1}^{n} \frac{T_{t}}{T_{t-1}} = k \prod_{t = 1}^{n} \frac{T_{t}}{T_{t-1}}$    
+Since, $W_{t,i} = W_{t-1,i} + \bar X_{t,i}$,   
+So, $e^{W_{t,i}} = e^{W_{t-1,i}}  e^{\bar X_{t,i}}$.
+Then we get, $\frac{T_{t}}{T_{t-1}} = \sum_{j = 1}^{k} \frac{e^{W_{t-1,i}}}{T_{t-1}}  e^{\bar X_{t,i}} = \sum_{j = 1}^{k} p_{t,j} e^{\bar X_{t,i}} $     
+But we know that for all $x \leq 1$, $e^{x} \leq 1 + x + x^{2}$   
+Recall the definition,  $\bar X_{t,i} = 1 - \mathbb{I}$ { $A_{t} = i$ } $\frac{1 - x_{t,i}}{p_{t,i}}$ and it's obvious that $\bar X_{t,i}$ can never be larger than 1. And we also choose $\eta$ in such a way that it $\eta \bar X_{t,i}$ remains less than 1. So,     
+ $\frac{T_{t}}{T_{t-1}} \leq \sum_{j = 1}^{n} p_{t,j} +\eta \sum_{j = 1}^{n} p_{t,j} \bar X_{t,j} +\eta^{2} \sum_{j = 1}^{n} p_{t,j} \bar X_{t,j}^{2} \leq e^{\eta \sum_{j = 1}^{n} p_{t,j} \bar X_{t,j} +\eta^{2} \sum_{j = 1}^{n} p_{t,j} \bar X_{t,j}^{2}}$    
+ The last inequality follows from the fact that, $e^{x} \geq 1 + x$ for all $x$.   
+ From equation $x$, we find that,    
+ $e^{\eta W_{n,i}} \leq k e^{\eta \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,i}\bar X_{t,j} + \eta^{2} \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,i}\bar X_{t,j}^{2} }$    
+  $e^{\eta W_{n,i}} \leq k e^{\eta W_{n} + \eta^{2} \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,i}\bar X_{t,j}^{2} }$
+By taking logarithms and dividing both sides by $\eta > 0$,   
+$W_{n,i} - W_{n} \leq \frac{\log{k}}{\eta} + \eta \sum_{t=1}^{n} \sum_{j=1}^{k} p_{t,j} \bar X_{t,j}^{2}$
+
+
