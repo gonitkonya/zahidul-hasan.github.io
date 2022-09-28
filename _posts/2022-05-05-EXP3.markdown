@@ -83,7 +83,7 @@ Recall the definition,  $\bar X_{t,i} = 1 - \mathbb{I}$ { $A_{t} = i$ } $\frac{1
  The last inequality follows from the fact that, $e^{x} \geq 1 + x$ for all $x$.   
  From equation $x$, we find that,    
  $e^{\eta W_{n,i}} \leq k e^{\eta \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,i}\bar X_{t,j} + \eta^{2} \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,i}\bar X_{t,j}^{2} }$    
-  $e^{\eta W_{n,i}} \leq k e^{\eta W_{n} + \eta^{2} \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,i}\bar X_{t,j}^{2} }$
+  $e^{\eta W_{n,i}} \leq k e^{\eta W_{n} + \eta^{2} \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,j}\bar X_{t,j}^{2} }$
 By taking logarithms and dividing both sides by $\eta > 0$,   
 $W_{n,i} - W_{n} \leq \frac{\log{k}}{\eta} + \eta \sum_{t=1}^{n} \sum_{j=1}^{k} p_{t,j} \bar X_{t,j}^{2}$   
 
