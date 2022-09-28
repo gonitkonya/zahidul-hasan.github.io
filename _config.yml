@@ -17,10 +17,10 @@ social-linkedin: https://www.linkedin.com/in/mohammad-zahidul-hasan-09223517b/# 
 social-email: zadidhasan11@gmail.com# add your Email address
 theme-name: flexible-jekyll
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+#discus-identifier: mr-brown # add your discus identifier
 
 # Tracker
-#analytics: # Google Analytics
+analytics: # Google Analytics
 
 # Build Settings
 markdown: kramdown
