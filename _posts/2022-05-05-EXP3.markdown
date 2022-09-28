@@ -67,7 +67,7 @@ $\mathbb{E}[ W_{n,i}] = \sum_{t = 1}^{n-1} x_{t,i} + 1 - p_{n,i} (1-X_{n}) \frac
 $$\mathbb{E}[ W_{n,i}] = \sum_{t = 1}^{n-1} x_{t,i} + x_{t,n}$$     
 
 We also know that, $X_{t} = \sum_{i = 1}^{k} p_{t,i} \bar X_{t,i}$,     
-So, $\mathbb{E} [ sum_{t = 1}^{n} X_{t} ] = \mathbb{E} [ \sum_{t = 1}^{n} \sum_{i = 1}^{k} p_{t,i} \bar X_{t,i}] $     
+So, $\mathbb{E} [ \sum_{t = 1}^{n} X_{t} ] = \mathbb{E} [ \sum_{t = 1}^{n} \sum_{i = 1}^{k} p_{t,i} \bar X_{t,i}] $     
 So, let's define $W_{n} = \sum_{t = 1}^{n} \sum_{i = 1}^{k} p_{t,i} \bar X_{t,i}$    
 Then $R_{n, i} = \mathbb{E} [ W_{n,i} - W_{n}]$    
 
