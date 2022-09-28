@@ -85,6 +85,13 @@ Recall the definition,  $\bar X_{t,i} = 1 - \mathbb{I}$ { $A_{t} = i$ } $\frac{1
  $e^{\eta W_{n,i}} \leq k e^{\eta \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,i}\bar X_{t,j} + \eta^{2} \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,i}\bar X_{t,j}^{2} }$    
   $e^{\eta W_{n,i}} \leq k e^{\eta W_{n} + \eta^{2} \sum_{t = 1}^{n} \sum_{j = 1}^{k} p_{t,i}\bar X_{t,j}^{2} }$
 By taking logarithms and dividing both sides by $\eta > 0$,   
-$W_{n,i} - W_{n} \leq \frac{\log{k}}{\eta} + \eta \sum_{t=1}^{n} \sum_{j=1}^{k} p_{t,j} \bar X_{t,j}^{2}$
+$W_{n,i} - W_{n} \leq \frac{\log{k}}{\eta} + \eta \sum_{t=1}^{n} \sum_{j=1}^{k} p_{t,j} \bar X_{t,j}^{2}$   
 
+Taking expectation on both sides,    
+$R_{n,i} = \mathbb{E} [ W_{n,i} - W_{n} ] \leq \frac{\log{k}}{\eta} + \eta \sum_{i=1}^{n} \mathbb{E}[ \sum_{j=1}^{k} p_{t,j} \bar x_{t,j}^{2}]$   
+Since, $\bar x_{t,j}$ and $p_{t,j}$ both are less than 1, so,    
+$\mathbb{E}[ \sum_{j=1}^{k} p_{t,j} \bar x_{t,j}^{2}] \leq \mathbb{E}[ \sum_{j=1}^{k} 1] \leq k$   
+So, $R_{n,i} \leq \frac{\log_{k}}{\eta} + \eta nk$   
+In order to minimize this quantity, we choose, $\eta = \sqrt{\frac{\log{k}}{nk}}$.
+So, the regret bound becomes $2\sqrt{nk\log{k}}  
 
