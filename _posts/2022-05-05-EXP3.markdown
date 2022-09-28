@@ -24,7 +24,8 @@ This particular arm that maximizes the first summand is called the <strong>best 
 
 There are various similar approaches to adversarial bandits starting with Weighted Majority Algorithm (WMA), Hedge, Exp3, Exp4 etc. Here will only discuss Hedge and Exp3. 
 <strong>Hedge Algorithm</strong>: We start with $k$ experts for $k$ arms of the bandit, each having equal weight. In each round, according to this weighted probability distribution, we sample one of the arms for exploitation. Then all of the rewards in that round are revealed. From that we calculate the cost of each arm. We decrease the weights of the arms according to this cost. The costlier the arm, the more the decrease.    
-$\textbf{Hedge}$: $parameters: \epsilon \in (0,\frac{1}{2})$    
+$\textbf{Hedge}$:     
+$\quad parameters: \epsilon \in (0,\frac{1}{2})$    
 $\quad \textbf{Initialization}:$ for each arm $a$, set $W_{1}(a) = 1$   
 $\quad$ for each round $t$:    
 $\quad\quad$ let, $p_{t}(a) = \frac{w_{t}(a)}{\sum_{a = 1}^{k} w_{t}(a)}$     
@@ -32,4 +33,8 @@ $\quad\quad$ sample one arm $a_{t}$ from the given distribution $p_{t}$ and expl
 $\quad\quad$ observe the cost fore each arm      
 $\quad\quad$ update the weight of each arm $a$ as: $w_{t+1}(a) = w_{t}(a) (1-\epsilon)^{cost_{t}(a)}$
 
-
+This algorithm seems fairly intuitive. So, is Exp3 except the concept of <strong>Weighted estimators</strong> that are fake estimators of the reward in round $t$, if we chose arm $i$. And it is defined as follows:    
+If our algorithm chooses arm $i$ in round $t$, then $\bar X_{t,i} = X_{t}/P_{t,i}$ where $P_{t,i}$ is the probability that having seen the action-reward series $A_{1}, X_{1}, \cdots, A_{t-1}, X_{t-1}$, the algorithm is going to choose arm $i$ in round $t$. Which means $p_{t,i} = P(A_{t} = i| A_{1}, X_{1}, \cdots, A_{t-1}, X_{t-1}$    
+If we don't choose arm $i$ in round $t$, then  $\bar X_{t,i} = 0$.  
+Notice that $E_{t-1}[\bar X_{t,i}] = x_{t,i}$ because, $E_{t-1}[X_{t,i}] = (\sum_{j \neq i} p_{t,j} 0 \bar X_{t,i}) + p_{t,i} \frac{x_{t,i}}{p_{t,i}}$. So, this $\bar X_{t,i}$ is an unbiased estimator of $x_{t,i}$.
+Since, we are talking about losses instead of rewards, let's define $\bar Y_{t,i} = \mathbb{I}\{A_{t} = i\} \frac{y_{t,i}}{p_{t,i}}$, substituting $x_{t,i} = 1 - y_{t,i}$, we get, $\bar X_{t,i} = 1 - \mathbb{I}\{A_{t} = i\} \frac{1 - x_{t,i}}{p_{t,i}}$. 
