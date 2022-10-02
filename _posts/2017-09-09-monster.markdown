@@ -84,7 +84,7 @@ These works fall under the category of contextual bandits with side information 
   <li>
     <strong>Drawback and Scope of Work</strong>:
     <ul>
-      <li> The runtime complexity in each round is $\mathcal{K+M}$.</li>
+      <li> The runtime complexity in each round is $\mathcal{|A|+|M|}$.</li>
     </ul>
   </li>
 </ol>
