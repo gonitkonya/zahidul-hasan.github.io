@@ -5,3 +5,19 @@ date: 2022-05-10 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: creature-keeper00005313still001-1654716362730.jpg # Add image post (optional)
 ---
+
+Here in this post, I will provide excerpts from some of the most influential works done on Contextual Multi-Armed Bandits.      
+<strong> 2005: Wang et al, 2007: Pandey et al </strong>   
+These works fall under the category of contextual bandits with side information and we will not elaborate on that.
+
+<strong> 2007: The Epoch-Greedy Algorithm for Multi-armed Bandits with Side Information by Langford et al. </strong>
+<ol>
+  <li><strong>Problem Setting</string>: The environment is partially observable. You can only observe the reward for the arm you have chosen.</li>
+  <li><strong>Key Properties</strong>: 
+    <ul>
+      <li> Exploration and Exploitation rounds are distinct from each other. In the exploration round, they pull an arm uniformly at random and use the arm's reward to learn about the bandit. But in the exploitation step, the reward collected from the best arm suggested by the algorithm is ignored.</li>
+      <li> In the exploration step, their goal is not to maximize immediate reward but in exploitation step, it is. </li>
+      <li> The reward of an unexplored arm in a round is estimated by an Inverse-Propensity-Score. </li>
+    </ul>
+  <li><strong>Regret Bound</strong></li>
+</ol>
