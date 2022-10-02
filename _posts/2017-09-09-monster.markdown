@@ -12,12 +12,20 @@ These works fall under the category of contextual bandits with side information 
 
 <strong> 2007: The Epoch-Greedy Algorithm for Multi-armed Bandits with Side Information by Langford et al. </strong>
 <ol>
-  <li><strong>Problem Setting</string>: The environment is partially observable. You can only observe the reward for the arm you have chosen.</li>
+  <li><strong>Problem Setting</strong>: 
+    <ul>
+      <li>The environment is partially observable. You can only observe the reward for the arm you have chosen.</li>
+      <li>The bandit is stochastic</li>
+    </ul>
   <li><strong>Key Properties</strong>: 
     <ul>
       <li> Exploration and Exploitation rounds are distinct from each other. In the exploration round, they pull an arm uniformly at random and use the arm's reward to learn about the bandit. But in the exploitation step, the reward collected from the best arm suggested by the algorithm is ignored.</li>
       <li> In the exploration step, their goal is not to maximize immediate reward but in exploitation step, it is. </li>
-      <li> The reward of an unexplored arm in a round is estimated by an Inverse-Propensity-Score. </li>
+      <li> The reward of an unexplored arm in a round is estimated by an <strong>Inverse-Propensity-Score.</strong> </li>
+      <li> Makes no assumption about the time horizon $T$. As, in the stochastic scenario, if $T$ is known before hands, then it is better to always perform all the exploration steps first and then do all the exploitation steps. Likewise, here they spread this idea of exploration first and then exploitation to multiple epoch. At the beginning of each epoch, they explore one arm at random. Then if the average regret in the previous rounds is $\epsilon$, then they perform ${\left\lceil \frac{1}{\epsilon}\right\rceil}$ exploitation steps per epoch.</li> 
     </ul>
+  </li>
   <li><strong>Regret Bound</strong></li>
+  <ul>
+    <li> The worst case regret bound for epoch greedy is $\mathcal{O}(T^{\frac{2}{3}} (K \log{M})^{\frac{1}{3}})$ where $T$ is the time horizon, $K$ is the number of arms and $M$ is the size of the hypotheses class.</li>
 </ol>
