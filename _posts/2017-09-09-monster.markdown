@@ -58,7 +58,7 @@ These works fall under the category of contextual bandits with side information 
   </li>
   <li><strong>Official Pseudocode:</strong>
     <ul>
-   <li><iframe src="https://drive.google.com/file/d/1D_E_NI61Nf3wazulFlMAxFChdAJi2cHR/preview" width="580" height="480" allow="autoplay"></iframe></li>
+   <li><iframe src="https://drive.google.com/file/d/1D_E_NI61Nf3wazulFlMAxFChdAJi2cHR/preview" width="540" height="480" allow="autoplay"></iframe></li>
       <li> <p>They have proposed several variants of the $F_{mix}$ subroutine. One of them is $UA_{mix}(\lambda)$:</p>         
         <center>$p(a) = (1-\lambda) \bar p(a) + \lambda \frac{1}{K}$</center>
         <p> where $\lambda$ is an egalitarianism factor </p>
@@ -67,7 +67,7 @@ These works fall under the category of contextual bandits with side information 
         <center>$p(a) = (1-\lambda) \bar p(a) + \frac{\lambda}{M} \sum_{i}^{} e_{i}(a)$</center>
       </li>
       <li> <p> Yet, another variant is called $LP_{mix}(\alpha)$:</p>
-        <iframe src="https://drive.google.com/file/d/1bAFLfdoX1zT5qoFCUujUKh7tX5ecKBoX/preview" width="640" height="380" allow="autoplay"></iframe>
+        <iframe src="https://drive.google.com/file/d/1bAFLfdoX1zT5qoFCUujUKh7tX5ecKBoX/preview" width="640" height="330" allow="autoplay"></iframe>
       </li>
     </ul>
   </li>
