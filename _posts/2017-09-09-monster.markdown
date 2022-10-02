@@ -67,7 +67,7 @@ These works fall under the category of contextual bandits with side information 
         <center>$p(a) = (1-\lambda) \bar p(a) + \frac{\lambda}{M} \sum_{i}^{} e_{i}(a)$</center>
       </li>
       <li> <p> Yet, another variant is called $LP_{mix}(\alpha)$:</p>
-        <iframe src="https://drive.google.com/file/d/1bAFLfdoX1zT5qoFCUujUKh7tX5ecKBoX/preview" width="610" height="300" allow="autoplay"></iframe>
+        <iframe src="https://drive.google.com/file/d/1bAFLfdoX1zT5qoFCUujUKh7tX5ecKBoX/preview" width="580" height="300" allow="autoplay"></iframe>
       </li>
     </ul>
   </li>
