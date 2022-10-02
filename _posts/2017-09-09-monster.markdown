@@ -32,6 +32,11 @@ These works fall under the category of contextual bandits with side information 
     <li> The worst case regret bound for epoch greedy is $\mathcal{O}(T^{\frac{2}{3}} (K \log{M})^{\frac{1}{3}})$ where $T$ is the time horizon, $K$ is the number of arms and $M$ is the size of the hypotheses class.</li>
   </ul>
   </li>
+  <li><strong> Drawbacks and Scope of Improvement </strong>
+    <ul>
+      <li> Compared to $Exp4$, has better regret bound dependence on $\log{M}$ and $K$ but worse dependence on $T$.</li>
+    </ul>
+  </li>
 </ol>
 
 <strong> 2007: NEXP Algorithm by McMahan et al. </strong>
