@@ -53,7 +53,7 @@ These works fall under the category of contextual bandits with side information 
     <strong>Key Properties:</strong>
     <ul>
       <li> Compares regret relative to the expected reward obtained by the best expert. </li>
-      <li> Uses the fact that when $K$ is significantly large and even larger than $M$, then the regret upper bound need not be $\sqrt{TK \log{M}}$.
+      <li> Uses the fact that when $K$ is significantly large and even larger than $M$, then the regret upper bound need not be $\sqrt{TK \log{M}}$.</li>
     </ul>
   </li>
   <li><strong>Official Pseudocode:</strong>
