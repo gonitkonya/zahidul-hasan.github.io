@@ -28,7 +28,9 @@ These works fall under the category of contextual bandits with side information 
     </ul>
   </li>
   <li><strong>Official Pseudocode</strong>
-   <iframe src="https://drive.google.com/file/d/1nLVR2h3SDDMRgJKvqJTfvSvh55p8i9ZC/preview" width="640" height="480" allow="autoplay"></iframe>
+    <ul>
+   <li><iframe src="https://drive.google.com/file/d/1nLVR2h3SDDMRgJKvqJTfvSvh55p8i9ZC/preview" width="640" height="480" allow="autoplay"></iframe></li>
+    </ul>
   </li>
   <li><strong>Regret Bound</strong>:
   <ul>
