@@ -73,6 +73,10 @@ These works fall under the category of contextual bandits with side information 
   <li><strong>Regret Bounds:</strong>
     <ul>
       <li>
+        When they use the $UA_{mix}$ subroutine, the expected regret is bounded from above by $E[R] \leq 2.63 \sqrt{TM \log{M}}$.
+      </li>
+      <li>
+        When they use the $LP_{mix}$ subroutine, the expected regret is bounded from above by $E[R] \leq 2.63 \sqrt{TS \log{M}}$ where $S \leq min(K,M)$.
       </li>
     </ul>
   </li>
