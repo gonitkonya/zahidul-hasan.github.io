@@ -27,6 +27,9 @@ These works fall under the category of contextual bandits with side information 
       <li> Compares regret relative to the total reward of the best hypothesis. </li>
     </ul>
   </li>
+  <li><strong>Official Pseudocode</strong>
+   <img src = "https://github.com/Zahidul-Hasan/zahidul-hasan.github.io/tree/master/assets/img/nexpp.jpg">
+  </li>
   <li><strong>Regret Bound</strong>:
   <ul>
     <li> The worst case regret bound for epoch greedy is $\mathcal{O}(T^{\frac{2}{3}} (K \log{M})^{\frac{1}{3}})$ where $T$ is the time horizon, $K$ is the number of arms and $M$ is the size of the hypotheses class.</li>
