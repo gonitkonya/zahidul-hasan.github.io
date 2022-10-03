@@ -17,7 +17,7 @@ These works fall under the category of contextual bandits with side information 
       <ul>
         <li>The bandit is adversarial.</li>
         <li>The environment is partially observable.</li>
-        <li> Makes the assumption that $\log{M} \leq Tk$.</li>
+        <li> Makes the assumption that $\log{M} \leq TK$.</li>
     </ul>
   </li>
   <li>
