@@ -10,6 +10,29 @@ Here in this post, I will provide excerpts from some of the most influential wor
 <strong> 2005: Wang et al, 2007: Pandey et al </strong>   
 These works fall under the category of contextual bandits with side information and we will not elaborate on that.
 
+<strong>2002: The Exp4 Algorithm by Auer et al </strong> The Exp4 algorithm can be perfectly used for the contextual bandit setting.
+<ol>
+  <li>
+    <strong>Problem setting:</strong>
+      <ul>
+        <li>The bandit is adversarial.</li>
+        <li>The environment is partially observable.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Regret Bounds:</strong>
+    <ul>
+      <li> The upper bound for the expected regret is $\mathcal{O}(\sqrt{TK\log{M}})$.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Drawbacks and Scope of Improvement:</strong>
+    <ul>
+      <li> The runtime is linear in $M$ in every round.</li>
+      <li> The expected regret is quite good. But due to high variance, there is no guarantee that the regret stays concentrated around it's mean. </li>
+    </ul>
+  </li>
+</ol>
 <strong> 2007: The Epoch-Greedy Algorithm for Multi-armed Bandits with Side Information by Langford et al. </strong>
 <ol>
   <li><strong>Problem Setting</strong>: 
@@ -100,6 +123,7 @@ These works fall under the category of contextual bandits with side information 
   <li>
     <strong>Regret Bounds:</strong>
     <ul>
+      <li> With probability at least $1-\delta$, expected regret is bounded by  $\mathcal{O}(\sqrt{TK\log{\frac{M}{\delta}}})$.</li>
       <li> With high probability, the algorithm guarantees that the upper bound for the expected regret is $\mathcal{O}(\sqrt{TK\log{M}})$.</li>
       <li> In the stochastic scenario, even if the policy class may be of an infinite size but if it has a finite VC dimension $d$, then the algorithm guarantees with high probability that the expected regret is bounded by $\mathcal{O}(\sqrt{Td\log{T}})$.</li>
     </ul>
