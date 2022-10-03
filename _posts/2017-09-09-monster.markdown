@@ -88,3 +88,27 @@ These works fall under the category of contextual bandits with side information 
     </ul>
   </li>
 </ol>
+<strong>2011: The Exp4.p Algorithm by Beygelzimer et al </strong>
+<ol>
+  <li>
+    <strong>Problem setting:</strong>
+      <ul>
+        <li>The bandit is adversarial.</li>
+        <li>The environment is partially observable.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Regret Bounds:</strong>
+    <ul>
+      <li> With high probability, the algorithm guarantees that the upper bound for the expected regret is $\mathcal{O}(\sqrt{TK\log{M}})$.</li>
+      <li> In the stochastic scenario, even if the policy class may be of an infinite size but if it has a finite VC dimension $d$, then the algorithm guarantees with high probability that the expected regret is bounded by $\mathcal{O}(\sqrt{Td\log{T}})$.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Drawbacks and Scope of Improvement:</strong>
+    <ul>
+      <li> Like it's predecessor $Exp4$, the runtime is linear in $M$ in every round.</li>
+    </ul>
+  </li>
+</ol>
+  
