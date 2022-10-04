@@ -15,3 +15,6 @@ This prior knowledge of the problem is represented by a set of hypotheses called
 <br>
 <strong>Empirical Risk</strong>: Given a hpyothesis $h \in \mathcal{H}$, a target concept $f$ in concept class $F$, and a sample $S = ((x_{1}, y_{1}), (x_{2}, y_{2}), \cdots, (x_{m}, y_{m}))$, then the empirical risk of the hypothesis $h$ with respect to this sample $S$ is defined to be,
 <center>$ R_{S}(h) = \frac{1}{m} \sum_{i = 1}^{m} \mathcal{I}\{h(x_{i}) \neq c(x_{i})\}$ </center>
+The empirical risk is an unbiased estimator of the true risk.    
+
+<strong>Empirical Risk Minimization Algorithm</strong>: Given a sample $S$ and a hypothesis class $\mathcal{H}$, a learning algorithm tries to come up with a hypothesis that is supposed to be least error-prone. But since it typically has no knowledge about the distribution $\mathcal{D}$, so, an available notion of error is the empirical risk with respect to the given sample. The algorithm tries to find a hypothesis that minimizes the empirical risk in sample $S$. Such an ERM algorithm could find a hypothesis that is specially designed to minimize the empirical risk in this sample but does very poor globally because the sample may not be a good representative of the whole domain and distribution.    
