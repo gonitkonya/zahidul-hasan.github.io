@@ -1,7 +1,9 @@
 ---
 layout: post
-title: "ML Theory: PAC Learnability"
+title: "ML Theory: PAC Learnability and VC Dimensions"
 date: 2022-04-06 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: pac.jpg # Add image post (optional)
 ---
+
+<strong>Binary Classification Problem</strong>: Let's say, we have a domain $\mathcal{X}$ where each element $x = (x_{1}, x_{2}, \cdots, x_{n})$ is a $k$ size vector of features, a distribution $\mathcal{D}$ over $\mathcal{X}$, and a label set $\mathcal{Y}$ so that there exists a bijective function $f: \mathcal{X} \rightarrow \\{0, 1\\}$ such that $f(x) \in \mathcal{Y}$ for all $x \in \mathcal{X}$. We have a finite sample $S = ((x_{1}, y_{1}), (x_{2}, y_{2}), \cdots, (x_{m}, y_{m}))$ where each pair is an input output mapping from $\mathcal{X} \times \mathcal{Y}$.
