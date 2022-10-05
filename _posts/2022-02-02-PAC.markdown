@@ -40,4 +40,10 @@ Solving for $m$, we find that, $m = \frac{1}{\epsilon}(\log{|\mathcal{H}|} - \lo
 Since, $Pr[ \forall h \in \mathcal{H}, R_{\mathcal{D}}(h) \leq \epsilon | R_{S}(h) = 0 ] + Pr[\exists h \in \mathcal{H} : R_{S}(h) = 0 \wedge R_{\mathcal{D}}(h) > \epsilon] = 1$    
 So, $Pr[ \forall h \in \mathcal{H}, R_{\mathcal{D}}(h) \leq \epsilon | R_{S}(h) = 0 ] \geq 1 - \delta$ for $m_{\mathcal{H}}(\epsilon,\delta) = \frac{1}{\epsilon}(\log{|\mathcal{H}|} - \log{\delta})$     
 <br>
-       
+<strong>Scopes of Generalization:</strong> 
+<ul>
+       <li>Hypothesis class $\mathcal{H}$ may not contain the target concept $c$. So, we may waive the realizability assumption.</li>   
+       <li>There may not even be a deterministic concept $c$ at all. The concept we are trying to learn could be stochastic. So instead of using a deterministic function $c$, we may want to zip the dataset $\mathcal{X}$ and the label set $\mathcal{Y}$ together as $\mathcal{Z} = \mathcal{X} \times \mathcal{Y}$</li>
+       <li>We may want to generalize beyond multi-class classification. So, we need to make adjustments for all kinds of loss functions. So, if $\mathcal{l}(h,z)$ denotes the loss of hypothesis $h$ against $z$, then the true risk of a hypothesis with respect to a probability distribution $\mathcal{D}$ is $R_{\mathcal{D}}(h) = \mathbb{E}_{z \sim \mathcal{D}}[\mathcal{l}(h,z)]$</li>
+</ul>
+<br>       
