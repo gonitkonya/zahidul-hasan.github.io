@@ -23,7 +23,7 @@ The empirical risk is an unbiased estimator of the true risk. A hypothesis $h$ i
 <br>
 <strong>The Realizability Assumption</strong>: It is the assumption that the concept $c$ we are trying to learn is contained in $\mathcal{H}$. So, $c$ will be consistent with any sample $S$ drawn from the distribution.
 <br>
-<strong>Learning Guarantees for Finite Hypothesis Classes with Realizability Assumption:</strong> Suppose, $\mathcal{H}$ is a finite hypothesis class that contains the target concept $c$, then for any $\delta > 0$ and $\epsilon > 0$, for a sample dataset $S$ with size $m \geq \frac{1}{\epsilon}(\log{|H|} - \log{\delta})$, then for any learning algorithm $\mathcal{A}$ that returns a consistent hypothesis, it can be said with confidence at least $1 - \delta$ that $\mathcal{A}$ will return a  hypothesis $h_{S}$ so that, $R_{\mathcal{D}}(h_{S}) \leq \epsilon$.  
+<strong>Learning Guarantees for Finite Hypothesis Classes with Realizability Assumption:</strong> Suppose, $\mathcal{H}$ is a finite hypothesis class that contains the target concept $c$, then for any $\delta > 0$ and $\epsilon > 0$ and any sample dataset $S$ with size $m \geq \frac{1}{\epsilon}(\log{|H|} - \log{\delta})$ and any learning algorithm $\mathcal{A}$ that returns a consistent hypothesis, it can be said with confidence at least $1 - \delta$ that $\mathcal{A}$ will return a  hypothesis $h_{S}$ so that, $R_{\mathcal{D}}(h_{S}) \leq \epsilon$.  
 <br>
 <strong>Proof:</strong> Let's find the probability of the bad event where there exists a hypothesis that is consistent with the training sample but has error greater than $\epsilon$ in the true error.   
 <center> $Pr[\exists h \in \mathcal{H} : R_{S}(h) = 0 \wedge R_{\mathcal{D}}(h) > \epsilon]$ </center>
