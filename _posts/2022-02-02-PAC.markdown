@@ -21,7 +21,7 @@ The empirical risk is an unbiased estimator of the true risk. A hypothesis $h$ i
 <br>
 <strong> ERM with Inductive Bias</strong>: With some prior knowledge of the problem, we could construct $\mathcal{H}$ in such a way that, it doesn't lead to overfitting. The sample could be misleading. But by being biased to a set of hypotheses that were constructed without knowing the sample, we increase the chance of better learning.   
 <br>
-<strong>The Realizability Assumption</strong>: It is the assumption that the concept $c$ we are trying to learn is contained in $\mathcal{H}$. So, $c$ will be consistent with any sample $S$ drawn from the distribution.
+<strong>The Realizability Assumption</strong>: It is the assumption that the concept $c$ we are trying to learn is contained in $\mathcal{H}$. So, $c$ will be consistent with any sample $S$ drawn from the distribution.    
 <br>
 <strong>Learning Guarantees for Finite Hypothesis Classes with Realizability Assumption:</strong> Suppose, $\mathcal{H}$ is a finite hypothesis class that contains the target concept $c$, then for any $\delta > 0$ and $\epsilon > 0$ and any sample dataset $S$ with size $m \geq \frac{1}{\epsilon}(\log{|H|} - \log{\delta})$ and any learning algorithm $\mathcal{A}$ that returns a consistent hypothesis, it can be said with confidence at least $1 - \delta$ that $\mathcal{A}$ will return a  hypothesis $h_{S}$ so that, $R_{\mathcal{D}}(h_{S}) \leq \epsilon$.  
 <br>
@@ -34,6 +34,7 @@ The empirical risk is an unbiased estimator of the true risk. A hypothesis $h$ i
 <center> $= |H| (1 - \epsilon)^{m} = \delta $</center>
 Solving for $m$, we find that, $m = \frac{1}{\epsilon}(\log{|\mathcal{H}|} - \log{\delta})$,    
 Since, $Pr[ \forall h \in \mathcal{H}, R_{\mathcal{D}}(h) \leq \epsilon | R_{S}(h) = 0 ] + Pr[\exists h \in \mathcal{H} : R_{S}(h) = 0 \wedge R_{\mathcal{D}}(h) > \epsilon] = 1$    
-So, $Pr[ \forall h \in \mathcal{H}, R_{\mathcal{D}}(h) \leq \epsilon | R_{S}(h) = 0 ] \geq 1 - \delta$    
+So, $Pr[ \forall h \in \mathcal{H}, R_{\mathcal{D}}(h) \leq \epsilon | R_{S}(h) = 0 ] \geq 1 - \delta$      
+<br>
 <strong>PAC Learning:</strong> A concept class $\mathcal{C}$ is said to be <strong>PAC-learnable</strong> if there exists an algorithm $\mathcal{A}$ which for any $\epsilon > 0$ and $\delta > 0$, returns a hypothesis $h_{S}$ from a hypothesis class $\mathcal{H}$ so that with at least $1-\delta$ confidence we can say that $R_{\mathcal{D}}(h_{S}) \leq \epsilon$ if it's run on any sample of size $m$ where $m_{\mathcal{H}}$ is a polynomial function and $m \geq m_{\mathcal{H}}(\epsilon, \delta)$ and if  $\mathcal{H}$ contains the target concept $c$.    
 We say, that $h_{S}$ is probably correct because the confidence $1-\delta$ can be close to one for near $0$ values of $\delta$ and it's approximately correct because the error is less than $\epsilon$.    
