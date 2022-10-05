@@ -67,4 +67,8 @@ for $m_{\mathcal{H}}(\epsilon, \delta) = \frac{\log{\frac{2|\mathcal{H}|}{\delta
 <br>
 <strong>Generalization bound - All Hypothesis:</strong> For a hypothesis set $\mathcal{H}$, the following inequality holds with probability at least $1 - \delta$ for all $h$:         
 <center>$R_{\mathcal{D}}(h) \leq R_{\mathcal{S}}(h) + \sqrt{\frac{\log{\frac{2|\mathcal{H}|}{\delta}}}{2m}}$ </center>
-
+<br>
+<strong>Estimation and Approximation Error:</strong> Let's say, there exists a hypothesis $h^{*}$ which may or may not be present in $\mathcal{H}$ that incurs the lowest risk, then the relative loss of a hypothesis $h$ is given by,    
+<center>$R_{\mathcal{D}}(h) - R_{\mathcal{D}}(h^{*}) =  (R_{\mathcal{D}}(h) - R_{\mathcal{D}}(\bar h)) + (R_{\mathcal{D}}(\bar h) - R_{\mathcal{D}}(h^{*}))$ </center>    
+Where $\bar h$ is the best hypothesis in $\mathcal{H}$ that minimizes the true error.     
+The first summand on the right hand side is called <strong>estimation error</strong> and the second summand is called <strong>approximation error</strong>.
