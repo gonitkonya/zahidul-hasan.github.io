@@ -59,6 +59,7 @@ So, instead we can show that,
 But since, $\mathbb{E}[R_{S}(h)] = R_{\mathcal{D}}(h)$, so, using <a href = "https://en.wikipedia.org/wiki/Hoeffding%27s_inequality">Hoeffding's Inequality</a>, we get,    
 <center>$Pr[{|R_{S}(h) - R_{\mathcal{D}}(h)| > \epsilon} ] \leq 2 e^{-2m\epsilon^{2}}$</center>
 So,  
-<center>$Pr[\exists h \in \mathcal{H}: |R_{S}(h) - R_{\mathcal{D}}(h)| > \epsilon] \leq 2 |\mathcal{H}| e^{2m\epsilon^{2}}$</center>
+<center>$Pr[\exists h \in \mathcal{H}: |R_{S}(h) - R_{\mathcal{D}}(h)| > \epsilon] \leq 2 |\mathcal{H}| e^{2m\epsilon^{2}} = \delta$</center>    
+for $m_{\mathcal{H}}(\epsilon, \delta) = \frac{\log{\frac{2|\mathcal{H}|}{\delta}}}{2\epsilon^{2}}$.
 
 
