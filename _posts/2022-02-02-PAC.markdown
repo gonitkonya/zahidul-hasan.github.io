@@ -33,5 +33,5 @@ The empirical risk is an unbiased estimator of the true risk. A hypothesis $h$ i
 <center> \leq \sum_{h \in \mathcal{H}}^{} (1 - \epsilon)^{m} </center>
 <center> = |H| (1 - \epsilon)^{m} = \delta</center>
 Solving for $m$, we find that, $m = \frac{1}{\epsilon}(\log{\mathcal{H}} - \log{\delta})$,    
-Since, $Pr[ \forall h, R_{\mathcal{D}}(h) \leq \epsilon | R_{S}(h) = 0 ] + Pr[\exists h \in \mathcal{H} : R_{S}(h) = 0 \wedge R_{\mathcal{D}}(h) > \epsilon] = 1$    
-So, $Pr[ \forall h, R_{\mathcal{D}}(h) \leq \epsilon | R_{S}(h) = 0 ] \geq 1 - \delta$
+Since, $Pr[ \forall h \in \mathcal{H}, R_{\mathcal{D}}(h) \leq \epsilon | R_{S}(h) = 0 ] + Pr[\exists h \in \mathcal{H} : R_{S}(h) = 0 \wedge R_{\mathcal{D}}(h) > \epsilon] = 1$    
+So, $Pr[ \forall h \in \mathcal{H}, R_{\mathcal{D}}(h) \leq \epsilon | R_{S}(h) = 0 ] \geq 1 - \delta$
