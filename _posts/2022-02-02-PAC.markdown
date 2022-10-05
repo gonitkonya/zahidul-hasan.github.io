@@ -63,6 +63,6 @@ So,
 for $m_{\mathcal{H}}(\epsilon, \delta) = \frac{\log{\frac{2|\mathcal{H}|}{\delta}}}{2\epsilon^{2}}$.
 
 <strong>Generalization bound:</strong> For a hypothesis $h \in \mathcal{H}$, the following inequality holds with probability at least $1 - \delta$:    
-<center>$R_{\mathcal{D}}(h) \leq R_{\mathcal{D}}(h) + \sqrt{\frac{\log{\frac{2}{\delta}}}{2m}}$ </center>
+<center>$R_{\mathcal{D}}(h) \leq R_{\mathcal{S}}(h) + \sqrt{\frac{\log{\frac{2}{\delta}}}{2m}}$ </center>
 
 
