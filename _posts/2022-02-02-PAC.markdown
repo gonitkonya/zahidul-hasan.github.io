@@ -65,6 +65,6 @@ for $m_{\mathcal{H}}(\epsilon, \delta) = \frac{\log{\frac{2|\mathcal{H}|}{\delta
 <strong>Generalization bound - Fixed Hypothesis:</strong> For a hypothesis $h \in \mathcal{H}$, the following inequality holds with probability at least $1 - \delta$:    
 <center>$R_{\mathcal{D}}(h) \leq R_{\mathcal{S}}(h) + \sqrt{\frac{\log{\frac{2}{\delta}}}{2m}}$ </center>
 <br>
-<strong>Generalization bound - Fixed Hypothesis:</strong> For a hypothesis set $\mathcal{H}$, the following inequality holds with probability at least $1 - \delta for all $h$:         
+<strong>Generalization bound - All Hypothesis:</strong> For a hypothesis set $\mathcal{H}$, the following inequality holds with probability at least $1 - \delta for all $h$:         
 <center>$R_{\mathcal{D}}(h) \leq R_{\mathcal{S}}(h) + \sqrt{\frac{\log{\frac{2|\mathcal{H}|}{\delta}}}{2m}}$ </center>
 
