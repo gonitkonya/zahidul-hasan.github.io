@@ -61,8 +61,10 @@ But since, $\mathbb{E}[R_{S}(h)] = R_{\mathcal{D}}(h)$, so, using <a href = "htt
 So,  
 <center>$Pr[\exists h \in \mathcal{H}: |R_{S}(h) - R_{\mathcal{D}}(h)| > \epsilon] \leq 2 |\mathcal{H}| e^{-2m\epsilon^{2}} = \delta$</center>    
 for $m_{\mathcal{H}}(\epsilon, \delta) = \frac{\log{\frac{2|\mathcal{H}|}{\delta}}}{2\epsilon^{2}}$.
-
-<strong>Generalization bound:</strong> For a hypothesis $h \in \mathcal{H}$, the following inequality holds with probability at least $1 - \delta$:    
+<br>
+<strong>Generalization bound - Fixed Hypothesis:</strong> For a hypothesis $h \in \mathcal{H}$, the following inequality holds with probability at least $1 - \delta$:    
 <center>$R_{\mathcal{D}}(h) \leq R_{\mathcal{S}}(h) + \sqrt{\frac{\log{\frac{2}{\delta}}}{2m}}$ </center>
-
+<br>
+<strong>Generalization bound - Fixed Hypothesis:</strong> For a hypothesis set $\mathcal{H}$, the following inequality holds with probability at least $1 - \delta for all $h$:         
+<center>$R_{\mathcal{D}}(h) \leq R_{\mathcal{S}}(h) + \sqrt{\frac{\log{\frac{2|\mathcal{H}|}{\delta}}}{2m}}$ </center>
 
