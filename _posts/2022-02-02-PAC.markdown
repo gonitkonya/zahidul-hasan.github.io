@@ -15,6 +15,23 @@ This prior knowledge of the problem is represented by a set of hypotheses called
 <br>
 <strong>Empirical Risk</strong>: Given a hpyothesis $h \in \mathcal{H}$, a target concept $f$ in concept class $F$, and a sample $S = ((x_{1}, y_{1}), (x_{2}, y_{2}), \cdots, (x_{m}, y_{m}))$, then the empirical risk of the hypothesis $h$ with respect to this sample $S$ is defined to be,
 <center>$ R_{S}(h) = \frac{1}{m} \sum_{i = 1}^{m} \mathcal{I}\{h(x_{i}) \neq c(x_{i})\}$ </center>
-The empirical risk is an unbiased estimator of the true risk.    
+The empirical risk is an unbiased estimator of the true risk. A hypothesis $h$ is said to be <strong>consistent</strong> with a sample $S$ if $R_{S}(h) = 0$.    
 <br>
-<strong>Empirical Risk Minimization Algorithm</strong>: Given a sample $S$ and a hypothesis class $\mathcal{H}$, a learning algorithm tries to come up with a hypothesis that is supposed to be least error-prone. But since it typically has no knowledge about the distribution $\mathcal{D}$, so, an available notion of error is the empirical risk with respect to the given sample. The algorithm tries to find a hypothesis that minimizes the empirical risk in sample $S$. Such an ERM algorithm could find a hypothesis that is specially designed to minimize the empirical risk in this sample but does very poor globally because the sample may not be a good representative of the whole domain and distribution.    
+<strong>Empirical Risk Minimization Algorithm</strong>: Given a sample $S$ and a hypothesis class $\mathcal{H}$, a learning algorithm tries to come up with a hypothesis that is supposed to be least error-prone. But since it typically has no knowledge about the distribution $\mathcal{D}$, so, an available notion of error is the empirical risk with respect to the given sample. The algorithm tries to find a hypothesis that minimizes the empirical risk in sample $S$. Such an ERM (Empirical Risk Minimization) algorithm could find a hypothesis that is specially designed to minimize the empirical risk in this sample but does very poor globally because the sample may not be a good representative of the whole domain and distribution.      
+<br>
+<strong> ERM with Inductive Bias</strong>: With some prior knowledge of the problem, we could construct $\mathcal{H}$ in such a way that, it doesn't lead to overfitting. The sample could be misleading. But by being biased to a set of hypotheses that were constructed without knowing the sample, we increase the chance of better learning.   
+<br>
+<strong>The Realizability Assumption</strong>: It is the assumption that the concept $c$ we are trying to learn is contained in $\mathcal{H}$. So, $c$ will be consistent with any sample $S$ drawn from the distribution.
+<br>
+<strong>Learning Guarantees for Finite Hypothesis Classes with Realizability Assumption</strong> Suppose, $\mathcal{H}$ is a finite hypothesis class that contains the target concept $c$, then for any $\delta > 0$ and $\epsilon > 0$, if $m \geq \frac{1}{\epsilon}(\log{|H|} - \log{\delta})$, then it can be said with confidence at least $1 - \delta$ that any learning algorithm $\mathcal{A}$ will return a consistent hypothesis $h_{S}$ so that, $R_{\mathcal{D}}(h_{S}) \geq \epsilon$.  
+<br>
+<strong>Proof:</strong> Let's find the probability of the bad event where there exists a hypothesis that is consistent with the training sample but has error greater than $\epsilon$ in the true error.   
+<center> Pr[\exists h \in \mathcal{H} : R_{S}(h) = 0 \wedge R_{\mathcal{D}}(h) > \epsilon] </center>
+<center> = Pr[\bigcup\limits_{h \in \mathcal{H}}^{} (R_{S}(h) = 0 \wedge R_{\mathcal{D}}(h) > \epsilon)] </center>
+<center> \leq \sum_{h \in \mathcal{H}}^{} Pr[(R_{S}(h) = 0 \wedge R_{\mathcal{D}}(h) > \epsilon)] </center>
+<center> \leq \sum_{h \in \mathcal{H}}^{} Pr[(R_{S}(h) = 0 | R_{\mathcal{D}}(h) > \epsilon)] </center>
+<center> \leq \sum_{h \in \mathcal{H}}^{} (1 - \epsilon)^{m} </center>
+<center> = |H| (1 - \epsilon)^{m} = \delta</center>
+Solving for $m$, we find that, $m = \frac{1}{\epsilon}(\log{\mathcal{H}} - \log{\delta})$,    
+Since, $Pr[ \forall h, R_{\mathcal{D}}(h) \leq \epsilon | R_{S}(h) = 0 ] + Pr[\exists h \in \mathcal{H} : R_{S}(h) = 0 \wedge R_{\mathcal{D}}(h) > \epsilon] = 1$    
+So, $Pr[ \forall h, R_{\mathcal{D}}(h) \leq \epsilon | R_{S}(h) = 0 ] \geq 1 - \delta$
