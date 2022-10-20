@@ -15,11 +15,11 @@ img: rishi.jpg # Add image post (optional)
 <ul>
   <li>
     Assignments
-<ul>
-  <li><a href = "https://drive.google.com/file/d/15t7PiSGSztp7NHsWV9Tfd0cj3X43E6Gh/view?usp=sharing"> Assignment 1 <a/></li>
- </ul>
+    <ul>
+      <li><a href = "https://drive.google.com/file/d/15t7PiSGSztp7NHsWV9Tfd0cj3X43E6Gh/view?usp=sharing"> Assignment 1 </a></li>
+    </ul>
   </li>
-  </ul>
+</ul>
 
 <strong style="color:blue;"> CSE426: Advanced Algorithms </strong>   
 <strong>Contents</strong>: String Matching Algorithms: Rabin Karp Hashing, String Matching Automaton, Knuth Morris Pratt, Polynomials: Polynomial Interpolation, Fast Fourier Transformation, Computational Geometry: Segment Segment Intersection, Graham's Scan, Jarvis's March, Closest Pair of Points, Voronoi Diagram, Deluanay Triangulation, Computational Number Theory: Sieve of Eratosthenes, Prime Factorization, Miller-Rabin Primality Test, Pollard's, Extended Euclidean, Chinese Remainder Theorem, Flow Networks: Maximum Flow - Minimum Cut Theorem, Ford Fulkerson Method, Edmond-Karp, Matching: Hull's Theorem, Maximum Bipartite Matching, Augmenting Path Algorithm, Hungarian Algorithm, Hopcroft Karp, Edmond's Blossom. Binary Search Tree: Unbalanced BST, Red Black Tree, Segment Tree: various applications, Linear Programming: Dual Problem, Simplex and Ellipsoid Algorithms etc.    
