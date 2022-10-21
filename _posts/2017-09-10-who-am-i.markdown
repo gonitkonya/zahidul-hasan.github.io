@@ -7,11 +7,11 @@ img: zadid.jpg # Add image post (optional)
 tags: #[Js, Conference] # add tag
 ---
 
-I am a <span style="color:blue;">lecturer</span> in the Department of Computer Science and Engineering at <strong style="color:blue;">BRAC University, Bangladesh</strong>. I have graduated from the Department of Computer Science of <strong style="color:blue;">Dhaka University, Bangladesh</strong>. Before that, in a past life, I had the good fortune of representing my country in the <strong style="color:blue;">International Mathematical Olympiad in 2013</strong> and win an honorable mention. I also won a Bronze Medal at the <strong style="color:blue;">Asian Pacific Mathematical Olympiad, 2013</strong>. I was announced the <strong style="color:blue;">National Champion of the Champions</strong> by Bangladesh Mathematical Olympiad Committee in 2011.
+I am a <span style="color:blue;">lecturer</span> in the Department of Computer Science and Engineering at <span style="color:blue;">BRAC University, Bangladesh</span>. I have graduated from the Department of Computer Science of <span style="color:blue;">Dhaka University, Bangladesh</span>. Before that, in a past life, I had the good fortune of representing my country in the <span style="color:blue;">International Mathematical Olympiad in 2013</span> and win an honorable mention. I also won a Bronze Medal at the <span style="color:blue;">Asian Pacific Mathematical Olympiad, 2013</span>. I was announced the <span style="color:blue;">National Champion of the Champions</span> by Bangladesh Mathematical Olympiad Committee in 2011.
 
-Besides teaching, I spend my time in <strong style="color:blue;">research, reading books, digital illustrations and programming</strong>. My areas of interest in research are <strong style="color:blue;">Machine Learning, Deep Learning, Reinforcement Learning and Optimization Theory</strong>. Currently, I am working on <strong style="color:blue;">Combinatorial Bandits</strong>. My research interests also span <strong style="color:blue;">Representation Learning</strong> topics such as <strong style="color:blue;">Graph Representation Learning</strong>.
+Besides teaching, I spend my time in <span style="color:blue;">research, reading books, digital illustrations and programming</span>. My areas of interest in research are <span style="color:blue;">Machine Learning, Deep Learning, Reinforcement Learning and Optimization Theory</span>. Currently, I am working on <span style="color:blue;">Combinatorial Bandits</span>. My research interests also span <span style="color:blue;">Representation Learning</span> topics such as <span style="color:blue;">Graph Representation Learning</span>.
 
-I am a student for life. I have an unquenchable thirst for knowledge. I love to read about <strong style="color:blue;">mathematics, CS, history, mythology, religion, history of religions, anthropology, philology, philosophy, fantasy novels, science fictions</strong>. I also love travelling to foreign places. I love nature and animals. I endorse open-mindedness and tolerance. 
+I am a student for life. I have an unquenchable thirst for knowledge. I love to read about <span style="color:blue;">mathematics, CS, history, mythology, religion, history of religions, anthropology, philology, philosophy, fantasy novels, science fictions</span>. I also love travelling to foreign places. I love nature and animals. I endorse open-mindedness and tolerance. 
 
 
 <div class="responsive">
@@ -50,4 +50,5 @@ I am a student for life. I have an unquenchable thirst for knowledge. I love to 
     <div class="desc">I love oceans and sunsets. Felt like a higher power took me there that day.</div>
   </div>
 </div>
+
 
