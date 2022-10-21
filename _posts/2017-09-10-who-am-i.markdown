@@ -17,7 +17,7 @@ I am a student for life. I have an unquenchable thirst for knowledge. I love to 
 <div class="responsive">
   <div class="gallery">
     <a target="_blank" href="/assets/img/champ.jpg">
-      <img src="/assets/img/champ.jpg" alt="Cinque Terre" width="600" height="400">
+      <img src="/assets/img/champ.jpg" alt="Cinque Terre" width="400" height="267">
     </a>
     <div class="desc">Add a description of the image here</div>
   </div>
@@ -27,7 +27,7 @@ I am a student for life. I have an unquenchable thirst for knowledge. I love to 
 <div class="responsive">
   <div class="gallery">
     <a target="_blank" href="/assets/img/colombia.jpg">
-      <img src="/assets/img/colombia.jpg" alt="Forest" width="600" height="400">
+      <img src="/assets/img/colombia.jpg" alt="Forest" width="400" height="267">
     </a>
     <div class="desc">Add a description of the image here</div>
   </div>
@@ -36,7 +36,7 @@ I am a student for life. I have an unquenchable thirst for knowledge. I love to 
 <div class="responsive">
   <div class="gallery">
     <a target="_blank" href="/assets/img/contest.jpg">
-      <img src="/assets/img/contest.jpg" alt="Northern Lights" width="600" height="400">
+      <img src="/assets/img/contest.jpg" alt="Northern Lights" width="400" height="267">
     </a>
     <div class="desc">Add a description of the image here</div>
   </div>
@@ -45,7 +45,7 @@ I am a student for life. I have an unquenchable thirst for knowledge. I love to 
 <div class="responsive">
   <div class="gallery">
     <a target="_blank" href="/assets/img/champ.jpg">
-      <img src="/assets/img/champ.jpg" alt="Mountains" width="600" height="400">
+      <img src="/assets/img/champ.jpg" alt="Mountains" width="400" height="267">
     </a>
     <div class="desc">Add a description of the image here</div>
   </div>
