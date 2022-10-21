@@ -31,7 +31,15 @@ img: rishi.jpg # Add image post (optional)
 
 <strong style="color:blue;"> MAT324: Graph Theory </strong>     
 <strong>Contents</strong>: Almost the same as CSE708 but this course is more proof oriented and overly mathematical.     
-
+<strong style="color:blue;"> Course Materials </strong>
+<ul>
+  <li>
+    Video Lectures:
+    <ul>
+      <li> <a href = "https://www.youtube.com/playlist?list=PLJrAoMb_npBEn0F0j1WVoTN-3MLnLKDPm"> Playlist Link </a></li>
+    </ul>
+  </li>
+  </ul>
 
 <strong style="color:blue;"> MAT216: Linear Algebra and Fourier Analysis </strong>    
 <strong>Contents</strong>: Linear Algebra: Basic subject on matrix theory and linear algebra, emphasizing topics useful in other discipline, including systems of equations, vector spaces, determinants, Eigenvalues, similarity, and positive definite matrices, Applications to Gauss elimination with pivoting. Fourier Analysis: Real and complex form. Finite transform. Fourier integral. Fourier transforms and their uses in solving boundary value problems. Multiple integrals; surface and volume integrals, divergence and Stoke's theorem     
