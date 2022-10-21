@@ -42,4 +42,15 @@ img: rishi.jpg # Add image post (optional)
 
 
 <strong style="color:blue;"> CSE220: Data Structures </strong>    
-<strong>Contents</strong>: Introduction to widely used and effective methods of data organisation, focussing on data structures, their algorithms and the performance of these algorithms. Concepts and examples, elementary data objects, elementary data structures, arrays, lists, stacks, queues, graphs, trees, compound structures, data abstraction and primitive operations on these structures. memory management; sorting and searching; hash techniques; Introduction to the fundamental algorithms and data structures: recursion, backtrack search, lists, stacks, queues, trees, operation on sets, priority queues, graph dictionary.    
+<strong>Contents</strong>: Introduction to widely used and effective methods of data organisation, focussing on data structures, their algorithms and the performance of these algorithms. Concepts and examples, elementary data objects, elementary data structures, arrays, lists, stacks, queues, graphs, trees, compound structures, data abstraction and primitive operations on these structures. memory management; sorting and searching; hash techniques; Introduction to the fundamental algorithms and data structures: recursion, backtrack search, lists, stacks, queues, trees, operation on sets, priority queues, graph dictionary.   
+
+<strong style="color:blue;"> Course Materials </strong>
+<ul>
+  <li>
+    Python Animated Video Lectures:
+    <ul>
+      <li> <a href = "https://www.youtube.com/playlist?list=PLJrAoMb_npBFfjd-HXCHgMZJOZE3WgchF"> Playlist Link </a></li>
+    </ul>
+  </li>
+  </ul>
+  
