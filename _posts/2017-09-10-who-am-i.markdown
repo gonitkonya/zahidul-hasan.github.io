@@ -12,3 +12,42 @@ I am a <strong style="color:blue;">lecturer</strong> in the Department of Comput
 Besides teaching, I spend my time in <strong style="color:blue;">research, reading books, digital illustrations and programming</strong>. My areas of interest in research are <strong style="color:blue;">Machine Learning, Deep Learning, Reinforcement Learning and Optimization Theory</strong>. Currently, I am working on <strong style="color:blue;">Combinatorial Bandits</strong>. My research interests also span <strong style="color:blue;">Representation Learning</strong> topics such as <strong style="color:blue;">Graph Representation Learning</strong>.
 
 I am a student for life. I have an unquenchable thirst for knowledge. I love to read about <strong style="color:blue;">mathematics, CS, history, mythology, religion, history of religions, anthropology, philology, philosophy, fantasy novels, science fictions</strong>. I also love travelling to foreign places. I love nature and animals. I endorse open-mindedness and tolerance. 
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="/assets/img/nex.jpg">
+      <img src="/assets/img/nex.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="/assets/img/nex.jpg">
+      <img src="/assets/img/nex.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="/assets/img/nex.jpg">
+      <img src="/assets/img/nex.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="/assets/img/nex.jpg">
+      <img src="/assets/img/nex.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
