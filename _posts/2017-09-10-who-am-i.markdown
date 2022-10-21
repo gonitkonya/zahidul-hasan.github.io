@@ -19,7 +19,7 @@ I am a student for life. I have an unquenchable thirst for knowledge. I love to 
     <a target="_blank" href="/assets/img/champ.jpg">
       <img src="/assets/img/champ.jpg" alt="Cinque Terre" width="400" height="267">
     </a>
-    <div class="desc">With my friends after winning at Bangladesh Mathematical Olympiad.</div>
+    <div class="desc">With my friends after winning at Bangladesh Mathematical Olympiad in February, 2011.</div>
   </div>
 </div>
 
@@ -47,7 +47,7 @@ I am a student for life. I have an unquenchable thirst for knowledge. I love to 
     <a target="_blank" href="/assets/img/ocean.jpg">
       <img src="/assets/img/ocean.jpg" alt="Mountains" width="400" height="267">
     </a>
-    <div class="desc">I love oceans and sunsets.</div>
+    <div class="desc">I love oceans and sunsets. Felt like a higher power took me there that day.</div>
   </div>
 </div>
 
