@@ -6,5 +6,3 @@ description: You’ll find this post in your `_posts` directory. Go ahead and ed
 img: resume.jpeg # Add image post (optional)
 ---
 <embed src="/assets/pdfs/CV.pdf" width="800px" height="2100px" />
-<iframe src="https://drive.google.com/file/d/1LfS4PTuLZQBZX-Xp0sTLAHNNq62wpuMF/preview" width="900" height="1100" allow="autoplay"></iframe>
-<object data="https://github.com/Zahidul-Hasan/zahidul-hasan.github.io/tree/master/assets/pdfs/CV.pdf" width="1000" height="1000" type='application/pdf'></object>
