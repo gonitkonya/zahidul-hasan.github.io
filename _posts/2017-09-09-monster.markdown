@@ -90,7 +90,7 @@ These works fall under the category of contextual bandits with side information 
         <center>$p(a) = (1-\lambda) \bar p(a) + \frac{\lambda}{M} \sum_{i}^{} e_{i}(a)$</center>
       </li>
       <li> <p> Yet, another variant is called $LP_{mix}(\alpha)$:</p>
-        <img src="/assets/img/lpmix.jpg" alt="lp subroutine" width="500" height="600">
+        <img src="/assets/img/lpmix.jpg" alt="lp subroutine" width="500" height="300">
       </li>
     </ul>
   </li>
