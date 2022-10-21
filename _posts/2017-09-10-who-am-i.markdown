@@ -47,7 +47,7 @@ I am a student for life. I have an unquenchable thirst for knowledge. I love to 
     <a target="_blank" href="/assets/img/ocean.jpg">
       <img src="/assets/img/ocean.jpg" alt="Mountains" width="400" height="267">
     </a>
-    <div class="desc">I love oceans and sunsets. Felt like a higher power took me there that day.</div>
+    <div class="desc">I love oceans and sunsets. Felt like a higher power took me there that day. I'm grateful. </div>
   </div>
 </div>
 
