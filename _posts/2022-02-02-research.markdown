@@ -6,3 +6,25 @@ description: You’ll find this post in your `_posts` directory. Go ahead and ed
 img: research.jpg # Add image post (optional)
 ---
 Broadly, I am interested in almost everything that ends with "learning", for example, Machine Learning, Deep Learning, Reinforcement Learning, Representation Learning etc. But my keen focus is in the domain of Reinforcement Learning. To be more specific, I am currently working on the Multi Armed Bandit(MAB) problem. I want to find an efficient algorithm for the Contextual MAB problem in both segmented non-stationary environments and continuously changing environments. And also, I am interested in finding an optimization-oracle-based efficient algorithm for the contextual bandit problem.
+
+
+<ul>
+  <li>Machine Learning</li>
+  <li>Deep Learning</li>
+  <ul>
+    <li>Monte Carlo Methods</li>
+    <li>Deep Generative Models</li>
+    <li>Graph Representation Learning</li>
+  </ul>
+  <li>Reinforcement Learning</li>
+   <ul>
+     <li>Fully and Partially Observable Markov Decision Processes</li>
+     <li>Multi Armed Bandits</li>
+     <ul>
+       <li>Contextual Bandits in adversarial non-stationary environments</li>
+       <li>Bayesian Bandits and Thompson Sampling</li>
+     </ul>
+  </ul>
+  <li>Convex Optimization</li>
+</ul>
+  
