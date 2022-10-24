@@ -8,5 +8,12 @@ fig-caption: The Amazing Thomas Bayes# Add figcaption (optional)
 tags: [Holidays, Hawaii]
 ---
 
-A policy that performs very well in a particular environment may perform very poorly in another adversarially chosen environment. In reality, the environments are unknown. So, we need a policy that performs good in all environments in average. If a policy that performs worse than another policy in at least one environment and never performs better than the other policy in other environments, then the first policy is said to be <strong>dominated</strong> by the second policy. A policy that isn't dominated by any other policy is called an <strong>admissible</strong> or <strong>pareto optimal</strong> policy. There may be lots of admissible policies. One of them is the <strong> Minimax Policy </strong> that minimizes the worst regret across all environments. It belongs to the following set:
-<center>$argmin_{\pi} sup_{\epsilon} R(\pi, \epsilon)$ </center> 
+A policy that performs very well in a particular bandit may perform very poorly in another adversarially chosen bandit. In reality, the bandits are unknown. So, we need a policy that performs good in all bandits in average. If a policy that performs worse than another policy in at least one bandit and never performs better than the other policy in other bandits, then the first policy is said to be <strong>dominated</strong> by the second policy. A policy that isn't dominated by any other policy is called an <strong>admissible</strong> or <strong>pareto optimal</strong> policy. There may be lots of admissible policies. One of them is the <strong> Minimax Policy </strong> that minimizes the worst regret across all bandits. It belongs to the following set:
+<center>$\arg \min_{\pi} \sup_{v \in \epsilon} R(\pi, v)$ </center> 
+Where, $R(\pi, \epsilon)$ is the regret of policy $\pi$ in bandit $v$. 
+But this policy may have a high regret on average. So, let's explicitly go for what we explicitly want. A policy that performs better on average than the others. The Bayesian optimal policy. When the environment $\epsilon$ is finite, it belongs to the following set:
+
+<center>$\arg \min_{\pi} \sum_{v \in \epsilon} \mathcal{P}(v) R(\pi,v))$ </center>
+
+<strong>Frequentist vs Bayesian Statistics: </strong>
+
