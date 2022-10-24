@@ -16,4 +16,3 @@ But this policy may have a high regret on average. So, let's explicitly go for w
 <center>$\arg \min_{\pi} \sum_{v \in \epsilon} \mathcal{P}(v) R(\pi,v)$ </center>
 
 <strong>Frequentist vs Bayesian Statistics: </strong>
-
