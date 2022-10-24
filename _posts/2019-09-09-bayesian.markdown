@@ -1,9 +1,12 @@
 ---
 layout: post
-title: "Bayesian Bandits: Thompson Sampling"
+title: "Bayesian Bandits: Conjugate Priors"
 date: 2022-08-23 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: bayes.jpg # Add image post (optional)
 fig-caption: The Amazing Thomas Bayes# Add figcaption (optional)
 tags: [Holidays, Hawaii]
 ---
+
+A policy that performs very well in a particular environment may perform very poorly in another adversarially chosen environment. In reality, the environments are unknown. So, we need a policy that performs good in all environments in average. If a policy that performs worse than another policy in at least one environment and never performs better than the other policy in other environments, then the first policy is said to be <strong>dominated</strong> by the second policy. A policy that isn't dominated by any other policy is called an <strong>admissible</strong> or <strong>pareto optimal</strong> policy. There may be lots of admissible policies. One of them is the <strong> Minimax Policy </strong> that minimizes the worst regret across all environments. It belongs to the following set:
+<center>$argmin_{\pi} sup_{\epsilon} R(\pi, \epsilon)$ </center> 
