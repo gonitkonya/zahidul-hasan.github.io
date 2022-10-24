@@ -13,6 +13,6 @@ A policy that performs very well in a particular bandit may perform very poorly 
 Where, $R(\pi, \epsilon)$ is the regret of policy $\pi$ in bandit $v$. 
 But this policy may have a high regret on average. So, let's explicitly go for what we explicitly want. A policy that performs better on average than the others. The <strong>Bayesian optimal policy</strong>. When the environment $\epsilon$ is finite, it belongs to the following set:
 
-<center>$\arg \min_{\pi} \sum_{v \in \epsilon} \mathcal{P}(v) R(\pi,v)$ </center>
+<center>$\arg \min_{\pi} \sum_{v \in \epsilon} \mathbb{P}(v) R(\pi,v)$ </center>
 
 <strong>Frequentist vs Bayesian Statistics: </strong>
