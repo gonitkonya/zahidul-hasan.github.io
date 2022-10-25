@@ -19,7 +19,7 @@ But this policy may have a high regret on average. So, let's explicitly go for w
 Initially, without any experiment, we can assume that, $Pr(p=x)$ is a uniform distribution for all values of $x$.    
 So, <center>$Pr(p = x | E)  = \frac{Pr(E|p = x)}{\int_{0}^{1} Pr(E|p = x)dx}$</center>.   
 It kind of makes sense, because the maximum likelihood estimate of $x$ will maximize the value of $Pr(p = x|E)$ which it should.    
-Now, We know that, $Pr(E | p = x) = x^{6} (1-x)^{3}$ but, we can replace E = "HTHHTHHHT" with a larger event called $\bar E = \{a = 6, b = 3\}$ where $a$ is the number of heads and $b$ is the number of tails. In that case,     
+Now, We know that, $Pr(E | p = x) = x^{6} (1-x)^{3}$ but, we can replace E = "HTHHTHHHT" with a larger event called $\bar E = (a = 6, b = 3)$ where $a$ is the number of heads and $b$ is the number of tails. In that case,     
 <center>$Pr(\bar E | p = x) = \binom{a+b}{a} x^{a} (1-x)^{b}$</center>      
 So, <center>$Pr(p = x | \bar E)  = \frac{Pr(\bar E |p = x)}{\int_{0}^{1} Pr(\bar E|p = x)dx} = \frac{\binom{a+b}{a} x^{a} (1-x)^{b}}{\int_{0}^{1} \binom{a+b}{a} x^{a} (1-x)^{b}dx} = \frac{x^{a} (1-x)^{b}}{\int_{0}^{1} x^{a} (1-x)^{b}dx}$.</center>    
 So, <center>$Pr(p = x | a = 6, b = 3) = \frac{x^{6} (1-x)^{3}}{\int_{0}^{1} x^{6} (1-x)^{3}dx}$</center>.   
