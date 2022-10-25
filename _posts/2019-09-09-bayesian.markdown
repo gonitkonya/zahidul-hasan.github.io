@@ -30,8 +30,8 @@ Or more generally, <center>$Pr(x | a, b) = \frac{x^{a} (1-x)^{b}}{\int_{0}^{1} x
 <strong>Variance:</strong> $\sigma^{2} = \frac{\alpha\beta}{(\alpha + \beta)^{2}(\alpha + \beta + 1)}$    
 
 <img src = "/assets/img/beta1.jpg" height = "50%" width = "50%" style = "display: block; margin-left: auto; margin-right: auto;">
-<img src = "/assets/img/beta2.jpg" height = "50%" width = "50%" class = "center">
-<img src = "/assets/img/beta3.jpg" height = "50%" width = "50%" class = "center">     
+<img src = "/assets/img/beta2.jpg" height = "50%" width = "50%" style = "display: block; margin-left: auto; margin-right: auto;">
+<img src = "/assets/img/beta3.jpg" height = "50%" width = "50%" style = "display: block; margin-left: auto; margin-right: auto;">     
 
 The above graphs show what happens when we change $\alpha$ by fixing $\alpha + \beta$. Notice that the graphs peak at $\frac{\alpha}{\alpha+\beta}$. 
 
