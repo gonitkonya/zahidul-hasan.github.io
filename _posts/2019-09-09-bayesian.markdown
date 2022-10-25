@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Bayesian Bandits: Conjugate Priors for Bernoulli and Gaussian Bandits"
+title: "Bayesian Bandits: Conjugate Priors for Bernoulli and Gaussian Arms"
 date: 2022-08-23 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: bayes.jpg # Add image post (optional)
@@ -37,3 +37,11 @@ If $\bar E = (\alpha, \beta)$ was the first experiement, then $Pr(p = x) = Pr(p 
 Which is also a beta distribution. If the prior and posterior are of the same distribution family, then the prior is called a conjugate prior. 
   
 <strong>Bayesianism vs Frequentism</strong>: The main difference between Bayesian and Frequentist philosophy is that in Bayesian statistics, even if 3 heads came up during 10 coin tosses, any probability from 0 to 1 is plausible. Even though, $\frac{3}{10}$ will have the maximum likelihood, $\frac{1}{2}$ too will have some non-zero likelihood. But in the case of the Frequentist perspective, we are $100\%$ sure that the probability of getting a head is $0.3$. Also, Frequentist statistics doesn't incorporate beliefs from previous experiments as priors unlike Bayesian statistics. 
+
+
+<strong>Bernoulli Arms:</strong> Suppose, we are showing ads to users. Ad number 1 was shown $\alpha + \beta$ times to people. It was clicked $\alpha$ times. In this situation, the reward is binary. Click or no click. In this case, every ad is a Bernoulli action/arm. And the Beta distribution captures this information so well. An appropriate prior distribution for this kind of arms is the Beta distribution.     
+
+
+<strong>Gaussian Arms:</strong> Most of the time, rewards of the arms aren't binary. They are most of the time continuously valued having an unknown mean and an estimated worst case variance. In these situations, we assume that all the arms' rewards are normally distributed around a carefully picked mean, with a large variance. Normal distributions too can be conjugate priors. Let's say, the prior mean for such an arm is $\mu$ and prior variance is $\sigma^{2}$, and then utilize this arm $t$ and the arm reveals rewards, $x_{1}, x_{2}, x_{3}, \cdots, x_{t}$, then the posterior mean and variance will be,    
+<center> $\mu_{t} = \frac{\frac{\mu}{\sigma^{2}} + \sum_{s = 1}^{t} x_{s}}{1 + \sigma^{-2}}$ </center>
+<center> $\sigma_{t}^{2} = (t + \frac{1}{\sigma^{2}})^{-1}$</center>
