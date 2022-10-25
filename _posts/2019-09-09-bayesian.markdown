@@ -33,7 +33,7 @@ Or more generally, <center>$Pr(x | a, b) = \frac{x^{a} (1-x)^{b}}{\int_{0}^{1} x
 <img src = "/assets/img/beta2.jpg" height = "50%" width = "50%" style = "display: block; margin-left: auto; margin-right: auto;">
 <img src = "/assets/img/beta3.jpg" height = "50%" width = "50%" style = "display: block; margin-left: auto; margin-right: auto;">     
 
-The above graphs show what happens when we change $\alpha$ by fixing $\alpha + \beta$. Notice that the graphs peak at $\frac{\alpha}{\alpha+\beta}$. 
+The above graphs show what happens when we change $\alpha$ by fixing $\alpha + \beta$. Notice that the graphs peak near $\frac{\alpha}{\alpha+\beta}$. 
 
 
 <strong>Conjugate Priors:</strong> Let's say, we are conducting two coin-toss experiments. In the first experiment we got $\alpha$ heads and $\beta$ tails. And now, we are conducting the second experiment and we got $\gamma$ heads and $\delta$ tails. We want to update the probabilities of getting heads. Let's call $E = (\gamma, \delta)$ the second experiment. We are interested in the following:    
