@@ -32,6 +32,8 @@ Variance: $\sigma^{2} = \frac{\alpha\beta}{(\alpha + \beta)^{2}(\alpha + \beta +
 <img src = "/assets/img/beta1.jpg" height = "50%" width = "50%" class = "center">
 <img src = "/assets/img/beta2.jpg" height = "50%" width = "50%" class = "center">
 <img src = "/assets/img/beta3.jpg" height = "50%" width = "50%" class = "center">
+The above graphs show what happens when we change $\alpha$ by fixing $\alpha + \beta$. Notice that the graphs peak at $\frac{\alpha}{\alpha+\beta}$. 
+
 
 <strong>Conjugate Priors:</strong> Let's say, we are conducting two coin-toss experiments. In the first experiment we got $\alpha$ heads and $\beta$ tails. And now, we are conducting the second experiment and we got $\gamma$ heads and $\delta$ tails. We want to update the probabilities of getting heads. Let's call $E = (\gamma, \delta)$ the second experiment. We are interested in the following:    
 <center>$Pr(p = x | E) = \frac{Pr(E|p = x) Pr(p = x)}{Pr(E)}$</center>
