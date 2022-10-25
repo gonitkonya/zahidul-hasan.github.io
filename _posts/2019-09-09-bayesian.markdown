@@ -36,3 +36,4 @@ If $\bar E = (\alpha, \beta)$ was the first experiement, then $Pr(p = x) = Pr(p 
 
 Which is also a beta distribution. If the prior and posterior are of the same distribution family, then the prior is called a conjugate prior. 
   
+<strong>Bayesianism vs Frequentism</strong>: The main difference between Bayesian and Frequentist philosophy is that in Bayesian statistics, even if 3 heads came up during 10 coin tosses, any probability from 0 to 1 is plausible. Even though, $\frac{3}{10}$ will have the maximum likelihood, $\frac{1}{2}$ too will have some non-zero likelihood. But in the case of the Frequentist perspective, we are $100\%$ sure that the probability of getting a head is $0.3$. Also, Frequentist statistics doesn't incorporate beliefs from previous experiments as priors unlike Bayesian statistics. 
