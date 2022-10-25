@@ -29,7 +29,9 @@ PDF of Beta Distribution: $f(x | \alpha, \beta) = \frac{x^{\alpha-1} (1-x)^{\bet
 Mean: $\mu = \frac{\alpha}{\alpha + \beta}$      
 Variance: $\sigma^{2} = \frac{\alpha\beta}{(\alpha + \beta)^{2}(\alpha + \beta + 1)}$    
 
-<img src = "/assets/img/beta1.jpg" height = "100%" width = "100%>
+<img src = "/assets/img/beta1.jpg" height = "50%" width = "50%">
+<img src = "/assets/img/beta2.jpg" height = "50%" width = "50%">
+<img src = "/assets/img/beta3.jpg" height = "50%" width = "50%">
 
 <strong>Conjugate Priors:</strong> Let's say, we are conducting two coin-toss experiments. In the first experiment we got $\alpha$ heads and $\beta$ tails. And now, we are conducting the second experiment and we got $\gamma$ heads and $\delta$ tails. We want to update the probabilities of getting heads. Let's call $E = (\gamma, \delta)$ the second experiment. We are interested in the following:    
 <center>$Pr(p = x | E) = \frac{Pr(E|p = x) Pr(p = x)}{Pr(E)}$</center>
