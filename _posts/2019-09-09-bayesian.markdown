@@ -25,9 +25,9 @@ So, <center>$Pr(p = x | \bar E)  = \frac{Pr(\bar E |p = x)}{\int_{0}^{1} Pr(\bar
 So, <center>$Pr(p = x | a = 6, b = 3) = \frac{x^{6} (1-x)^{3}}{\int_{0}^{1} x^{6} (1-x)^{3}dx}$</center>.   
 Or more generally, <center>$Pr(x | a, b) = \frac{x^{a} (1-x)^{b}}{\int_{0}^{1} x^{a} (1-x)^{b}dx}$</center>.   
 <center>$\int_{0}^{1} x^{\alpha} (1-x)^{\beta}dx$ is defined to be $B(\alpha + 1, \beta + 1)$</center>.    
-PDF of Beta Distribution: $f(x | \alpha, \beta) = \frac{x^{\alpha-1} (1-x)^{\beta-1}}{B(\alpha, \beta)}$ for all $0 \leq x \leq 1, \alpha > 0, \beta > 0$.           
-Mean: $\mu = \frac{\alpha}{\alpha + \beta}$      
-Variance: $\sigma^{2} = \frac{\alpha\beta}{(\alpha + \beta)^{2}(\alpha + \beta + 1)}$    
+<strong>PDF of Beta Distribution:</strong> $f(x | \alpha, \beta) = \frac{x^{\alpha-1} (1-x)^{\beta-1}}{B(\alpha, \beta)}$ for all $0 \leq x \leq 1, \alpha > 0, \beta > 0$.           
+<strong>Mean:</strong> $\mu = \frac{\alpha}{\alpha + \beta}$      
+<strong>Variance:</strong> $\sigma^{2} = \frac{\alpha\beta}{(\alpha + \beta)^{2}(\alpha + \beta + 1)}$    
 
 <img src = "/assets/img/beta1.jpg" height = "50%" width = "50%" class = "center">
 <img src = "/assets/img/beta2.jpg" height = "50%" width = "50%" class = "center">
