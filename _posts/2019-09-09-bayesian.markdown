@@ -31,7 +31,8 @@ Variance: $\sigma^{2} = \frac{\alpha\beta}{(\alpha + \beta)^{2}(\alpha + \beta +
 
 <img src = "/assets/img/beta1.jpg" height = "50%" width = "50%" class = "center">
 <img src = "/assets/img/beta2.jpg" height = "50%" width = "50%" class = "center">
-<img src = "/assets/img/beta3.jpg" height = "50%" width = "50%" class = "center">
+<img src = "/assets/img/beta3.jpg" height = "50%" width = "50%" class = "center">     
+
 The above graphs show what happens when we change $\alpha$ by fixing $\alpha + \beta$. Notice that the graphs peak at $\frac{\alpha}{\alpha+\beta}$. 
 
 
