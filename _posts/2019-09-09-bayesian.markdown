@@ -15,7 +15,7 @@ But this policy may have a high regret on average. So, let's explicitly go for w
 
 <center>$\arg \min_{\pi} \sum_{v \in \epsilon} \mathbb{P}(v) R(\pi,v)$ </center>
 
-<strong>Beta Distributions</strong> Suppose, we tossed a coin 9 times. And the outcomes can be represented as a string E = "HTHHTHHHT". If the probability of getting a head up is $p = x$, then the probability of this particular event is $x^{6}(1-x)^{3}$. The maximum likelihood estimate for $x$ should be $\frac{1}{3}$. And the likelihood that $Pr(p = x | E) = \frac{Pr(E|p = x) Pr(p = x)}{Pr(E)} = \frac{Pr(E|p = x) Pr(p = x)}{\int_{0}^{1} Pr(E|p = x) Pr(p = x) dx}$.      
+<strong>Beta Distributions:</strong> Suppose, we tossed a coin 9 times. And the outcomes can be represented as a string E = "HTHHTHHHT". If the probability of getting a head up is $p = x$, then the probability of this particular event is $x^{6}(1-x)^{3}$. The maximum likelihood estimate for $x$ should be $\frac{1}{3}$. And the likelihood that $Pr(p = x | E) = \frac{Pr(E|p = x) Pr(p = x)}{Pr(E)} = \frac{Pr(E|p = x) Pr(p = x)}{\int_{0}^{1} Pr(E|p = x) Pr(p = x) dx}$.      
 Initially, without any experiment, we can assume that, $Pr(p=x)$ is a uniform distribution for all values of $x$.    
 So, $Pr(p = x | E)  = \frac{Pr(E|p = x)}{\int_{0}^{1} Pr(E|p = x)dx}$.   
 It kind of makes sense, because the maximum likelihood estimate of $x$ will maximize the value of $Pr(p = x|E)$ which it should.    
@@ -24,8 +24,15 @@ $Pr(\bar E | p = x) = \binom{a+b}{a} x^{a} (1-x)^{b}$
 So, $Pr(p = x | \bar E)  = \frac{Pr(\bar E |p = x)}{\int_{0}^{1} Pr(\bar E|p = x)dx} = \frac{\binom{a+b}{a} x^{a} (1-x)^{b}}{\int_{0}^{1} \binom{a+b}{a} x^{a} (1-x)^{b}dx} = \frac{x^{a} (1-x)^{b}}{\int_{0}^{1} x^{a} (1-x)^{b}dx}$.    
 So, $Pr(p = x | a = 6, b = 3) = \frac{x^{6} (1-x)^{3}}{\int_{0}^{1} x^{6} (1-x)^{3}dx}$.   
 Or more generally, $Pr(x | a, b) = \frac{x^{a} (1-x)^{b}}{\int_{0}^{1} x^{a} (1-x)^{b}dx}$.   
-$\int_{0}^{1} x^{\alpha} (1-x)^{\beta}dx$ is defined to be $B(\alpha, \beta)$.    
-PDF of Beta Distribution: $f(x | a, b) = \frac{x^{a} (1-x)^{b}}{B(\alpha, \beta)}$ for all $0 \leq x \leq 1, a > 0, b > 0$.           
+$\int_{0}^{1} x^{\alpha} (1-x)^{\beta}dx$ is defined to be $B(\alpha + 1, \beta + 1)$.    
+PDF of Beta Distribution: $f(x | \alpha, \beta) = \frac{x^{\alpha-1} (1-x)^{\beta-1}}{B(\alpha, \beta)}$ for all $0 \leq x \leq 1, \alpha > 0, \beta > 0$.           
 Mean: $\mu = \frac{\alpha}{\alpha + \beta}$      
 Variance: $\sigma^{2} = \frac{\alpha\beta}{(\alpha + \beta)^{2}(\alpha + \beta + 1)}$    
 
+<strong>Conjugate Priors:</strong> Let's say, we are conducting two coin-toss experiments. In the first experiment we got $\alpha-1$ heads and $\beta-1$ tails. And now, we are conducting the second experiment and we got $\gamma$ heads and $\delta$ tails. We want to update the probabilities of getting heads. Let's call $E = (\gamma, \delta)$ the second experiment. We are interested in the following:    
+<center>$Pr(p = x | E) = \frac{Pr(E|p = x) Pr(p = x)}{Pr(E)}$</center>
+If $\bar E = (\alpha, \beta)$ was the first experiement, then $Pr(p = x) = Pr(p = x | \bar E)$. So, our posterior from the first experiment becomes the prior in the second experiment. So, $Pr(p = x) = \frac{x^{a} (1-x)^{b}}{B(\alpha, \beta)}$. And if we plug it in,    
+<center>$Pr(p = x | E) = \frac{\binom{\gamma + \delta}{\gamma} x^{\gamma} (1-x)^{\delta} \frac{x^{\alpha-1} (1-x)^{\beta-1}}{B(\alpha, \beta)}}{\int_{0}^{1} \binom{\gamma + \delta}{\gamma} x^{\gamma} (1-x)^{\delta} \frac{x^{\alpha-1} (1-x)^{\beta-1}}{B(\alpha, \beta)}dx} = \frac{x^{\gamma + \alpha - 1} (1-x)^{\delta + \beta - 1}}{\int_{0}^{1} x^{\gamma + \alpha - 1} (1-x)^{\delta + \beta - 1}) dx} = \frac{x^{\gamma + \alpha - 1} (1-x)^{\delta + \beta - 1}}{B(\gamma+\alpha, \delta + \beta}$ </center>  
+
+Which is also a beta distribution. If the prior and posterior are of the same distribution family, then the prior is called a conjugate prior. 
+  
