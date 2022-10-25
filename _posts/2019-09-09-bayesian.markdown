@@ -15,17 +15,17 @@ But this policy may have a high regret on average. So, let's explicitly go for w
 
 <center>$\arg \min_{\pi} \sum_{v \in \epsilon} \mathbb{P}(v) R(\pi,v)$ </center>
 
-<strong>Beta Distributions</strong> Suppose, we tossed a coin 9 times. And the outcomes can be represented as a string E = "HTHHTHHHT". If the probability of getting a head up is $p = x$, then the probability of this particular event is $x^{6}(1-x)^{3}$. The maximum likelihood estimate for $x$ should be $\frac{1}{3}$. And the likelihood that $Pr(p = x | E) = \frac{Pr(E|p = x) Pr(p = x)}{Pr(E)} = \frac{Pr(E|p = x) Pr(p = x)}{\int_{0}^{1} Pr(E|p = x) Pr(p = x) dx}$.
+<strong>Beta Distributions</strong> Suppose, we tossed a coin 9 times. And the outcomes can be represented as a string E = "HTHHTHHHT". If the probability of getting a head up is $p = x$, then the probability of this particular event is $x^{6}(1-x)^{3}$. The maximum likelihood estimate for $x$ should be $\frac{1}{3}$. And the likelihood that $Pr(p = x | E) = \frac{Pr(E|p = x) Pr(p = x)}{Pr(E)} = \frac{Pr(E|p = x) Pr(p = x)}{\int_{0}^{1} Pr(E|p = x) Pr(p = x) dx}$.      
 Initially, without any experiment, we can assume that, $Pr(p=x)$ is a uniform distribution for all values of $x$.    
 So, $Pr(p = x | E)  = \frac{Pr(E|p = x)}{\int_{0}^{1} Pr(E|p = x)dx}$.   
-It kind of makes sense, because the maximum likelihood estimate of $x$ will maximize the value of $Pr(p = x|E)$ which it should. 
-Now, We know that, $Pr(E | p = x) = x^{6} (1-x)^{3}$ but, we can replace E = "HTHHTHHHT" with a larger event called $\bar E = \{a = 6, b = 3\}$ where $a$ is the number of heads and $b$ is the number of tails. In that case,  
-$Pr(\bar E | p = x) = \binom{a+b}{a} x^{a} (1-x)^{b}$
-So, $Pr(p = x | \bar E)  = \frac{Pr(\bar E |p = x)}{\int_{0}^{1} Pr(\bar E|p = x)dx} = \frac{\binom{a+b}{a} x^{a} (1-x)^{b}}{\int_{0}^{1} \binom{a+b}{a} x^{a} (1-x)^{b}dx} = \frac{x^{a} (1-x)^{b}}{\int_{0}^{1} x^{a} (1-x)^{b}dx}$.
-So, $Pr(p = x | a = 6, b = 3) = \frac{x^{6} (1-x)^{3}}{\int_{0}^{1} x^{6} (1-x)^{3}dx}$.
-Or more generally, $Pr(x | a, b) = \frac{x^{a} (1-x)^{b}}{\int_{0}^{1} x^{a} (1-x)^{b}dx}$.
-$\int_{0}^{1} x^{\alpha} (1-x)^{\beta}dx$ is defined to be $B(\alpha, \beta)$.
-PDF of Beta Distribution: $f(x | a, b) = \frac{x^{a} (1-x)^{b}}{B(\alpha, \beta)}$.      
+It kind of makes sense, because the maximum likelihood estimate of $x$ will maximize the value of $Pr(p = x|E)$ which it should.    
+Now, We know that, $Pr(E | p = x) = x^{6} (1-x)^{3}$ but, we can replace E = "HTHHTHHHT" with a larger event called $\bar E = \{a = 6, b = 3\}$ where $a$ is the number of heads and $b$ is the number of tails. In that case,     
+$Pr(\bar E | p = x) = \binom{a+b}{a} x^{a} (1-x)^{b}$      
+So, $Pr(p = x | \bar E)  = \frac{Pr(\bar E |p = x)}{\int_{0}^{1} Pr(\bar E|p = x)dx} = \frac{\binom{a+b}{a} x^{a} (1-x)^{b}}{\int_{0}^{1} \binom{a+b}{a} x^{a} (1-x)^{b}dx} = \frac{x^{a} (1-x)^{b}}{\int_{0}^{1} x^{a} (1-x)^{b}dx}$.    
+So, $Pr(p = x | a = 6, b = 3) = \frac{x^{6} (1-x)^{3}}{\int_{0}^{1} x^{6} (1-x)^{3}dx}$.   
+Or more generally, $Pr(x | a, b) = \frac{x^{a} (1-x)^{b}}{\int_{0}^{1} x^{a} (1-x)^{b}dx}$.   
+$\int_{0}^{1} x^{\alpha} (1-x)^{\beta}dx$ is defined to be $B(\alpha, \beta)$.    
+PDF of Beta Distribution: $f(x | a, b) = \frac{x^{a} (1-x)^{b}}{B(\alpha, \beta)}$ for all $0 \leq x \leq 1, a > 0, b > 0$.           
 Mean: $\mu = \frac{\alpha}{\alpha + \beta}$      
 Variance: $\sigma^{2} = \frac{\alpha\beta}{(\alpha + \beta)^{2}(\alpha + \beta + 1)}$    
 
