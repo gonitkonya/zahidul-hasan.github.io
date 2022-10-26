@@ -30,7 +30,7 @@ Suppose, we are talking about ad recommendation. We have $k$ ads to render to a 
 
 <img src = "/assets/img/thompson1.jpg" height = "60%" width = "60%" style = "display: block; margin-left: auto; margin-right: auto;">
 <img src = "/assets/img/thompson2.jpg" height = "60%" width = "60%" style = "display: block; margin-left: auto; margin-right: auto;">
-<img src = "/assets/img/thompson4.jpg" height = "80%" width = "80%" style = "display: block; margin-left: auto; margin-right: auto;"> 
+<img src = "/assets/img/thompson5.jpg" height = "80%" width = "80%" style = "display: block; margin-left: auto; margin-right: auto;"> 
 
 
  <strong>Bayesian Regret Analysis:</strong> We will discuss the worst case Bayesian regret of Thompson Sampling for Bernoulli Bandits with 0-1 rewards and Gaussian bandits with 1-sub Gaussian arms.   
