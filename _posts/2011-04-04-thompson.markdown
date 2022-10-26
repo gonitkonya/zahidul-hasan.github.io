@@ -38,3 +38,6 @@ If the bandit has only 0-1 rewards, then for a particular arm, if it's played $T
 <center>$Pr(|\bar u_{i}(t-1) - \mu_{i}| \geq \sqrt{\frac{1}{2 \max(1,T_{i}(t-1))}\log{\frac{2}{\delta}}} ) \leq \delta$</center>
 If the bandit is 1-sub Gaussian, then we can say,    
 <center>$Pr(|\bar u_{i}(t-1) - \mu_{i}| \geq \sqrt{\frac{2}{\max(1,T_{i}(t-1))}\log{\frac{1}{\delta}}} ) \leq \delta$</center>
+So, in both cases, we can say that for all arms $i$ and for all rounds $t$,    
+<center>$ |\bar u_{i}(t-1) - \mu_{i}| \leq \sqrt{\frac{1}{2 \max(1,T_{i}(t-1))}\log{\frac{2}{\delta}}}$</center>
+holds for a good probability $1-\delta$ with delta arbitrality close to 0. Such as, taking $\delta = \frac{1}{n^{2}}$.
