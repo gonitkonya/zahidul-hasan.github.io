@@ -24,7 +24,7 @@ Here, $\oplus$ means concatenation.
 
 <strong>A very easy example for Bernoulli Bandits:</strong> For every arm, we keep track of two variables $(\alpha, \beta)$. $\alpha$ means the number of rewards and $\beta$ is the number times you got no rewards. We use a <strong>Beta Distribution</strong> to sample a mean reward for this arm which is likely to be close to $\frac{\alpha}{\alpha + \beta}$. In this way, we get an estimate for the mean rewards of each arm. And this is the bandit $v_{t}$ which is mentioned in the pseudocode. We simply choose the best arm of $v_{t}$.    
 
-Suppose, we are talking about ad recommendation. We have $k$ ads to render to a user. For each ad, we keep track of $(\alpha, \beta)$. We start with $(\alpha = 0, \beta = 0)$. An implementation of Thompson Sampling in this scenario is shown below:
+Suppose, we are talking about ad recommendation. We have $k$ ads to render to a user. For each ad, we keep track of $(\alpha, \beta)$. We start with the beta distribution with $(\alpha = 0, \beta = 0)$ as prior. An implementation of Thompson Sampling in this scenario is shown below:
 
 
 
