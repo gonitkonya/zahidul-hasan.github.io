@@ -30,7 +30,7 @@ Suppose, we are talking about ad recommendation. We have $k$ ads to render to a 
 
 <img src = "/assets/img/thompson1.jpg" height = "50%" width = "50%" style = "display: block; margin-left: auto; margin-right: auto;">
 <img src = "/assets/img/thompson2.jpg" height = "50%" width = "50%" style = "display: block; margin-left: auto; margin-right: auto;">
-<img src = "/assets/img/thompson4.jpg" height = "70%" width = "70%" style = "display: block; margin-left: auto; margin-right: auto;"> 
+<img src = "/assets/img/thompson4.jpg" height = "80%" width = "80%" style = "display: block; margin-left: auto; margin-right: auto;"> 
 
 
  <strong>Bayesian Regret Analysis:</strong> We will discuss the worst case Bayesian regret of Thompson Sampling for Bernoulli Bandits with 0-1 rewards and Gaussian bandits with 1-sub Gaussian arms.   
@@ -45,8 +45,10 @@ Let's define this event to be the good event $G$. The bad event $G^{c}$ is then 
 So, <center>$Pr(G^{c}) = Pr(\cup_{i = 1, t = 1}^{i = k, t = n} {|\bar u_{i}(t-1) - \mu_{i}| > \sqrt{\frac{1}{2 \max(1,T_{i}(t-1))}\log{\frac{2}{\delta}}}}$</center>
 Using the union bound,
 <center>$Pr(G^{c}) \leq \sum_{i = 1}^{k} \sum_{t = 1}^{n} Pr(|\bar u_{i}(t-1) - \mu_{i}| > \sqrt{\frac{1}{2 \max(1,T_{i}(t-1))}\log{\frac{2}{\delta}}}) \leq nk\delta$</center>
-
+Let's define $U_{t}(i) = \mu_{i}(t-1) + \sqrt{\frac{1}{2 \max(1,T_{i}(t-1))}\log{\frac{2}{\delta}}}$ which is the upper confidence bound of <center>UCB</center>.
 We know that, the Bayesian Regret can be expressed using the tower rule of conditional expectation with respect to the history $H_{t-1}$. So,    
 <center>$R_{n} = \mathbb{E}[ \sum_{t=1}^{n} (\mu_{A^{*}} - \mu_{A_{t}}) ] =   \mathbb{E}[ \sum_{t=1}^{n} \mathbb{E}[\mu_{A^{*}} - \mu_{A_{t}}| H_{t-1}] ]$</center>
-
-
+Let's focus on the inner conditional expectation,   
+<center>$ \mathbb{E}[\mu_{A^{*}} - \mu_{A_{t}}| H_{t-1}] = \mathbb{E}[\mu_{A^{*}} - U_{t}(A_{t}) + U_{t}(A_{t}) - \mu_{A_{t}}| H_{t-1}]$</center>
+<center>$ \mathbb{E}[\mu_{A^{*}} - \mu_{A_{t}}| H_{t-1}] = \mathbb{E}[\mu_{A^{*}} - U_{t}(A^{*}) + U_{t}(A_{t}) - \mu_{A_{t}}| H_{t-1}]$</center>
+<center>$ \mathbb{E}[\mu_{A^{*}} - \mu_{A_{t}}| H_{t-1}] = \mathbb{E}[\mu_{A^{*}} - U_{t}(A^{*})| H_{t-1}] + \mathbb{E}[U_{t}(A_{t}) - \mu_{A_{t}}| H_{t-1}]$</center>
