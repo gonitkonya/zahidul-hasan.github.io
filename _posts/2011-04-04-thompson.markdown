@@ -19,3 +19,15 @@ $\quad\quad$choose $A_{t} = \arg \max_{1 \leq i \leq k} \mu_{i}(v_{t})$
 $\quad\quad$observe reward $X_{t}$     
 $\quad\quad$update $H_{t} = (X_{t}, A_{t}) \oplus H_{t-1}$    
 <strong>end for</strong>      
+
+Here, $\oplus$ means concatenation.
+
+<strong>A very easy example for Bernoulli Bandits:</strong> For every arm, we keep track of two variables $(\alpha, \beta)$. $\alpha$ means the number of rewards and $\beta$ is the number times you got no rewards. We use a <strong>Beta Distribution</strong> to sample a mean reward for this arm which is likely to be close to $\frac{\alpha}{\alpha + \beta}$. In this way, we get an estimate for the mean rewards of each arm. And this is the bandit $v_{t}$ which is mentioned in the pseudocode. We simply choose the best arm of $v_{t}$.    
+
+Suppose, we are talking about ad recommendation. We have $k$ ads to render to a user. For each ad, we keep track of $(\alpha, \beta)$. An implementation of Thompson Sampling in this scenario is shown below:
+
+
+
+<img src = "/assets/img/thompson1.jpg" height = "50%" width = "50%" style = "display: block; margin-left: auto; margin-right: auto;">
+<img src = "/assets/img/thompson2.jpg" height = "50%" width = "50%" style = "display: block; margin-left: auto; margin-right: auto;">
+<img src = "/assets/img/thompson3.jpg" height = "50%" width = "50%" style = "display: block; margin-left: auto; margin-right: auto;"> 
