@@ -60,7 +60,7 @@ So,
 <center> $R_{n} = \mathbb{E}[\sum_{t=1}^{n} (\mu_{A^{*}} - U_{t}(A^{*})) + \sum_{t=1}^{n} (U_{t}(A_{t}) - \mu_{A_{t}})]$</center>
 Then,
 <center>$\mathbb{E}[R_{n}] = \mathbb{P}(G^{c}) \mathbb{E}[R_{n}|G^{c}] + \mathbb{P}(G) \mathbb{E}[R_{n}|G] $ </center>
-<center>$\mathbb{E}[R_{n}] \leq \frac{k}{n} 2n + (1-\frac{k}{n}) \mathbb{E}[R_{n}|G] $ </center>
+<center>$\mathbb{E}[R_{n}] \leq \frac{2k}{n} 2n + (1-\frac{2k}{n}) \mathbb{E}[R_{n}|G] $ </center>
 
 Let's focus on $\mathbb{E}[R_{n} | G]$. 
 <center>$\mathbb{E}[R_{n} | G] = \mathbb{E}[\sum_{t=1}^{n} (\mu_{A^{*}} - U_{t}(A^{*})) + \sum_{t=1}^{n} (U_{t}(A_{t}) - \mu_{A_{t}}) | G] \leq \mathbb{E}[\sum_{t=1}^{n} (U_{t}(A_{t}) - \mu_{A_{t}}) | G]$</center>
@@ -68,7 +68,7 @@ Because, the left summand is negative in the good scenario. So,
 <center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{t=1}^{n} (U_{t}(A_{t}) - \mu_{A_{t}})| G]$</center>
 <center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{t=1}^{n} \sum_{i=1}^{k} \mathbb{I}(A_{t} = i)(U_{t}(i) - \mu_{i})| G]$</center>
 <center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{i=1}^{k} \sum_{t=1}^{n} \mathbb{I}(A_{t} = i) \sqrt{\frac{1}{\max(1,T_{i}(t-1))}\log{\frac{1}{\delta}}}| G]$</center>
-<center>$\mathbb{E}[R_{n} | G] \leq \sum_{i=1}^{k} \int_{t = 0}^{T_{i}(n)} \sqrt{\frac{1}{s}\log{\frac{2}{\delta}}}$</center>
+<center>$\mathbb{E}[R_{n} | G] \leq \sum_{i=1}^{k} \int_{t = 0}^{T_{i}(n)} \sqrt{\frac{1}{s}\log{\frac{1}{\delta}}}$</center>
 <center>$\mathbb{E}[R_{n} | G] \leq \sqrt{\log{\frac{1}{\delta}}} \sum_{i=1}^{k} 2\sqrt{T_{i}(n)}$</center>
 We know that, the arithmetic mean is less than the quadratic mean. So,   
 <center>$\frac{\sum_{i=1}^{k} \sqrt{T_{i}(n)}}{k} \leq \sqrt{ \frac{\sum_{i=1}^{k} T_{i}(n)}{k} } = \sqrt{ \frac{n}{k} }$</center>
