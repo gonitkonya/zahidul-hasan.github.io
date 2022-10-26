@@ -34,5 +34,7 @@ Suppose, we are talking about ad recommendation. We have $k$ ads to render to a 
 
 
  <strong>Bayesian Regret Analysis:</strong> We will discuss the worst case Bayesian regret of Thompson Sampling for Bernoulli Bandits with 0-1 rewards and Gaussian bandits with 1-sub Gaussian arms.   
-If the bandit has only 0-1 rewards, then for a particular arm, if it's played $T_{i}(t-1)$ times up to round $t$, then we know that,    
-<center>$Pr(|\bar u_{i}(t-1) - \mu_{i}| \geq \sqrt{\frac{1}{2 T_{i}(t-1)}\log{\frac{2}{\delta}}}) \leq \delta$</center>
+If the bandit has only 0-1 rewards, then for a particular arm, if it's played $T_{i}(t-1)$ times up to round $t$, then from, <strong>Hoeffding's Inequality</strong> we know that,    
+<center>$Pr(|\bar u_{i}(t-1) - \mu_{i}| \geq \sqrt{\frac{1}{2 \max(1,T_{i}(t-1))}\log{\frac{2}{\delta}}} ) \leq \delta$</center>
+If the bandit is 1-sub Gaussian, then we can say,    
+<center>$Pr(|\bar u_{i}(t-1) - \mu_{i}| \geq \sqrt{\frac{2}{\max(1,T_{i}(t-1))}\log{\frac{1}{\delta}}} ) \leq \delta$</center>
