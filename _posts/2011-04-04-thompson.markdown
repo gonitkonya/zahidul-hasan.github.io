@@ -71,5 +71,5 @@ Because, the left summand is negative in the good scenario. So,
 <center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{i=1}^{k} \int_{t = 0}^{T_{i}(n)} \sqrt{\frac{1}{s}\log{\frac{2}{\delta}}}]$</center>
 <center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sqrt{\log{\frac{1}{\delta}}} \sum_{i=1}^{k} 2\sqrt{T_{i}(n)}]$</center>
 We know that, the arithmetic mean is less than the quadratic mean. So,   
-<center>$\frac{\sum_{i=1}^{k} \sqrt{T_{i}(n)}}{k} \leq \sqrt{ \frac{\sum_{i=1}^{k} T_{i}(n)}{k} }$</center>
-<center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sqrt{\log{\frac{1}{\delta}}} \sum_{i=1}^{k} 2\sqrt{T_{i}(n)}]$</center>
+<center>$\frac{\sum_{i=1}^{k} \sqrt{T_{i}(n)}}{k} \leq \sqrt{ \frac{\sum_{i=1}^{k} T_{i}(n)}{k} } = \sqrt{ \frac{n}{k} }$</center>
+<center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sqrt{\log{\frac{1}{\delta}}} \sum_{i=1}^{k} 2\sqrt{T_{i}(n)}] \leq 2 \sqrt{nk\log{\frac{1}{\delta}}}$</center>
