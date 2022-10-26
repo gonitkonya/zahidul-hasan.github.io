@@ -5,3 +5,8 @@ date: 2022-09-01 05:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: beta.jpg # Add image post (optional)
 ---
+
+<strong>Thompson Sampling:</strong> At any round of the Thompson Sampling, we try to sample a bandit environment from the bandit space that is most likely to be close to the one we are dealing with right now, given the history of the previous rounds. So, we are in fact building a posterior distribution $Q_{t}(v | X_{t-1}, A_{n-1},\cdots, ,X_{1}, A_{1})$ where $v$ is the bandit environment and $A_{t}$ is the action taken at round $t$ and $X_{t}$ is the reward revealed after action $A_{t}$. For brevity, let's define $H_{t} = (X_{t}, A_{t},\cdots, ,X_{1}, A_{1})$ to be the history of exploration-exploitation and rewards. So, this approach returns a policy $\pi = (\pi_{t})_{t=1}^{\inf}$ so that,    
+<center>$\pi_{t}(a|H_{t-1}) = Q_{t}(B_{a}|H_{t-1})$</center>
+where, 
+<center>$B_{a} = \{v \in \epsilon: \mu_{a}(v) = \arg \max_{b} \mu_{b}(v)\}$</center>
