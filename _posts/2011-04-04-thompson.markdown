@@ -75,3 +75,6 @@ We know that, the arithmetic mean is less than the quadratic mean. So,
 <center>$\mathbb{E}[R_{n} | G] \leq \sqrt{\log{\frac{1}{\delta}}} \sum_{i=1}^{k} 2\sqrt{T_{i}(n)} \leq 2 \sqrt{nk\log{\frac{1}{\delta}}}$</center>
 So, 
 <center>$E[R_{n}]  \leq \frac{2k}{n} 2n + (1-\frac{2k}{n}) 2 \sqrt{2nk\log{n}}$ </center>
+
+Since, typically $n$ is substantially larger than $k$,  
+<center>$E[R_{n}]  \approx \mathcal{O} (\sqrt{nk\log{n}})$ </center>
