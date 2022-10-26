@@ -39,13 +39,13 @@ If the bandit has only 0-1 rewards, then for a particular arm, if it's played $T
 If the bandit is 1-sub Gaussian, then we can say,    
 <center>$Pr(|\bar u_{i}(t-1) - \mu_{i}| \geq \sqrt{\frac{2}{\max(1,T_{i}(t-1))}\log{\frac{1}{\delta}}} ) \leq \delta$</center>
 So, in both cases, we can say that for all arms $i$ and for all rounds $t$,    
-<center>$ |\bar u_{i}(t-1) - \mu_{i}| \leq \sqrt{\frac{1}{2 \max(1,T_{i}(t-1))}\log{\frac{2}{\delta}}}$</center>
-holds for a good probability in the order of $1-\delta$ for each $i$ and $t$ with $\delta$ arbitrality close to 0. Such as, taking $\delta = \frac{1}{n^{2}}$.
+<center>$ |\bar u_{i}(t-1) - \mu_{i}| \leq \sqrt{\frac{1}{\max(1,T_{i}(t-1))}\log{\frac{1}{\delta}}}$</center>
+holds for a good probability in the order of $1-2\delta$ for each $i$ and $t$ with $\delta$ arbitrality close to 0. Such as, taking $\delta = \frac{2}{n^{2}}$.
 Let's define this event to be the good event $G$. The bad event $G^{c}$ is then the event when any of the arms violate this property at any round.
-So, <center>$Pr(G^{c}) = Pr(\cup_{i = 1, t = 1}^{i = k, t = n} {|\bar u_{i}(t-1) - \mu_{i}| > \sqrt{\frac{1}{2 \max(1,T_{i}(t-1))}\log{\frac{2}{\delta}}}})$ </center>
+So, <center>$Pr(G^{c}) = Pr(\cup_{i = 1, t = 1}^{i = k, t = n} {|\bar u_{i}(t-1) - \mu_{i}| > \sqrt{\frac{1}{\max(1,T_{i}(t-1))}\log{\frac{1}{\delta}}}})$ </center>
 Using the union bound,
-<center>$Pr(G^{c}) \leq \sum_{i = 1}^{k} \sum_{t = 1}^{n} Pr(|\bar u_{i}(t-1) - \mu_{i}| > \sqrt{\frac{1}{2 \max(1,T_{i}(t-1))}\log{\frac{2}{\delta}}}) \leq nk\delta$</center>
-Let's define $U_{t}(i) = \mu_{i}(t-1) + \sqrt{\frac{1}{2 \max(1,T_{i}(t-1))}\log{\frac{2}{\delta}}}$ which is the upper confidence bound of <strong>UCB</strong>.
+<center>$Pr(G^{c}) \leq \sum_{i = 1}^{k} \sum_{t = 1}^{n} Pr(|\bar u_{i}(t-1) - \mu_{i}| > \sqrt{\frac{1}{\max(1,T_{i}(t-1))}\log{\frac{1}{\delta}}}) \leq 2nk\delta$</center>
+Let's define $U_{t}(i) = \mu_{i}(t-1) + \sqrt{\frac{1}{\max(1,T_{i}(t-1))}\log{\frac{1}{\delta}}}$ which is the upper confidence bound of <strong>UCB</strong>.
 We know that, the Bayesian Regret can be expressed using the tower rule of conditional expectation with respect to the history $H_{t-1}$. So,    
 <center>$R_{n} = \mathbb{E}[ \sum_{t=1}^{n} (\mu_{A^{*}} - \mu_{A_{t}}) ] =   \mathbb{E}[ \sum_{t=1}^{n} \mathbb{E}[\mu_{A^{*}} - \mu_{A_{t}}| H_{t-1}] ]$</center>
 Let's focus on the inner conditional expectation,   
@@ -67,8 +67,9 @@ Let's focus on $\mathbb{E}[R_{n} | G]$.
 Because, the left summand is negative in the good scenario. So,    
 <center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{t=1}^{n} (U_{t}(A_{t}) - \mu_{A_{t}})]$</center>
 <center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{t=1}^{n} \sum_{i=1}^{k} \mathbb{I}(A_{t} = i)(U_{t}(i) - \mu_{i})]$</center>
-<center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{i=1}^{k} \sum_{t=1}^{n} \mathbb{I}(A_{t} = i) \sqrt{\frac{1}{2 \max(1,T_{i}(t-1))}\log{\frac{2}{\delta}}}]$</center>
+<center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{i=1}^{k} \sum_{t=1}^{n} \mathbb{I}(A_{t} = i) \sqrt{\frac{1}{\max(1,T_{i}(t-1))}\log{\frac{1}{\delta}}}]$</center>
 <center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{i=1}^{k} \int_{t = 0}^{T_{i}(n)} \sqrt{\frac{1}{s}\log{\frac{2}{\delta}}}]$</center>
-<center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{i=1}^{k} 2\sqrt{T_{i}(n)}]$</center>
+<center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sqrt{\log{\frac{1}{\delta}}} \sum_{i=1}^{k} 2\sqrt{T_{i}(n)}]$</center>
 We know that, the arithmetic mean is less than the quadratic mean. So,   
 <center>$\frac{\sum_{i=1}^{k} \sqrt{T_{i}(n)}}{k} \leq \sqrt{ \frac{\sum_{i=1}^{k} T_{i}(n)}{k} }$</center>
+<center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sqrt{\log{\frac{1}{\delta}}} \sum_{i=1}^{k} 2\sqrt{T_{i}(n)}]$</center>
