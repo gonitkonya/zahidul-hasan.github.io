@@ -68,8 +68,10 @@ Because, the left summand is negative in the good scenario. So,
 <center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{t=1}^{n} (U_{t}(A_{t}) - \mu_{A_{t}})]$</center>
 <center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{t=1}^{n} \sum_{i=1}^{k} \mathbb{I}(A_{t} = i)(U_{t}(i) - \mu_{i})]$</center>
 <center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{i=1}^{k} \sum_{t=1}^{n} \mathbb{I}(A_{t} = i) \sqrt{\frac{1}{\max(1,T_{i}(t-1))}\log{\frac{1}{\delta}}}]$</center>
-<center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{i=1}^{k} \int_{t = 0}^{T_{i}(n)} \sqrt{\frac{1}{s}\log{\frac{2}{\delta}}}]$</center>
-<center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sqrt{\log{\frac{1}{\delta}}} \sum_{i=1}^{k} 2\sqrt{T_{i}(n)}]$</center>
+<center>$\mathbb{E}[R_{n} | G] \leq \sum_{i=1}^{k} \int_{t = 0}^{T_{i}(n)} \sqrt{\frac{1}{s}\log{\frac{2}{\delta}}}$</center>
+<center>$\mathbb{E}[R_{n} | G] \leq \sqrt{\log{\frac{1}{\delta}}} \sum_{i=1}^{k} 2\sqrt{T_{i}(n)}$</center>
 We know that, the arithmetic mean is less than the quadratic mean. So,   
 <center>$\frac{\sum_{i=1}^{k} \sqrt{T_{i}(n)}}{k} \leq \sqrt{ \frac{\sum_{i=1}^{k} T_{i}(n)}{k} } = \sqrt{ \frac{n}{k} }$</center>
-<center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sqrt{\log{\frac{1}{\delta}}} \sum_{i=1}^{k} 2\sqrt{T_{i}(n)}] \leq 2 \sqrt{nk\log{\frac{1}{\delta}}}$</center>
+<center>$\mathbb{E}[R_{n} | G] \leq \sqrt{\log{\frac{1}{\delta}}} \sum_{i=1}^{k} 2\sqrt{T_{i}(n)} \leq 2 \sqrt{nk\log{\frac{1}{\delta}}}$</center>
+So, 
+<center>$E[R_{n}]  \leq \frac{2k}{n} 2n + (1-\frac{2k}{n}) 2 \sqrt{2nk\log{n}}$ </center>
