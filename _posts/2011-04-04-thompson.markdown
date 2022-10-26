@@ -45,7 +45,7 @@ Let's define this event to be the good event $G$. The bad event $G^{c}$ is then 
 So, <center>$Pr(G^{c}) = Pr(\cup_{i = 1, t = 1}^{i = k, t = n} {|\bar u_{i}(t-1) - \mu_{i}| > \sqrt{\frac{1}{2 \max(1,T_{i}(t-1))}\log{\frac{2}{\delta}}}})$ </center>
 Using the union bound,
 <center>$Pr(G^{c}) \leq \sum_{i = 1}^{k} \sum_{t = 1}^{n} Pr(|\bar u_{i}(t-1) - \mu_{i}| > \sqrt{\frac{1}{2 \max(1,T_{i}(t-1))}\log{\frac{2}{\delta}}}) \leq nk\delta$</center>
-Let's define $U_{t}(i) = \mu_{i}(t-1) + \sqrt{\frac{1}{2 \max(1,T_{i}(t-1))}\log{\frac{2}{\delta}}}$ which is the upper confidence bound of <center>UCB</center>.
+Let's define $U_{t}(i) = \mu_{i}(t-1) + \sqrt{\frac{1}{2 \max(1,T_{i}(t-1))}\log{\frac{2}{\delta}}}$ which is the upper confidence bound of <strong>UCB</strong>.
 We know that, the Bayesian Regret can be expressed using the tower rule of conditional expectation with respect to the history $H_{t-1}$. So,    
 <center>$R_{n} = \mathbb{E}[ \sum_{t=1}^{n} (\mu_{A^{*}} - \mu_{A_{t}}) ] =   \mathbb{E}[ \sum_{t=1}^{n} \mathbb{E}[\mu_{A^{*}} - \mu_{A_{t}}| H_{t-1}] ]$</center>
 Let's focus on the inner conditional expectation,   
@@ -56,3 +56,7 @@ The second line follows from the fact that,
 <center>$\pi_{t}(a|H_{t-1}) = Q_{t}(B_{a}|H_{t-1})$</center>
 The best arm $A^{*}$ given the history is actually identically distributed as the best arm of the most plausible bandit given the history. So,    
 <center>$\mathbb{P}(A^{*} = a| H_{t-1}) = \mathbb{P}(A^{t} = a| H_{t-1})$</center>
+So, 
+<center> $R_{n} = \mathbb{E}[\sum_{t=1}^{n} (\mu_{A^{*}} - U_{t}(A^{*})) + \sum_{t=1}^{n} (U_{t}(A_{t}) - \mu_{A_{t}})]$</center>
+Then,
+<center>$\mathbb{E}[R_{n}] = \mathbb{P}(G^{C}) R_{n} + \mathbb{P}(G) R_{n} $ </center>
