@@ -12,10 +12,10 @@ where,
 <center>$B_{a} = \{v \in \epsilon: \mu_{a}(v) = \arg \max_{b} \mu_{b}(v)\}$</center>
 Ties are broken arbitrarily.
 
-<strong>Pseudocode:</strong> 
-<strong>for</strong> $t = 1, 2, \cdots , n$ <strong>do</strong>
-$\quad\quad$sample $v_{t}$ from $Q_{t}(.|H_{t-1})$
-$\quad\quad$choose $A_{t} = \arg \max_{1 \leq i \leq k} \mu_{i}(v_{t})$
-$\quad\quad$observe reward $X_{t}$
-$\quad\quad$update $H_{t} = (X_{t}, A_{t}) \oplus H_{t-1}$
-<strong>end for</strong>
+<strong>Pseudocode:</strong>      
+<strong>for</strong> $t = 1, 2, \cdots , n$ <strong>do</strong>     
+$\quad\quad$sample $v_{t}$ from $Q_{t}(.|H_{t-1})$     
+$\quad\quad$choose $A_{t} = \arg \max_{1 \leq i \leq k} \mu_{i}(v_{t})$    
+$\quad\quad$observe reward $X_{t}$     
+$\quad\quad$update $H_{t} = (X_{t}, A_{t}) \oplus H_{t-1}$    
+<strong>end for</strong>      
