@@ -55,8 +55,16 @@ Let's focus on the inner conditional expectation,
 The second line follows from the fact that, 
 <center>$\pi_{t}(a|H_{t-1}) = Q_{t}(B_{a}|H_{t-1})$</center>
 The best arm $A^{*}$ given the history is actually identically distributed as the best arm of the most plausible bandit given the history. So,    
-<center>$\mathbb{P}(A^{*} = a| H_{t-1}) = \mathbb{P}(A^{t} = a| H_{t-1})$</center>
+<center>$\mathbb{P}(A^{*} = a| H_{t-1}) = \mathbb{P}(A_{t} = a| H_{t-1})$</center>
 So, 
 <center> $R_{n} = \mathbb{E}[\sum_{t=1}^{n} (\mu_{A^{*}} - U_{t}(A^{*})) + \sum_{t=1}^{n} (U_{t}(A_{t}) - \mu_{A_{t}})]$</center>
 Then,
-<center>$\mathbb{E}[R_{n}] = \mathbb{P}(G^{C}) R_{n} + \mathbb{P}(G) R_{n} $ </center>
+<center>$\mathbb{E}[R_{n}] = \mathbb{P}(G^{c}) \mathbb{E}[R_{n}|G^{c}] + \mathbb{P}(G) \mathbb{E}[R_{n}|G] $ </center>
+<center>$\mathbb{E}[R_{n}] \leq \frac{k}{n} 2n + (1-\frac{k}{n}) \mathbb{E}[R_{n}|G] $ </center>
+
+Let's focus on $\mathbb{E}[R_{n} | G]$. 
+<center>$\mathbb{E}[R_{n} | G] = \mathbb{E}[\sum_{t=1}^{n} (\mu_{A^{*}} - U_{t}(A^{*})) + \sum_{t=1}^{n} (U_{t}(A_{t}) - \mu_{A_{t}})] \leq \mathbb{E}[\sum_{t=1}^{n} (U_{t}(A_{t}) - \mu_{A_{t}})]$</center>
+Because, the left summand is negative in the good scenario. So,    
+<center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{t=1}^{n} (U_{t}(A_{t}) - \mu_{A_{t}})]$</center>
+<center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{t=1}^{n} (U_{t}(A_{t}) - \mu_{A_{t}})]$</center>
+
