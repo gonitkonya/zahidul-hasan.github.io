@@ -66,5 +66,6 @@ Let's focus on $\mathbb{E}[R_{n} | G]$.
 <center>$\mathbb{E}[R_{n} | G] = \mathbb{E}[\sum_{t=1}^{n} (\mu_{A^{*}} - U_{t}(A^{*})) + \sum_{t=1}^{n} (U_{t}(A_{t}) - \mu_{A_{t}})] \leq \mathbb{E}[\sum_{t=1}^{n} (U_{t}(A_{t}) - \mu_{A_{t}})]$</center>
 Because, the left summand is negative in the good scenario. So,    
 <center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{t=1}^{n} (U_{t}(A_{t}) - \mu_{A_{t}})]$</center>
-<center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{t=1}^{n} (U_{t}(A_{t}) - \mu_{A_{t}})]$</center>
-
+<center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{t=1}^{n} \sum_{i=1}^{k} \mathbb{I}(A_{t} = i)(U_{t}(i) - \mu_{i})]$</center>
+<center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{i=1}^{k} \sum_{t=1}^{n} \mathbb{I}(A_{t} = i) \sqrt{\frac{1}{2 \max(1,T_{i}(t-1))}\log{\frac{2}{\delta}}}]$</center>
+<center>$\mathbb{E}[R_{n} | G] \leq \mathbb{E}[\sum_{i=1}^{k} \int_{t = 0}^{T_{i}(n)}\mathbb{I}(A_{t} = i) \sqrt{\frac{1}{s)}\log{\frac{2}{\delta}}}]$</center>
