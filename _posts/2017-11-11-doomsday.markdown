@@ -6,13 +6,15 @@ description: You’ll find this post in your `_posts` directory. Go ahead and ed
 img: icpc.png # Add image post (optional)
 ---
 
+<strong>Problem Statement:</strong>
 <embed src="/assets/img/doomsday.pdf" width="600px" height="600px" />
 
-<strong>Solution</strong> One can probably find a closed form for this. But this is not necessary and also it can cause a lot of time-waste during a live contest. Instead, one can notice that, the term inside the summands is of degree 5. So, after all the summations are done, the final value is a 10 degree polynomial of $n$.   
+<strong>Solution:</strong> One can probably find a closed form for this. But this is not necessary and also it can cause a lot of time-waste during a live contest. Instead, one can notice that, the term inside the summands is of degree 5. So, after all the summations are done, the final value is a 10 degree polynomial of $n$.   
 So, we can assume,  
 <center>$T = f(n) = a_{0} + a_{1}n^{1} + a_{2}n^{2} + a_{3}n^{3} + a_{4}n^{4} + a_{5}n^{5} + a_{6}n^{6} + a_{7}n^{7} + a_{8}n^{8} +  a_{9}n^{9} + a_{10}n^{10}$</center>
 
-We can manually calculate the value of $f(n)$ for $n = 1, 2, \cdots, 11$. Then, it comes down to solving a system of 11 equations with 11 variables. We solve for the coefficients and use them to determine $f(n)$ for future values of $n$.
+We can manually calculate the value of $f(n)$ for $n = 1, 2, \cdots, 11$. Then, it comes down to solving a system of 11 equations with 11 variables. We solve for the coefficients and use them to determine $f(n)$ for future values of $n$.     
+<strong>Implementation:</strong>
 <pre class = "prettyprint">
 #include <bits/stdc++.h>
 #define MOD 10007
