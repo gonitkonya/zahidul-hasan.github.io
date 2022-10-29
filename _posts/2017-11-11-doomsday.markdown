@@ -6,12 +6,156 @@ description: You’ll find this post in your `_posts` directory. Go ahead and ed
 img: icpc.png # Add image post (optional)
 ---
 <pre>
-#include <iostream>
+#include <bits/stdc++.h>
+#define MOD 10007
+
 using namespace std;
-void main()
-{
-	cout << "Hello World!" << endl;
-	cout << "Welcome to C++ Programming" << endl; 
+
+
+
+#define MAX         3
+/// n rows, m columns
+/// MAX is the maximum number of equations or variables
+/// X holds the solution
+/// returns 1 if unique solution, -1 if inconsistent, inf if infinite solutions
+struct matrix{
+    long long arr[MAX+10][MAX+10];
+    int n, m;
+    void print()
+    {
+        for(int i = 0; i<n; i++)
+        {
+            for(int j = 0; j<=m; j++)
+                cout << arr[i][j] << " ";
+            cout << endl;
+        }
+    }
+}A;
+
+int where[MAX+10];
+long long X[MAX+10];
+const int inf = INT_MAX;
+
+
+long long modinverse(long long a, long long n){
+    if(n==0) return 1LL;
+    long long ret = modinverse(a,n/2);
+    ret = (ret*ret) % MOD;
+    if(n%2==1){
+        ret = (ret*a) % MOD;
+    }
+    return ret;
 }
+
+
+int gauss()
+{
+    memset(where,-1,sizeof(where));
+    int row, col;
+    for(row = col = 0; row<A.n && col<A.m; col++)
+    {
+        int pivot = row;
+        for(int i = row+1; i<A.n; i++)
+        {
+            if(abs(A.arr[pivot][col]) < abs(A.arr[i][col]))
+                 pivot = i;
+        }
+        if(pivot != row)
+        {
+            for(int i = 0; i<=A.m; i++)
+                swap(A.arr[row][i], A.arr[pivot][i]);
+        }
+        if(A.arr[row][col]==0)
+            continue;
+        where[col] = row;
+        for(int i = row+1; i<A.n; i++)
+        {
+            if(A.arr[i][col])
+            {
+                long long c = (A.arr[i][col]*modinverse(A.arr[row][col],MOD-2))%MOD;
+                for(int j = col; j<=A.m; j++){
+                    A.arr[i][j] -= (c*A.arr[row][j])%MOD;
+                    A.arr[i][j] = (A.arr[i][j]+MOD)%MOD;
+                }
+            }
+        }
+        row++;
+    }
+
+
+    for(int i = 0; i<A.n; i++)
+    {
+        long long total = 0;
+        for(int j = 0; j<A.m;j++){
+            total += abs(A.arr[i][j]);
+            total %= MOD;
+        }
+        if(abs(total)==0 && abs(A.arr[i][A.m])==0)
+            return -1;
+    }
+    for(int i = A.n-1; i>=0; i--)
+    {
+        if(where[i] == -1)  return inf;
+        int row = where[i];
+        long long sltn = A.arr[row][A.m];
+        for(int j = i+1; j<A.m; j++){
+            sltn -= (A.arr[row][j]*X[j])%MOD;
+            sltn %= MOD;
+            if(sltn < 0) sltn+= MOD;
+        }
+        X[i] = (sltn *modinverse(A.arr[row][i],MOD-2))%MOD;
+    }
+    int u;
+    return 1;
+}
+
+
+void buildmatrix(){
+    A.n = 11, A.m = 11;
+    for(int i = 0; i < A.n; i++){
+        A.arr[i][0] = 1LL;
+        for(int j = 1; j < A.m; j++){
+            A.arr[i][j] = (A.arr[i][j-1] * (i+1)) %MOD;
+        }
+    }
+    for(int n = 1; n <= 11; n++){
+        for(int i = 1; i <= n; i++){
+            for(int j = 1; j <= n; j++){
+                for(int k = 1; k <= n; k++){
+                    for(int l = 1; l <= n; l++){
+                        for(int m = 1; m <= n; m++){
+                            A.arr[n-1][11] += ((long long)abs(i-j)*abs(j-k)*abs(k-l)*abs(l-m)*abs(m-i))%MOD;
+                            A.arr[n-1][11] %= MOD;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+long long Fun(long long n){
+    long long ret = X[10];
+    for(int i = 9; i >= 0; i--){
+        ret = (ret * n )%MOD+ X[i];
+        ret %= MOD;
+    }
+    return ret;
+}
+
+
+int main(){
+    buildmatrix();
+    gauss();
+    long long n;
+    while(1){
+        scanf("%lld",&n);
+        if(n==0) break;
+        printf("%lld\n",Fun(n));
+    }
+    return 0;
+}
+
 </pre>
 
