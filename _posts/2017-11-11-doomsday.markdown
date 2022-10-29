@@ -6,7 +6,7 @@ description: You’ll find this post in your `_posts` directory. Go ahead and ed
 img: icpc.png # Add image post (optional)
 ---
 
-<embed src="/assets/img/doomsday.pdf" width="800px" height="2100px" />
+<embed src="/assets/img/doomsday.pdf" width="600px" height="800px" />
 
 <pre class = "prettyprint">
 #include <bits/stdc++.h>
