@@ -14,6 +14,76 @@ only doubt that remains is whether $F$ is a lattice point or not. We choose $BE$
 <center> $CF = k = \frac{(N-X)X}{N}$ </center>
 We want $k$ to be an integer. So the right hand side must be an integer. Let's take $N = ng$ and $X = xg$ where $g = \gcd(N,X)$. So, definitely $\gcd(x,n) = 1$. So, 
 <center> $CF = k = \frac{(n-x)xg}{n}$ </center>
-Since $\gcd(x,n) = \gcd(n-x,n) = 1$, so $n$ divides $g$. Thus, $g = f \times n$ for some positive integer $f$.
+Since $\gcd(x,n) = \gcd(n-x,n) = 1$, so $n$ divides $g$. Thus, $g = f \times n$ for some positive integer $f$.    
+So, $N = f n^{2}$ and $X = f n x$. So, for every square divisor $n^2$ of $N$, we will get $f$ and also, for every $x$ that is less than $n$ and co-prime to $n$, we can make a tuple $(f, n, x)$ and thus an $X$.   
+Let $N$ have the following prime factorization,   
+<center>$N = p_{1}^{a_{1}}p_{2}^{a_{2}} \cdots p_{k}^{a_{k}}$</center>
+Since, $N = f n^{2}$, so $n \leq \sqrt{N}$. What we want is actually, if,   
+<center>$M = p_{1}^{\lfloor \frac{a_{1}}{2} \rfloor }p_{2}^{\lfloor \frac{a_{2}}{2} \rfloor } \cdots p_{k}^{\lfloor \frac{a_{k}}{2} \rfloor }$</center>
+Then our answer is, $\sum_{d|M} \varphi(d)$
+But, We can easily prove that, $\sum_{d|M} \varphi(d) = M$.   
+And also, notice that, we could start the construct from any of the 4 corners and the point $E$ could be chosen from 2 sides for each. So, there are total 8 possible configuration each having $M$ possible lattice points for $F$. So, the answer is $8M$.
+<strong>Implementation:</strong>
+<pre class ="prettyprint">
+#include <bits/stdc++.h>
+#define MAX 10000000
 
+using namespace std;
+
+bool status[MAX+10];
+vector <int> v;
+
+void sieve(){
+    int limit = sqrt(MAX);
+    for(int i = 3; i <= limit; i+=2){
+        if(status[i]==false){
+            for(int j = i *i; j <= MAX; j+=i+i){
+                status[j]=true;
+            }
+        }
+    }
+    v.push_back(2);
+    for(int i = 3; i <= MAX; i++){
+        if(status[i]==false){
+            v.push_back(i);
+        }
+    }
+}
+
+long long factorize(long long N){
+    long long ret = 1LL;
+    for(int i = 0; i < v.size() and v[i]*v[i] <= N; i++){
+        int p = v[i];
+        if(N%p==0){
+            int cnt = 0;
+            while(N%p==0){
+                cnt++;
+                N/=p;
+            }
+            cnt = cnt / 2;
+            while(cnt){
+                ret = ret * p;
+                cnt--;
+            }
+        }
+    }
+    return ret;
+}
+
+int main(){
+    sieve();
+    long long N;
+    int t = 0;
+    while(true){
+        scanf("%lld",&N);
+        if(N==0) break;
+        t++;
+        long long x = factorize(N)-1;
+        if(x) printf("Case %d: %lld\n",t,8LL*x);
+        else printf("Case %d: Impossible\n",t);
+    }
+    return 0;
+}
+
+</pre>
 
