@@ -67,7 +67,7 @@ img: table.jpg # Add image post (optional)
     <ul>
       <li><a href="">8.1 Geometry </a>
         <ul>
-          <li> <a href = "https://zahidul-hasan.github.io/china-western/">8.1.1 China Western Math olympiad 2006: Multiple Solutions </a> </li>
+          <li> <a href = "https://zahidul-hasan.github.io/china-western/">8.1.1 China Western Math Olympiad 2006: Multiple Solutions </a> </li>
         </ul>
       </li>
     </ul>
