@@ -59,5 +59,11 @@ img: table.jpg # Add image post (optional)
         <li><a href = "https://zahidul-hasan.github.io/10-hall-marriage-theorem/">5.2 Graph Theory: Hall's Marriage Theorem and It's Applications</a></li>
     </ul>
   </li>
+  <li><a href="">6. Deep Reinforcement Learning</a>
+  </li>
+  <li><a href="">7. Inequalities</a>
+  </li>
+  <li><a href="">8. Olympiad Mathematics</a>
+  </li>
 </ul>
 </div>
