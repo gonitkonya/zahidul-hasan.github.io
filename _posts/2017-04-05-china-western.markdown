@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "China Western Math olympiad 2006: Multiple Solutions"
+title: "China Western Math Olympiad 2006: Multiple Solutions"
 date: 2017-09-11 05:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: china.jpg # Add image post (optional)
@@ -21,8 +21,12 @@ So, it turns out that $C, Y, H, X$ are all collinear. So, definitely, $CH$ is th
 
 
 Let $OP \cap CH = Q$. We will prove that $Q = G$. 
-To show $Q = G$, note that $\angle PQH, \angle PDH$ and $\angle PEH$ are $90°$, which implies $P, E, Q, H, D$ are concyclic. Then $\angle PQD = ∠ PED = ∠ DBO$, which implies $Q, D, B, O$ are concyclic. Therefore, Q = G since they are both the point of intersection (other than $O$) of the circumcircle of $\triangle BOD$ and the circle with diameter $OC$.
- 
+To show $Q = G$, note that $\angle PQH, \angle PDH$ and $\angle PEH$ are $90°$, which implies $P, E, Q, H, D$ are concyclic. Then $\angle PQD = ∠ PED = ∠ DBO$, which implies $Q, D, B, O$ are concyclic. Therefore, Q = G since they are both the point of intersection (other than $O$) of the circumcircle of $\triangle BOD$ and the circle with diameter $OC$.     
+
+Using power of point $P$ with respect to circle $GOBD$, we get, $PG.PO = PD.PB$ and using power of point $P$ with respect to circle $DBAE$, we get, $PD.PB = PE.PA$.
+Since, $PE.PA = PD.PB = PG.PO$, we can infer that $G, O, A, E$ are concyclic.    
+
+
 <strong> Solution 2 ( Due to Me ):</strong> My solution is almost analogous to the one above. Except I have my personal proof for the Lemma. Let's simply the diagram as below. We just need to prove that $AO \perp IJ$.    
 <img src = "/assets/img/Geo.jpg" width = "80%" height = "80%">
 
