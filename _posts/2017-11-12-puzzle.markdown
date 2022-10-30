@@ -30,6 +30,7 @@ Now, let's express them in their reduced forms. If there is a fraction such as, 
 And also, notice that, we could start the construction from any of the 4 corners and the point $E$ could be chosen from 2 sides for each. So, there are total 8 possible configuration each having $M-1$ possible lattice points for $F$. So, the answer is $8(M-1)$.       
 <strong>Implementation:</strong>
 <pre class ="prettyprint">
+
 #include <bits/stdc++.h>
 #define MAX 10000000
 
@@ -89,6 +90,5 @@ int main(){
     }
     return 0;
 }
-
 </pre>
 
