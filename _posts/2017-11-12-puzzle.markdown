@@ -5,7 +5,7 @@ date: 2017-05-05 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: icpc.png # Add image post (optional)
 ---
-<h3>Tags: Euler's Totient Function, Divisor Sum Theorem, Sieve of Eratosthenes, Similar Triangles</h3>
+<h3>Tags: Euler's Totient Function, Divisor Sum Theorem, Dirichlet Convolution, Sieve of Eratosthenes, Similar Triangles</h3>
 <strong>Problem Statement:</strong>
 <embed src="/assets/pdfs/puzzle.pdf" width="600px" height="1050px" />
 <strong>Solution:</strong>
@@ -15,8 +15,8 @@ only doubt that remains is whether $F$ is a lattice point or not. We choose $BE$
 We want $k$ to be an integer. So the right hand side must be an integer. Let's take $N = ng$ and $X = xg$ where $g = \gcd(N,X)$. So, definitely $\gcd(x,n) = 1$. So, 
 <center> $CF = k = \frac{(n-x)xg}{n}$ </center>
 Since $\gcd(x,n) = \gcd(n-x,n) = 1$, so $n$ divides $g$. Thus, $g = f \times n$ for some positive integer $f$.    
-So, $N = f n^{2}$ and $X = f n x$. So, for every square divisor $n^2$ of $N$, we will get $f$ and also, for every $x$ that is less than $n$ and co-prime to $n$, we can make a tuple $(f, n, x)$ and thus an $X$.   
-Let $N$ have the following prime factorization,   
+So, $N = f n^{2}$ and $X = f n x$. So, for every square divisor $n^2$ of $N$, we will get $f$ and also, for every $x$ that is less than $n$ and co-prime to $n$, we can make a tuple $(f, n, x)$ and thus an $X$.    
+Let $N$ have the following prime factorization,  
 <center>$N = p_{1}^{a_{1}}p_{2}^{a_{2}} \cdots p_{k}^{a_{k}}$</center>
 Since, $N = f n^{2}$, so $n \leq \sqrt{N}$. What we want is actually, if,   
 <center>$M = p_{1}^{\lfloor \frac{a_{1}}{2} \rfloor }p_{2}^{\lfloor \frac{a_{2}}{2} \rfloor } \cdots p_{k}^{\lfloor \frac{a_{k}}{2} \rfloor }$</center>
@@ -24,8 +24,13 @@ Then our answer is, ($\sum_{d|M} \varphi(d)) - 1$ because, if $n = 1$, there is 
 But, We can easily prove that, $\sum_{d|M} \varphi(d) = M$.    
 <strong>Proof:</strong>
 Consider the following list of rational numbers.   
-<center>$\frac{1}{n}, \frac{2}{n}, \cdots, \frac{n}{n}$ </center>     
-Now, let's express them in their reduced forms. If there is a fraction such as, $\frac{a}{d}$, then definitely $a \leq d$ and $\gcd(a,d) = 1$. Because, otherwise, it wouldn't be an irreducible fraction. And there will be exactly $\varphi(d)$ such $a$ for each $d$. And the fractions that will have $d$ as their denominator are disjoint from all other fractions and there are $n$ fractions in total. QED.
+Since $\varphi(n)$ and $g(n) = 1$ are multiplicative functions, let's define the following <strong>Dirichlet Convolution</strong>
+<center>$f(n) = (\varphi * g) (n) = \sum_{d|n} \varphi(d) g(\frac{n}{d}) = \sum_{d|n} \varphi(d)$</center>
+which is also a multiplicative function.   
+It can be easily seen that,
+<center>$f(p^{a}) = \varphi(1) + \varphi(p^{1}) + \varphi(p^{2})+ \cdots + \varphi(p^{a-1}) + \varphi(p^{a})$</center>
+<center>$f(p^{a}) = p^{0} + p^{1} - p^{0} + p^{2} - p^{1}+ \cdots + p^{a-1} - p^{a-2} + p^{a} - p^{a-1} = p^{a}$</center>
+So, <center>$f(M) = f(p_{1}^{x_{1}}p_{2}^{x_{2}} \cdots p_{k}^{x_{k}}) = f(p_{1}^{x_{1}}) f(p_{2}^{x_{2}}) \cdots f(p_{k}^{x_{k}}) = p_{1}^{x_{1}}p_{2}^{x_{2}} \cdots p_{k}^{x_{k}} = M$<center>.
 
 And also, notice that, we could start the construction from any of the 4 corners and the point $E$ could be chosen from 2 sides for each. So, there are total 8 possible configuration each having $M-1$ possible lattice points for $F$. So, the answer is $8(M-1)$.       
 <strong>Implementation:</strong>
