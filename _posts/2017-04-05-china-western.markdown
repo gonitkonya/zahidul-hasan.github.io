@@ -11,14 +11,18 @@ img: china.jpg # Add image post (optional)
 
 <img src = "/assets/img/geogeo.jpg" width = "60%" height = "60%">
 
-<strong>Solution 1:</strong> 
+<strong>Solution 1 ( Due to WONG Chiu Wai ):</strong> 
 <strong>Lemma:</strong> Let $AE \cap BD = P$ and $AD \cap BE = H$. We will prove that, the polar of point $P$ is through $C$ and $H$. If so, then the extension of $CH$ is perpendicular to $OP$.     
 From <strong>La Hire's Theorem</strong>, we know that, if $X$ lies on the polar of $Y$, then $Y$ too lies on the polar of $X$.     
-In the above diagram, let the tangents at $A$ and $E$ to the larger circle intersect at $X$ and let the tangents at $B$ and $D$ to the larger circle intersect at $Y$. Since, $AE$ is the polar of $X$ and $BD$ is the polar of $Y$, so the polar of $AE \cap BD = P$ goes through $X$ and $Y$.
-Using <strong>Pascal's Theorem</strong> on hexagon $BAADEE$, we find that $C = BA \cap CE$ and $H = AD \cap BE$ and $X = EE \cap AA$ are collinear.    
-Using <strong>Pascal's Theorem</strong> on hexagon $ABBEDD$, we find that $C = AB \cap DE$ and $H = AD \cap BE$ and $Y = BB \cap DD$ are collinear. 
-So, it turns out that $C, Y, H, X$ are all collinear. So, definitely, $CH$ is the polar of $P$. 
- 
+In the above diagram, let the tangents at $A$ and $E$ to the larger circle intersect at $X$ and let the tangents at $B$ and $D$ to the larger circle intersect at $Y$. Since, $AE$ is the polar of $X$ and $BD$ is the polar of $Y$, so the polar of $AE \cap BD = P$ goes through $X$ and $Y$.     
+Using <strong>Pascal's Theorem</strong> on hexagon $BAADEE$, we find that $C = BA \cap CE$ and $H = AD \cap BE$ and $X = EE \cap AA$ are collinear.     
+Using <strong>Pascal's Theorem</strong> on hexagon $ABBEDD$, we find that $C = AB \cap DE$ and $H = AD \cap BE$ and $Y = BB \cap DD$ are collinear.       
+So, it turns out that $C, Y, H, X$ are all collinear. So, definitely, $CH$ is the polar of $P$.     
 
+
+Let $OP \cap CH = Q$. We will prove that $Q = G$. 
+To show $Q = G$, note that $\angle PQH, \angle PDH$ and $\angle PEH$ are $90°$, which implies $P, E, Q, H, D$ are concyclic. Then $\angle PQD = ∠ PED = ∠ DBO$, which implies $Q, D, B, O$ are concyclic. Therefore, Q = G since they are both the point of intersection (other than $O$) of the circumcircle of $\triangle BOD$ and the circle with diameter $OC$.
+ 
+<strong> Solution 2 ( Due to Me ):</strong> My solution is almost analogous to the one above. Except I have my personal proof for the Lemma. Let's simply the diagram as below. We just need to prove that $AO \perp IJ$.    
 <img src = "/assets/img/Geo.jpg" width = "80%" height = "80%">
 
