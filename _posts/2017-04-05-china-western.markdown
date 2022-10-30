@@ -28,10 +28,7 @@ To show $Q = G$, note that $\angle PQH, \angle PDH$ and $\angle PEH$ are $90°$,
 
 We will go for a hybrid solution. This is why it's my favorite. It's a solution where Euclidean geometry meets Cartesian coordinate geometry.    
 Let's define the coordinates of the points in the following way:    
-$ D = (0, 0)$
-$ A = (0, a)$
-$ B = (b, 0)$
-$ C = (c, 0)$
+$ D = (0, 0)$, $ A = (0, a)$, $ B = (b, 0)$, $ C = (c, 0), H = (0, h), J = (j, 0)$       
 From here we can deduce that, $ O = (\frac{b+c}{2}, 0)$. Now, let's find out the coordinates of $H$ and $J$. One would be tempted to solve equations of the lines $BC$ and $EF$ or $BE$ and $CF$. But that would be very cumbersome. Instead, remember that, if we reflect $H$ across $BC$, it's reflection $H'$ falls on the circumcircle of $\triangle ABC$. So using the power of point $D$, 
 <center>$|AD| \times |DH'| = |BD| \times |CD|$  </center>
 Therefore, 
@@ -39,11 +36,11 @@ Therefore,
 So, $H = (0, \frac{-bc}{a})$  
 Now, let's find the coordinates of $J$.  
 Since the cevians $AD, BE, CF$ are collinear. So using <strong>Ceva's Theorem</strong>,    
-<center> $ \frac{AF}{FB} \frac{BD}{DC} \frac{CE}{EA} = 1$ </center>
-And since $E, F, J$ are collinear. Using <strong>Manelaus's Theorem</strong>,
-<center> $ \frac{AF}{FB} \frac{BJ}{JC} \frac{CE}{EA} = -1$ </center>
+<center> $ \frac{AF}{FB} \frac{BD}{DC} \frac{CE}{EA} = 1$ </center>       
+And since $E, F, J$ are collinear. Using <strong>Manelaus's Theorem</strong>,     
+<center> $ \frac{AF}{FB} \frac{BJ}{JC} \frac{CE}{EA} = -1$ </center>     
 
-Combining both we get, 
+Combining both we get,        
 <center> $  \frac{BJ}{JC} = -  \frac{BD}{DC}$ </center>
 Which means, $J, B, D, C$ are <strong>harmonic conjugates</strong>.   
 <center> $  \frac{j-b}{c-j} = -  \frac{d-b}{c-d}$ </center>
