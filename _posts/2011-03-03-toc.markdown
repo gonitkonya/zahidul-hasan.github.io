@@ -9,7 +9,7 @@ img: table.jpg # Add image post (optional)
 <div id="toc_container">
 <p class="toc_title">Contents</p>
 <ul class="toc_list">
-  <li><a href="#amma">1. Machine Learning</a>
+  <li><a href="https://zahidul-hasan.github.io/toc/#og">1. Machine Learning</a>
   <ul>
     <li><a href="">1.1 ML Theory: PAC Learnability</a></li>
     <li><a href="">1.2 ML Theory: VC Dimensions</a></li>
@@ -63,7 +63,7 @@ img: table.jpg # Add image post (optional)
   </li>
   <li><a href="">7. Inequalities</a>
   </li>
-  <li><a id = "amma" href="">8. Olympiad Mathematics</a>
+  <li><a id = "og" href="">8. Olympiad Mathematics</a>
     <ul>
       <li><a href="">8.1 Geometry </a>
         <ul>
