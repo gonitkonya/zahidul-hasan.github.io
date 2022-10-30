@@ -26,7 +26,7 @@ But, We can easily prove that, $\sum_{d|M} \varphi(d) = M$.
 Since $\varphi(n)$ and $g(n) = 1$ are multiplicative functions, let's define the following <strong>Dirichlet Convolution</strong>
 <center>$f(n) = (\varphi * g) (n) = \sum_{d|n} \varphi(d) g(\frac{n}{d}) = \sum_{d|n} \varphi(d)$</center>
 which is also a multiplicative function.   
-It can be easily seen that,
+It can be easily seen that for a prime power $p^{a}$,
 <center>$f(p^{a}) = \varphi(1) + \varphi(p^{1}) + \varphi(p^{2})+ \cdots + \varphi(p^{a-1}) + \varphi(p^{a})$</center>
 <center>$f(p^{a}) = p^{0} + p^{1} - p^{0} + p^{2} - p^{1}+ \cdots + p^{a-1} - p^{a-2} + p^{a} - p^{a-1} = p^{a}$</center>
 So, <center>$f(M) = f(p_{1}^{x_{1}}p_{2}^{x_{2}} \cdots p_{k}^{x_{k}}) = f(p_{1}^{x_{1}}) f(p_{2}^{x_{2}}) \cdots f(p_{k}^{x_{k}}) = p_{1}^{x_{1}}p_{2}^{x_{2}} \cdots p_{k}^{x_{k}} = M$<center>.
