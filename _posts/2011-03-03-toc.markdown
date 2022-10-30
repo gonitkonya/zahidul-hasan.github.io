@@ -9,13 +9,54 @@ img: table.jpg # Add image post (optional)
 <div id="toc_container">
 <p class="toc_title">Contents</p>
 <ul class="toc_list">
-  <li><a href="#First_Point_Header">1 First Point Header</a>
+  <li><a href="">1. Machine Learning</a>
   <ul>
-    <li><a href="#First_Sub_Point_1">1.1 First Sub Point 1</a></li>
-    <li><a href="#First_Sub_Point_2">1.2 First Sub Point 2</a></li>
+    <li><a href="">1.1 ML Theory: PAC Learnability</a></li>
+    <li><a href="">1.2 ML Theory: VC Dimensions</a></li>
   </ul>
 </li>
-<li><a href="#Second_Point_Header">2 Second Point Header</a></li>
-<li><a href="#Third_Point_Header">3 Third Point Header</a></li>
+<li><a href="">2. Deep Learning</a>
+  <ul>
+  </ul>
+</li>
+<li><a href="">3. Reinforcement Learning</a>
+  <ul>
+    <li><a href = "">3.1 Multi Armed Bandits </a>
+      <ul>
+        <li><a href = "https://zahidul-hasan.github.io/mab/"> 3.1.1 Multi Armed Bandits: Exploration vs Exploitation</a> </li>
+        <li><a href = "https://zahidul-hasan.github.io/explore-then-commit/"> 3.1.2 Stochastic Bandits: Explore The Commit</a> </li>
+        <li><a href = "https://zahidul-hasan.github.io/epsilon-greedy/"> 3.1.3 Stochastic Bandits: The Epsilon Greedy Algorithm</a> </li>
+        <li><a href = "https://zahidul-hasan.github.io/bandits-optimism/"> 3.1.4 Stochastic Bandits: Optimism In The Face of Uncertainty</a> </li>
+        <li><a href = "https://zahidul-hasan.github.io/successive-elimination/"> 3.1.5 Stochastic Bandits: Successive Elimination</a> </li>
+        <li><a href = "https://zahidul-hasan.github.io/moss/"> 3.1.6 Stochastic Bandits: The MOSS Algorithm</a> </li>
+        <li><a href = "https://zahidul-hasan.github.io/EXP3/"> 3.1.7 Adversarial Bandits: Hedge and Exp3</a> </li>
+        <li><a href = "https://zahidul-hasan.github.io/monster/"> 3.1.8 Contextual Bandits: A Literature Review</a> </li>
+        <li><a href = "https://zahidul-hasan.github.io/bayesian/"> 3.1.9 Bayesian Bandits: Conjugate Priors for Bernoulli and Gaussian Arms</a> </li>
+        <li><a href = "https://zahidul-hasan.github.io/thompson/"> 3.1.10 Bayesian Bandits: Thompson Sampling with Implementation and Regret Analysis</a> </li>
+      </ul>
+    </li>
+    <li><a href = "">3.2 Markov Decision Process</a>
+      <ul>
+        <li><a href = "">3.2.1 Markov Chains, Markov Reward Process, Markov Decision process</a></li>
+        <li><a href = "">3.2.1 State Value Functions and Action Value Functions</a></li>
+      </ul>
+  </ul>
+  </li>
+  <li><a href="">4. Competitive Programming</a>
+    <ul>
+      <li><a href = "">4.1 ACM ICPC Problems</a>
+        <ul>
+        <li><a href = "https://zahidul-hasan.github.io/puzzle/">4.1.1 ACM ICPC Dhaka Regional 2008: Puzzles of Triangles</a></li>
+        <li><a href = "https://zahidul-hasan.github.io/doomsday/">4.1.2 ACM ICPC Dhaka Regional 2008: Stopping Doom's Day</a></li>
+      </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="">5. Graph Theory</a>
+    <ul>
+        <li><a href = "https://zahidul-hasan.github.io/matching/">5.1 Graph Theory: Matching</a></li>
+        <li><a href = "https://zahidul-hasan.github.io/10-hall-marriage-theorem/">5.2 Graph Theory: Hall's Marriage Theorem and It's Applications</a></li>
+    </ul>
+  </li>
 </ul>
 </div>
