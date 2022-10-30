@@ -11,7 +11,7 @@ img: table.jpg # Add image post (optional)
 <ul class="toc_list">
   <li><a href="">1. Machine Learning</a>
   <ul>
-    <li><a href="">1.1 ML Theory: PAC Learnability</a></li>
+    <li><a href="https://zahidul-hasan.github.io/PAC/">1.1 ML Theory: PAC Learnability</a></li>
     <li><a href="">1.2 ML Theory: VC Dimensions</a></li>
   </ul>
 </li>
