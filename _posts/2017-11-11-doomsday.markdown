@@ -115,7 +115,6 @@ int gauss()
         }
         X[i] = (sltn *modinverse(A.arr[row][i],MOD-2))%MOD;
     }
-    int u;
     return 1;
 }
 
@@ -157,7 +156,7 @@ long long Fun(long long n){
 
 int main(){
     buildmatrix();
-    gauss();
+    int x = gauss();
     long long n;
     while(1){
         scanf("%lld",&n);
