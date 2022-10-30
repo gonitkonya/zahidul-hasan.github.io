@@ -43,7 +43,7 @@ img: table.jpg # Add image post (optional)
     </li>
   </ul>
   </li>
-  <li><a href="">4. Competitive Programming</a>
+  <li><a href="cp">4. Competitive Programming</a>
     <ul>
       <li><a href = "">4.1 ACM ICPC Problems</a>
         <ul>
@@ -63,7 +63,7 @@ img: table.jpg # Add image post (optional)
   </li>
   <li><a href="">7. Inequalities</a>
   </li>
-  <li><a id = "og" href="">8. Olympiad Mathematics</a>
+  <li><a id = "om" href="">8. Olympiad Mathematics</a>
     <ul>
       <li><a href="">8.1 Geometry </a>
         <ul>
