@@ -10,10 +10,10 @@ site-twitter: #if your site has a twitter account, enter it here
 author: Md Zahidul Hasan # add your name
 author-img: pic.jpg #david-freeman.jpg # add your photo
 about-author: Lecturer, Department of Computer Science and Engineering, BRAC University, Bangladesh. # add description
-social-twitter: # add your Twitter handle
+social-twitter: ZadidHasan11# add your Twitter handle
 social-facebook: # add your Facebook handle
-social-github: https://github.com/Zahidul-Hasan # add your Github handle
-social-linkedin: https://www.linkedin.com/in/mohammad-zahidul-hasan-09223517b/# add your Linkedin handle
+social-github: Zahidul-Hasan # add your Github handle
+social-linkedin: mohammad-zahidul-hasan-09223517b/# add your Linkedin handle
 social-email: zadidhasan11@gmail.com# add your Email address
 theme-name: flexible-jekyll
 # Disqus
