@@ -40,7 +40,7 @@ img: table.jpg # Add image post (optional)
         <li><a href = "">3.2.1 Markov Chains, Markov Reward Process, Markov Decision process</a></li>
         <li><a href = "">3.2.1 State Value Functions and Action Value Functions</a></li>
       </ul>
-  </ul>
+    </li>
   </li>
   <li><a href="">4. Competitive Programming</a>
     <ul>
