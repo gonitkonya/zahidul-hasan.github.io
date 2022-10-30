@@ -12,4 +12,8 @@ img: icpc.png # Add image post (optional)
 Let's assume, $BE = X$. Connect $A$ with $E$. Draw a perpendicular line to $AE$ that intersects $DC$ at $F$. It's evident that all 4 triangles are right angled. The
 only doubt that remains is whether $F$ is a lattice point or not. We choose $BE$ to be an integer. Since, $\triangle ABE$ and $\triangle ECF$ are similar. We get,   
 <center> $CF = k = \frac{(N-X)X}{N}$ </center>
+We want $k$ to be an integer. So the right hand side must be an integer. Let's take $N = ng$ and $X = xg$ where $g = \gcd(N,X)$. So, definitely $\gcd(x,n) = 1$. So, 
+<center> $CF = k = \frac{(n-x)xg}{n}$ </center>
+Since $\gcd(x,n) = \gcd(n-x,n) = 1$, so $n$ divides $g$. Thus, $g = f \times n$ for some positive integer $f$.
+
 
