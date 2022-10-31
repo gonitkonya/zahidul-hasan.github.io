@@ -137,7 +137,7 @@ These works fall under the category of contextual bandits with side information 
     </ul>
   </li>
 </ol>
-  <strong> 2014: Beyond UCB: SquareCB by Dylan Foster and Alexander Rakhlin</strong>
+  <strong> 2014: ILOVETOCONBANDITS: Taming the Monster by Agarwal and Schapire et al</strong>
 <ol>
   <li>
     <strong>Problem Setting:</strong>
@@ -175,6 +175,43 @@ These works fall under the category of contextual bandits with side information 
     <ul>
       <li>Time complexity is $\sqrt{\frac{K^{3}T^{3}}{\log{\frac{\mathcal{M}}{\delta}}}}$. Can be optimized.</li>
       <li>The oracle is an offline regressor which prossesses batches of data at the start of each epoch. So, at the end of the end, the algorithm kind of uses stale knowledge about the environment.</li>
+    </ul>
+  </li>
+</ol>
+  <strong> 2020: Beyond UCB: SquareCB by Dylan Foster and Alexander Rakhlin</strong>
+<ol>
+  <li>
+    <strong>Problem Setting:</strong>
+    <ul>
+      <li>Makes no assumption about the bandit environment.</li>
+      <li>We can only observe the reward for the action chosen.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Key Properties:</strong>
+    <ul>
+      <li>Oracle based algorithms compute a distribution over all the policies. Then they randomly sample a policy from that distribution. And that policy is also a distribution across arms. Then they randomly sample an arm. So, this distribution across policies is a middleman. We can get rid of that. The authors keep a single online regressor oracle that estimates the expected reward of each arm. Then chooses the best arm. </li>
+      <li>Now, this may feel like choosing the arm is deterministic. How can we allow exploration then? </li>
+      <li>Any arm whose estimated reward is deviated from that of the best arm has less likelihood of being chosen. They create a probability distribution in the following way</li>
+      <li> Let $\bar y_{t,a}$ be the estimated reward of arm $a$ at round $t$. And let $b_{t}$ be the best arm mentioned above. Then for all other arms, $p_{t,a} = \frac{1}{\mu + \lambda (\bar y_{t,b_{t}} - \bar y_{t,a})}$ and for $b_{t}$, $p_{t,b_{t}} = 1 - sum_{a \neq b_{t}}^{} p_{t,a}$. </li>
+      <li> This is $\mu$ is the exploration factor. It's the same for everyone and $\lambda$ is the learning rate.</li>
+      <li> Then the action is randomly sampled from this distribution.</li>
+    </ul>
+  </li>
+  <li><strong>Official Pseudocode:</strong>
+    <ul>
+   <li><img src="/assets/img/square.jpg" alt="pseudocode" width="80%" height="80%"></li>
+    </ul>
+  </li>
+  <li><strong>Regret Bounds:</strong>
+    <ul>
+      <li> Their algorithm gives optimal regret: $\mathcal{O}(\sqrt{TK\log{\mathcal{M}}})$</li> 
+    </ul>
+  </li>
+  <li>
+    <strong>Drawbacks and Scope of Work:</strong>:
+    <ul>
+      <li>The Algorithm uses an online regression oracle. There is no algorithm yet that uses an online classification oracle.</li>
     </ul>
   </li>
 </ol>
