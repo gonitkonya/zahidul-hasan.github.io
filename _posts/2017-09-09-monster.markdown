@@ -193,7 +193,7 @@ These works fall under the category of contextual bandits with side information 
       <li>Oracle based algorithms compute a distribution over all the policies. Then they randomly sample a policy from that distribution. And that policy is also a distribution across arms. Then they randomly sample an arm. So, this distribution across policies is a middleman. We can get rid of that. The authors keep a single online regressor oracle that estimates the expected reward of each arm. Then chooses the best arm. </li>
       <li>Now, this may feel like choosing the arm is deterministic. How can we allow exploration then? </li>
       <li>Any arm whose estimated reward is deviated from that of the best arm has less likelihood of being chosen. They create a probability distribution in the following way</li>
-      <li> Let $\bar y_{t,a}$ be the estimated reward of arm $a$ at round $t$. And let $b_{t}$ be the best arm mentioned above. Then for all other arms, $p_{t,a} = \frac{1}{\mu + \lambda (\bar y_{t,b_{t}} - \bar y_{t,a})}$ and for $b_{t}$, $p_{t,b_{t}} = 1 - sum_{a \neq b_{t}}^{} p_{t,a}$. </li>
+      <li> Let $\bar y_{t,a}$ be the estimated reward of arm $a$ at round $t$. And let $b_{t}$ be the best arm mentioned above. Then for all other arms, $p_{t,a} = \frac{1}{\mu + \lambda (\bar y_{t,b_{t}} - \bar y_{t,a})}$ and for $b_{t}$, $p_{t,b_{t}} = 1 - \sum_{a \neq b_{t}}^{} p_{t,a}$. </li>
       <li> This is $\mu$ is the exploration factor. It's the same for everyone and $\lambda$ is the learning rate.</li>
       <li> Then the action is randomly sampled from this distribution.</li>
     </ul>
