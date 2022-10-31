@@ -63,7 +63,7 @@ These works fall under the category of contextual bandits with side information 
   </li>
 </ol>
 
-<strong> 2007: NEXP Algorithm by McMahan et al. </strong>
+<strong> 2009: NEXP Algorithm by McMahan et al. </strong>
 <ol>
   <li>
     <strong>Problem Setting:</strong>
@@ -81,7 +81,7 @@ These works fall under the category of contextual bandits with side information 
   </li>
   <li><strong>Official Pseudocode:</strong>
     <ul>
-   <li><img src="/assets/img/nex.jpg" alt="pseudocode" width="60%" height="60%"></li>
+   <li><img src="/assets/img/mcmahan.jpg" alt="pseudocode" width="45%" height="45%"></li>
       <li> <p>They have proposed several variants of the $F_{mix}$ subroutine. One of them is $UA_{mix}(\lambda)$:</p>         
         <center>$p(a) = (1-\lambda) \bar p(a) + \lambda \frac{1}{K}$</center>
         <p> where $\lambda$ is an egalitarianism factor </p>
@@ -90,7 +90,7 @@ These works fall under the category of contextual bandits with side information 
         <center>$p(a) = (1-\lambda) \bar p(a) + \frac{\lambda}{M} \sum_{i}^{} e_{i}(a)$</center>
       </li>
       <li> <p> Yet, another variant is called $LP_{mix}(\alpha)$:</p>
-        <img src="/assets/img/lpmix.jpg" alt="lp subroutine" width="60%" height="60%">
+        <img src="/assets/img/lpmix.jpg" alt="lp subroutine" width="45%" height="45%">
       </li>
     </ul>
   </li>
