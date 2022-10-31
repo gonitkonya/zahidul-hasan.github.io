@@ -154,38 +154,26 @@ These works fall under the category of contextual bandits with side information 
       <li> The algorithm calculates a distribution over the policy space. Then randomly samples a policy from that space. This policy also is a probability distribution over the actions. Then the algorithm chooses an action at random.</li>
       <li> Since they use the inverse propensity score to estimate the rewards, if the probability of an action being chosen at round $t$ is very low, then it induces a large variance on the reward estimate. So, they don't allow any of that probabilty to become less than $\mu \in [0, \frac{1}{K}]$.</li>
       <li> Unlike it's precursors such as Randomized UCB, this algorithm doesn't call the oracle in every round. It uses a epoch schedule like the doubling trick and calls the oracle only at the beginning of the epoch</li>
-      <li> $\tau_{m}$ is the current epoch schedule and $\tau_{m+1}$ is the next epoch schedule, then $\tau_{m+1} \leq 2\tau_{m}$
+      <li> $\tau_{m}$ is the current epoch schedule and $\tau_{m+1}$ is the next epoch schedule, then $\tau_{m+1} \leq 2\tau_{m}$ </li>
+      <li> Uses coordinate descent to solve the optimization problem </li>
+      <li> Makes only $\sart{\frac{KT}{\log{\mathcal{O}}}}$ calls to the oracle which is phenomenal compared to it's precursor Randomized UCB </li>
     </ul>
   </li>
   <li><strong>Official Pseudocode:</strong>
     <ul>
-   <li><img src="/assets/img/nex.jpg" alt="pseudocode" width="60%" height="60%"></li>
-      <li> <p>They have proposed several variants of the $F_{mix}$ subroutine. One of them is $UA_{mix}(\lambda)$:</p>         
-        <center>$p(a) = (1-\lambda) \bar p(a) + \lambda \frac{1}{K}$</center>
-        <p> where $\lambda$ is an egalitarianism factor </p>
-      </li>
-      <li> <p> Another variant of $F_{mix}$ is $UE_{mix}(\lambda)$:</p>
-        <center>$p(a) = (1-\lambda) \bar p(a) + \frac{\lambda}{M} \sum_{i}^{} e_{i}(a)$</center>
-      </li>
-      <li> <p> Yet, another variant is called $LP_{mix}(\alpha)$:</p>
-        <img src="/assets/img/lpmix.jpg" alt="lp subroutine" width="60%" height="60%">
-      </li>
+   <li><img src="/assets/img/conbandit.jpg" alt="pseudocode" width="60%" height="60%"></li>
     </ul>
   </li>
   <li><strong>Regret Bounds:</strong>
     <ul>
-      <li>
-        When they use the $UA_{mix}$ subroutine, the expected regret is bounded from above by $E[R] \leq 2.63 \sqrt{TM \log{M}}$.
-      </li>
-      <li>
-        When they use the $LP_{mix}$ subroutine, the expected regret is bounded from above by $E[R] \leq 2.63 \sqrt{TS \log{M}}$ where $S \leq min(K,M)$.
-      </li>
+      <li> Their algorithm gives optimal regret: $\mathcal{O}(\sqrt{TK\log{\frac{T\mathcal{M}}{\delta}}})$ with confidence at least $1-\delta$.</li> 
     </ul>
   </li>
   <li>
     <strong>Drawbacks and Scope of Work:</strong>:
     <ul>
-      <li> The runtime complexity in each round is $\mathcal{|A|+|M|}$.</li>
+      <li>Time complexity is $\sart{\frac{K^{3}T^{3}}{\log{\mathcal{O}}}}$. Can be optimized.</li>
+      <li>The oracle is an offline regressor which prossesses batches of data at the start of each epoch. So, at the end of the end, the algorithm kind of uses stale knowledge about the environment.</li>
     </ul>
   </li>
 </ol>
