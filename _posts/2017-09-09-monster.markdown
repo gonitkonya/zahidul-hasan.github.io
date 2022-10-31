@@ -156,7 +156,7 @@ These works fall under the category of contextual bandits with side information 
       <li> Unlike it's precursors such as Randomized UCB, this algorithm doesn't call the oracle in every round. It uses a epoch schedule like the doubling trick and calls the oracle only at the beginning of the epoch</li>
       <li> $\tau_{m}$ is the current epoch schedule and $\tau_{m+1}$ is the next epoch schedule, then $\tau_{m+1} \leq 2\tau_{m}$ </li>
       <li> Uses coordinate descent to solve the optimization problem </li>
-      <li> Makes only $\sart{\frac{KT}{\log{\mathcal{O}}}}$ calls to the oracle which is phenomenal compared to it's precursor Randomized UCB </li>
+      <li> Makes only $\sqrt{\frac{KT}{\log{\mathcal{O}}}}$ calls to the oracle which is phenomenal compared to it's precursor Randomized UCB </li>
     </ul>
   </li>
   <li><strong>Official Pseudocode:</strong>
