@@ -6,7 +6,8 @@ description: You’ll find this post in your `_posts` directory. Go ahead and ed
 img: creature-keeper00005313still001-1654716362730.jpg # Add image post (optional)
 ---
 
-Here in this post, I will provide excerpts from some of the most influential works done on Contextual Multi-Armed Bandits.      
+Here in this post, I will provide excerpts from some of the most influential works done on Contextual Multi-Armed Bandits.     
+<strong>Notation:</strong> $T$ is the horizon. $K$ is the number of arms. $\mathcal{M}$ is the set of policies.     
 <strong> 2005: Wang et al, 2007: Pandey et al </strong>   
 These works fall under the category of contextual bandits with side information and we will not elaborate on that.
 
