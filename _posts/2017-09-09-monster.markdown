@@ -172,7 +172,7 @@ These works fall under the category of contextual bandits with side information 
   <li>
     <strong>Drawbacks and Scope of Work:</strong>:
     <ul>
-      <li>Time complexity is $\sart{\frac{K^{3}T^{3}}{\log{\mathcal{O}}}}$. Can be optimized.</li>
+      <li>Time complexity is $\sqrt{\frac{K^{3}T^{3}}{\log{\mathcal{O}}}}$. Can be optimized.</li>
       <li>The oracle is an offline regressor which prossesses batches of data at the start of each epoch. So, at the end of the end, the algorithm kind of uses stale knowledge about the environment.</li>
     </ul>
   </li>
