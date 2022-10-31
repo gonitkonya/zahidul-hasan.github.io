@@ -161,7 +161,7 @@ These works fall under the category of contextual bandits with side information 
   </li>
   <li><strong>Official Pseudocode:</strong>
     <ul>
-   <li><img src="/assets/img/conbandit.jpg" alt="pseudocode" width="60%" height="60%"></li>
+   <li><img src="/assets/img/conbandit.jpg" alt="pseudocode" width="80%" height="80%"></li>
     </ul>
   </li>
   <li><strong>Regret Bounds:</strong>
