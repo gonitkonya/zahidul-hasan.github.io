@@ -177,3 +177,44 @@ These works fall under the category of contextual bandits with side information 
     </ul>
   </li>
 </ol>
+  <strong> 2014: Beyond UCB: SquareCB by Dylan Foster and Alexander Rakhlin</strong>
+<ol>
+  <li>
+    <strong>Problem Setting:</strong>
+    <ul>
+      <li>The bandit is stochastic.</li>
+      <li>We can only observe the reward for the action chosen.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Key Properties:</strong>
+    <ul>
+      <li>They use inverse propensity score to estimate the reward at round $t$ if they chose action $a$ given the history $H_{t-1} = (C_{1}, A_{1}, X_{1}, C_{2}, A_{2}, X_{2}, \cdots, C_{t-1}, A_{t-1}, X_{t-1})$.</li>
+      <li>They have access to an Oracle that returns the policy that maximizes the total reward in the first $t-1$ rounds according to this estimated reward system.</li>
+      <li> Compares regret relative to the expected reward obtained by the best policy.</li>
+      <li> The algorithm calculates a distribution over the policy space. Then randomly samples a policy from that space. This policy also is a probability distribution over the actions. Then the algorithm chooses an action at random.</li>
+      <li> Since they use the inverse propensity score to estimate the rewards, if the probability of an action being chosen at round $t$ is very low, then it induces a large variance on the reward estimate. So, they don't allow any of that probabilty to become less than $\mu \in [0, \frac{1}{K}]$.</li>
+      <li> Unlike it's precursors such as Randomized UCB, this algorithm doesn't call the oracle in every round. It uses a epoch schedule like the doubling trick and calls the oracle only at the beginning of the epoch</li>
+      <li> $\tau_{m}$ is the current epoch schedule and $\tau_{m+1}$ is the next epoch schedule, then $\tau_{m+1} \leq 2\tau_{m}$ </li>
+      <li> Uses coordinate descent to solve the optimization problem </li>
+      <li> Makes only $\sqrt{\frac{KT}{\log{\mathcal{O}}}}$ calls to the oracle which is phenomenal compared to it's precursor Randomized UCB </li>
+    </ul>
+  </li>
+  <li><strong>Official Pseudocode:</strong>
+    <ul>
+   <li><img src="/assets/img/conbandit.jpg" alt="pseudocode" width="80%" height="80%"></li>
+    </ul>
+  </li>
+  <li><strong>Regret Bounds:</strong>
+    <ul>
+      <li> Their algorithm gives optimal regret: $\mathcal{O}(\sqrt{TK\log{\frac{T\mathcal{M}}{\delta}}})$ with confidence at least $1-\delta$.</li> 
+    </ul>
+  </li>
+  <li>
+    <strong>Drawbacks and Scope of Work:</strong>:
+    <ul>
+      <li>Time complexity is $\sqrt{\frac{K^{3}T^{3}}{\log{\frac{\mathcal{M}}{\delta}}}}$. Can be optimized.</li>
+      <li>The oracle is an offline regressor which prossesses batches of data at the start of each epoch. So, at the end of the end, the algorithm kind of uses stale knowledge about the environment.</li>
+    </ul>
+  </li>
+</ol>
