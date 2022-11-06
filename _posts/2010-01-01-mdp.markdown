@@ -10,10 +10,10 @@ img: mdpp.jpg # Add image post (optional)
 <center><img src = "/assets/img/mc.jpg" height = "70%" width = "70%">      </center>       
 From this diagram, we can compute the probability of the following sequence of weather type: (sunny, sunny, windy, rainy, sunny) or in short (s, s, w, r, s). But how?    
 <strong>Stochastic Matrix:</strong> A stochastic matrix is a square matrix where all of the entries are non-negative and the sum of each column is 1. Every stochastic matrix represents a finite markov chain. For example, the above state transition diagram can be expressed as a stochastic matrix like this:    
-$\begin{bmatrix}
+<center>$\begin{bmatrix}
 1 & 2 & 3\\
 a & b & c\\
-\end{bmatrix}$      
+\end{bmatrix}$      </center>       
 <strong>Markov Assumption:</strong> A Markov Chain adheres to the Markov assumption that, the probably of the next state depends only on the current state. More formally,    
 <center>$p(S_{n+1} = s_{n+1}| S_{n} = s_{n}, S_{n-1} = s_{n-1}, \cdots, S_{1} = s_{1}) = p(S_{n+1} = s_{n+1}| S_{n} = s_{n})$</center>    
 Which can be succintly written as,
