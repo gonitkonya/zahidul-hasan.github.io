@@ -10,7 +10,7 @@ img: mdpp.jpg # Add image post (optional)
 <center><img src = "/assets/img/mc.jpg" height = "70%" width = "70%">      </center>       
 From this diagram, we can compute the probability of the following sequence of weather type: (sunny, sunny, windy, rainy, sunny) or in short (s, s, w, r, s). But how?    
 <strong>Stochastic Matrix:</strong> A right stochastic matrix is a square matrix where all of the entries are non-negative and the sum of each row is 1. Every stochastic matrix represents a finite markov chain. For example, the above state transition diagram can be expressed as a right stochastic matrix like this:    
-<center>$\begin{bmatrix}
+<center>$A = \begin{bmatrix}
 0.6 & 0.3 & 0.1\\
 0.2 & 0.7 & 0.1\\
 0.4 & 0.4 & 0.2\\
