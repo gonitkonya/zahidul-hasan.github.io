@@ -3,7 +3,7 @@ layout: post
 title: "MDPs: Markov Chain, Reducibility, Steady State Probabilities"
 date: 2022-10-11 05:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: moss.jpg# Add image post (optional)
+img: beta.jpg# Add image post (optional)
 ---
 
 <strong>Markov Chain:</strong> A Markov chain is a (possibly infinite) sequence of states where the transition from one state to another is stochastic. The set of all possible states could be countably infinite. In the Discrete-Time Markov Chain, the transition from one state to another is a discrete event. In the Continuous-Time Markov Chain, at any given moment the environment is changing from one state to another. Let's consider the following discrete example. For simplicity, we only assume that, there is only one type of weather possible for each day. Let's say, there are only three types of weather. And any day can be classified to only one of those. The following diagram shows the state transition probability for each weather type.      
