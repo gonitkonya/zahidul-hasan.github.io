@@ -9,6 +9,11 @@ img: mdpp.jpg # Add image post (optional)
 <strong>Markov Chain:</strong> A Markov chain is a (possibly infinite) sequence of states where the transition from one state to another is stochastic. The set of all possible states could be countably infinite. In the Discrete-Time Markov Chain, the transition from one state to another is a discrete event. In the Continuous-Time Markov Chain, at any given moment the environment is changing from one state to another. Let's consider the following discrete example. For simplicity, we only assume that, there is only one type of weather possible for each day. Let's say, there are only three types of weather. And any day can be classified to only one of those. The following diagram shows the state transition probability for each weather type.      
 <center><img src = "/assets/img/mc.jpg" height = "70%" width = "70%">      </center>       
 From this diagram, we can compute the probability of the following sequence of weather type: (sunny, sunny, windy, rainy, sunny) or in short (s, s, w, r, s). But how?    
+<strong>Stochastic Matrix:</strong> A stochastic matrix is a square matrix where all of the entries are non-negative and the sum of each column is 1. Every stochastic matrix represents a finite markov chain. For example, the above state transition diagram can be expressed as a stochastic matrix like this:    
+$\begin{bmatrix}
+1 & 2 & 3\\
+a & b & c\\
+\end{bmatrix}$      
 <strong>Markov Assumption:</strong> A Markov Chain adheres to the Markov assumption that, the probably of the next state depends only on the current state. More formally,    
 <center>$p(S_{n+1} = s_{n+1}| S_{n} = s_{n}, S_{n-1} = s_{n-1}, \cdots, S_{1} = s_{1}) = p(S_{n+1} = s_{n+1}| S_{n} = s_{n})$</center>    
 Which can be succintly written as,
