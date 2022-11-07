@@ -32,10 +32,10 @@ The <strong>optimal policy</strong> $\pi^{*}$ is one that belongs to the followi
 <center> $v_{\pi}(s) = \mathbb{E}_{\tau \sim \pi}[R(\tau)|S_{0} = s]$ </center>      
 <br>
 <strong>Action-Value Function:</strong> Given a policy $\pi$, the action-value function of an action-state pair is the expected return of a trajectory starting from that state and choosing that action.      
-<center> $v_{\pi}(s, a) = \mathbb{E}_{\tau \sim \pi}[R(\tau)|S_{0} = s, A_{0} = a]$ </center>      
+<center> $q_{\pi}(s, a) = \mathbb{E}_{\tau \sim \pi}[R(\tau)|S_{0} = s, A_{0} = a]$ </center>      
 <br>
 Also note that,     
-<center> $v_{\pi}(s) = \mathbb{E}_{a \sim \pi}[v_{\pi}(s,a)]$ </center> 
+<center> $v_{\pi}(s) = \mathbb{E}_{a \sim \pi}[q_{\pi}(s,a)]$ </center> 
 <br>
 <strong>Bellman Equations:</strong> One easily comes up with the following,        
 <center>$q_{\pi}(s) = \mathbb{E}[ R_{0} + \gamma R_{1} + \gamma^{2} R_{2} + \cdots | S_{0} = s]$ </center>      
@@ -47,8 +47,11 @@ Also note that,
 <center>$q_{\pi}(s) = \mathbb{E}_{a \sim \pi(.|s), s' \sim p(.|s,a)} [r + \gamma v_{\pi}(s')]$ </center> 
 
 Analogously, for the action-value function, one can guess and similarly derive the following:      
-<center>$q_{\pi}(s, a) = \mathbb{E}_{s' \sim p(.|s,a), a' \sim \pi(. | s')} [r + \gamma v_{\pi}(s', a')]$ </center> 
+<center>$q_{\pi}(s, a) = \mathbb{E}_{s' \sim p(.|s,a), a' \sim \pi(. | s')} [r + \gamma q_{\pi}(s', a')]$ </center> 
 So, the value function vector is defined in term's of itself, $v = r + \gamma Pv$. It can be solved from $v = (1-\gamma P)^{-1}r$ which takes $\mathcal{O}(n^{3})$ complexity. But we can use Monte Carlo simulation or Dynamic Programming to yeild faster solutions.   
 
-    
-
+<strong>Optimal State-Value Function:</strong> For a state $s$, it's maximum value across all policies is called $v_{*}(s)$.      
+<center>$v_{*}(s) = \max_{\pi} v_{\pi}(s)$ </center>
+<br>
+<strong>Optimal Action-Value Function:</strong> For a state $s$ and an action $a$, the maximum action-value of this pair across all policies is called $v_{*}(s, a)$.      
+<center>$q_{*}(s, a) = \max_{\pi} q_{\pi}(s, a)$ </center>
