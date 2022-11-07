@@ -36,9 +36,16 @@ The <strong>optimal policy</strong> $\pi^{*}$ is one that belongs to the followi
 <br>
 Also note that,     
 <center> $v_{\pi}(s) = \mathbb{E}_{a \sim \pi}[v_{\pi}(s,a)]$ </center> 
-
-
-
+<br>
+<strong>Bellman Equations:</strong> One easily comes up with the following,        
+<center>$q_{\pi}(s) = \mathbb{E}[ R_{0} + \gamma R_{1} + \gamma^{2} R_{2} + \cdots | S_{0} = s]$ </center>      
+<center>$q_{\pi}(s) = \mathbb{E}_{a \sim \pi(.\vert s)}[ R_{0} + \gamma R_{1} + \gamma^{2} R_{2} + \cdots | S_{0} = s, A_{0} = a]$ </center> 
+<center>$q_{\pi}(s) = \mathbb{E}_{a \sim \pi(.\vert s)}[ R_{0}] + \mathbb{E}_{a \sim \pi(.\vert s)}[\gamma R_{1} + \gamma^{2} R_{2} + \cdots | S_{0} = s, A_{0} = a]$ </center> 
+<center>$q_{\pi}(s) = \mathbb{E}_{a \sim \pi(.\vert s)}[ R_{0}] + \sum_{s' \sim p(.\vert s, a) } p(s'\vert s, a ) \mathbb{E}_{a \sim \pi(.\vert s)}[\gamma R_{1} + \gamma^{2} R_{2} + \cdots | S_{1} = s']$ </center> 
+<center>$q_{\pi}(s) = \mathbb{E}_{a \sim \pi(.\vert s)}[ R_{0}] + \gamma \sum_{s' \sim p(.\vert s, a) } p(s'\vert s, a ) v_{\pi}(s')$ </center> 
+<center>$q_{\pi}(s) = \mathbb{E}_{a \sim \pi(.\vert s)}[ R_{0}] + \gamma \mathbb{E}_{a \sim \pi(.|s), s' \sim p(.|s,a)} [v_{\pi}(s)]$ </center> 
+<center>$q_{\pi}(s) = \mathbb{E}_{a \sim \pi(.|s), s' \sim p(.|s,a)} [r + \gamma v_{\pi}(s)]$ </center> 
+So, the value function vector is defined in term's of itself, $v = r + \gamma Pv$. It can be solved from $v = (1-\gamma P)^{-1}r$ which takes $\mathcal{O}(n^{3})$ complexity. But we can use Monte Carlo simulation or Dynamic Programming to yeild faster solutions.   
 
     
 
