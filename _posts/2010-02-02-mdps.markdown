@@ -25,7 +25,7 @@ One good thing about the discounted return is that it can allow $T$ to be infini
 <strong>Policy:</strong> A policy is a strategy of the agent. It's the agent's estimation of the profitability of an action from a particular state. $\pi(a|s)$ is a probability distribution across the actions from the state $s$. $\pi(a|s) = p(A_{t} = a | S_{t} = s)$.    
 <strong>Expected Return:</strong> The expected return of a policy is the expected return of any trajectory from any starting state by following that policy. It's defined as follows,     
 <center>$J(\pi) = \int_{\tau}^{} p(\tau|\pi) R(\tau)$ </center>     
-The <strong>optimal policy</strong> $\pi^{*}$ is one that belong to the following set:    
+The <strong>optimal policy</strong> $\pi^{*}$ is one that belongs to the following set:    
 <center>$\arg \max_{\pi} J(\pi)$ </center>
 
 <strong>Value Function:</strong> Given a policy $\pi$, the value function of a state is the expected return of a trajectory starting from that state.       
