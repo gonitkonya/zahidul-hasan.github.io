@@ -1,10 +1,18 @@
 ---
 layout: post
-title: "MDPs: Markov Reward Process, Markov Decision Process"
+title: "MDPs: Markov Reward Model, Markov Decision Process"
 date: 2022-10-01 05:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: mdpp.jpg # Add image post (optional)
 ---
 
-<strong>Markov Reward Process:</strong> A Markov chain was only a pair $\langle S, A\rangle$ where $S$ is the set of states and $A$ is the stochastic state transition matrix. From this information, we can only find out which states are more likely to occur on a random walk. But if we associate a reward with each state, then some states become more desirable than others. In this way, the Markov Reward Model can send some feedback to the agent. So, a Markov Reward Process/Model is a quadruple $\langle S, A, R, \gamma \rangle$ where $R$ is a function that maps each state to a reward, $R(S_{t}) = R_{t}$ and $\gamma$ is a discount factor which will be explained later.     
-<center><img src = "/assets/img/mrp.jpg" height = "70%" width = "70%"> </center>
+<strong>Markov Reward Model:</strong> A Markov chain was only a pair $\langle S, A\rangle$ where $S$ is the set of states and $A$ is the stochastic state transition matrix. From this information, we can only find out which states are more likely to occur on a random walk. But if we associate a reward with each state, then some states become more desirable than others. In this way, the Markov Reward Model can send some feedback to the agent. So, a Markov Reward Process/Model is a quadruple $\langle S, A, R, \gamma \rangle$ where $R$ is a function that maps each state to a reward, $R(S_{t}) = R_{t}$ and $\gamma$ is a discount factor which will be explained later.     
+<center><img src = "/assets/img/mrp.jpg" height = "70%" width = "70%"> </center>     
+<br>
+<strong>Return:</strong> If $S_{0}, S_{1}, \cdots, S_{T}$ is a path/trajectory, then the return or gain of that path is the cumulative reward.    
+<center>$G_{t = 0: T} = \sum_{t = 0}^{T} R(S_{t}) = \sum_{t = 0}^{T} R_{t}$ </center>      
+The goal of the agent is to walk a path before the time horizon $T$ so that, the total reward is maximized.    
+
+<strong>Discounted Return:</strong> Sometimes, to the agent, immediate rewards are more important than future ones. But the future rewards aren't irrelevant either. Rather their importance is diminishing with time, rather than the other way round. One way to think of it is, if we prioritize distant rewards more than current rewards, the agent would be procrastinating. Tomorrow is more important than today and so we can slack off a bit. That way, the agent never gets much done. So, we introduce a $0 < \gamma \leq 1$.   
+<center>$G_{t = 0: T} = \sum_{t = 0}^{T} \gamma^{t}R(S_{t}) = \sum_{t = 0}^{T} \gamma^{t}R_{t}$ </center>      
+One good thing about the discounted return is that it can allow $T$ to be infinite. In the case of the cumulative return, it might not even be a finite value. But with $\gamma$ less than 1, we can make the return converge. If $\gamma = 1$, then it's just the old cumulative reward. But if $\gamma$ is very close to 0, then the agent is actually miopic ( short-sighted ) and only seeks to maximize per round reward.      
