@@ -24,6 +24,9 @@ Also, a left stochastic matrix is one where the rows sum to 1 and a doubly stoch
 <center>$p(S_{n+1} = s_{n+1}| S_{n} = s_{n}, S_{n-1} = s_{n-1}, \cdots, S_{1} = s_{1}) = p(S_{n+1} = s_{n+1}| S_{n} = s_{n})$</center>    
 Which can be succintly written as,
 <center>$p(S_{n+1}| S_{n}, S_{n-1} , \cdots, S_{1}) = p(S_{n+1}| S_{n})$</center>        
+<br>
+<strong>Time Homogeneity Assumption:</strong> We also assume that, the conditional state transition probabilities do not change over time. In other words,   
+<center> $p(S_{t+1} = s^{'} | S_{t+1} = s) = p(S_{k+1} = s^{'} | S_{k} = s) = p(s^{'}|s)$</center>     
 So, using probability chain rule,
 <center> $p(s, s, w, r, s) = p(s, w, r, s | S_{1} = s)p(S_{1} = s)$ </center>
 <center> $= p(w, r, s | S_{2} = s, S_{1} = s) p(S_{2} = s | S_{1} = s) p(S_{1} = s)$ </center>
