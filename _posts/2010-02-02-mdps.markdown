@@ -6,4 +6,5 @@ description: You’ll find this post in your `_posts` directory. Go ahead and ed
 img: mdpp.jpg # Add image post (optional)
 ---
 
-uu
+<strong>Markov Reward Process:</strong> A Markov chain was only a pair $\langle S, A\rangle$ where $S$ is the set of states and $A$ is the stochastic state transition matrix. From this information, we can only find out which states are more likely to occur on a random walk. But if we associate a reward with each state, then some states become more desirable than others. In this way, the Markov Reward Model can send some feedback to the agent. So, a Markov Reward Process/Model is a quadruple $\langle S, A, R, \gamma \rangle$ where $R$ is a function that maps each state to a reward, $R(S_{t}) = R_{t}$ and $\gamma$ is a discount factor which will be explained later.     
+<center><img src = "/assets/img/mrp.jpg" height = "70%" width = "70%"> </center>
