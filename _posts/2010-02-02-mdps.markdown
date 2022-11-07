@@ -56,7 +56,7 @@ So, the value function vector is defined in term's of itself, $v = r + \gamma Pv
 <strong>Optimal Action-Value Function:</strong> For a state $s$ and an action $a$, the maximum action-value of this pair across all policies is called $v_{*}(s, a)$.      
 <center>$q_{*}(s, a) = \max_{\pi} q_{\pi}(s, a)$ </center>
 <center>$q_{*}(s, a) = \mathbb{E}[R(s,a) + \gamma \max_{\pi} \mathbb{E}[q_{\pi}(s', a')]]$</center>
-<strong>$v_{*}(s) = \max_{a \sim A} q_{*}(s,a)$</center>
+<center>$v_{*}(s) = \max_{a \sim A} q_{*}(s,a)$</center>
 
 <strong>Bellman Optimality Equations:</strong> The following equations are rather straightforward:
 <center>$v_{*}(s) = \max_{a} \mathbb{E}_{s' \sim p(.|s,a)} [R(s,a) + \gamma v_{*}(s')]$</center>
