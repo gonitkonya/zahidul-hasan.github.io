@@ -47,8 +47,8 @@ Solving for $w_{1}$ and $w_{2}$ yields,
 <strong>Linear Regression with Learning:</strong> When your dataset is constantly changing, new data are coming in, we can't use the above approach of solving a system of linear equations. But we can use <strong>gradient descent</strong> to learn better values of the weights. The weight update rule should look like this:   
 <center> $w_{i} = w_{i} - \lambda \frac{\partial E}{\partial w_{i}}$ </center>
 Where $\lambda$ is the learning rate. In the case of the univariate linear regression model,    
-<center> $w_{1} = w_{1} + \lambda \sum_{i=1}^{m}(y^{(i)} - h_{w}(x^{(i)}))x^{(i)}$ </center>
-<center> $w_{2} = w_{2} + \lambda \sum_{i=1}^{m}(y^{(i)} - h_{w}(x^{(i)}))$ </center>   
+<center> $w_{1} = w_{1} + \lambda \sum_{i=1}^{m}(y_{i} - h_{w}(x_{i}))x_{i}$ </center>
+<center> $w_{2} = w_{2} + \lambda \sum_{i=1}^{m}(y_{i} - h_{w}(x_{i}))$ </center>   
 The above approach is called <strong>batch gradient descent</strong> because while calculating the error we are using the whole dataset. In this case, convergence to the global minimum is guaranteed if we take $\lambda$ small enough. But the algorithm is very slow. In each step of the iteration for all data points we have to 
 compute $h_{w}(x)$ because the weights are being updated in each iteration. We need to use the updated values of weights in the next iteration. The complexity of this approach is $\mathcal{O}(kmn)$ where $k$ is the number of iterations which is a function of $\lambda$ and the dataset, $m$ is the size of the dataset and $n$ is the dimension of the feature space.     
 <br>
