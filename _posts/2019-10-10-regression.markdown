@@ -55,7 +55,7 @@ There is another approach called <strong>stochastic gradient descent</strong> wh
 Batch gradient descent is slow. Stochastic gradient descent is spurious and can induce bias. A middle ground is <strong>mini-batch gradient descent</strong>. Instead of sampling one data point per iteration, we can sample 200-500 data points dependending on the problem instance.     
 <br>
 <strong>Classification using Linear Regression:</strong> If two sets of n-dimensional points are separable by a <a href = "https://en.wikipedia.org/wiki/Hyperplane">hyperplane</a>, then we can use linear regression and hard threshold to classify those points. In the diagram given below, the 2-D points can be separated with a line and thus we can use linear regression to learn such a decision boundary. 
-<img src = "/assets/img/classifier.jpg" height = "70%" width = "70%"> 
+<img src = "/assets/img/classifier.jpg" height = "70%" width = "70%">      
 Let's say we are trying to classify the above points as "good" and "bad". We will express them as +1 and -1 respectively. Then our hypothesis will be:
 <center> $h_{w}(x) = sign(w_{1} x_{1} + w_{2} x_{2} + w_{3})$ </center>   
 But how to define error in this case? If we define the error as the total number of misclassification, then the error function doesn't remain a continuous and differentiable function. However, an update rule of the following form works:    
