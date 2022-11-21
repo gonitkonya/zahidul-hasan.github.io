@@ -2,7 +2,7 @@
 layout: post
 title: "ML Theory: Linear Models"
 date: 2022-10-01 05:32:20 +0300
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+description: A supplementary content I've written for my students.
 img: linear.jpg # Add image post (optional)
 ---
 <strong>Regression:</strong> Regression is the task of estimating the value of one variable that's dependent on other variables. For example: determining the rent of a
