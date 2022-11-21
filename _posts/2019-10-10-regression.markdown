@@ -10,7 +10,7 @@ house is a  function of the area of the house by square feet, the number of bedr
 educational background and skill-set etc. There are lots of regression models. We will discuss only the linear model here. But the best in practice are Kernel Ridge 
 regression, Support Vector regression, Lasso etc.   
 
-<strong>Linear Regression</strong> Imagine that the features of a house can be numerically expressed as the following vector $x = (x_{1}, x_{2}, \cdots, x_{n})$ where $x_{1}$ can mean the number of kitchen or $x_{2}$ can mean whether there is a gym in the building or not. Our linear hypothesis is that if $y$ is the house rent, then,    
+<strong>Multivariate Linear Regression</strong> Imagine that the features of a house can be numerically expressed as the following vector $x = (x_{1}, x_{2}, \cdots, x_{n})$ where $x_{1}$ can mean the number of kitchen or $x_{2}$ can mean whether there is a gym in the building or not. Our linear hypothesis is that if $y$ is the house rent, then,    
 <center> $y = w_{1} x_{1} +  w_{2} x_{2} + \cdots +  w_{n} x_{n} + w_{n+1}$ </center>
 
 So, if we extend the vector $x$ by one dimension by appending a dummy 1 at the end $x = (x_{1}, x_{2}, \cdots, x_{n}, 1)$, we can express $y$ as follows,   
@@ -31,7 +31,7 @@ If $XX^{T}$ is invertible, then there is a unique solution, $W = (XX^{T})^{-1}XY
 where $A$ is an arbitrary matrix and $(XX^{T})^{+}$ is the <a href = "https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse">Moore-Penrose Pseudo-Inverse</a> of $XX^{T}$. The solution with the smallest norm is achieved when $A = 0$.            
 The overall complexity of the solution is $\mathcal{O}((m+n)n^{2})$.      
 <br>
-<strong>Univariate Linear Regression</strong> Let's say, we only have one feature. So, our linear hypothesis is very simple.     
+<strong>Univariate Linear Regression:</strong> Let's say, we only have one feature. So, our linear hypothesis is very simple.     
 <center>$h_{w}(x) = w_{1}x + w_{2}$</center>
 So, the loss over the whole data set can be formulated as,    
 <center>$E(W) = \sum_{i = 1}^{m} (y_{i} - (w_{1} x_{i} + w_{2}))^{2}$</center>
