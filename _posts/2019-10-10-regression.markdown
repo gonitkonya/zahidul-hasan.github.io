@@ -10,8 +10,8 @@ house is a  function of the area of the house by square feet, the number of bedr
 educational background and skill-set etc. There are lots of regression models. We will discuss only the linear model here. But the best in practice are Kernel Ridge 
 regression, Support Vector regression, Lasso etc.   
 
-<strong>Multivariate Linear Regression</strong> Imagine that the features of a house can be numerically expressed as the following vector $x = (x_{1}, x_{2}, \cdots, x_{n})$ where $x_{1}$ can mean the number of kitchen or $x_{2}$ can mean whether there is a gym in the building or not. Our linear hypothesis is that if $y$ is the house rent, then,    
-<center> $y = w_{1} x_{1} +  w_{2} x_{2} + \cdots +  w_{n} x_{n} + w_{n+1}$ </center>
+<strong>Multivariate Linear Regression</strong> Imagine that the features of a house can be numerically expressed as the following vector $x = (x_{1}, x_{2}, \cdots, x_{n})$ where $x_{1}$ can mean the number of kitchen or $x_{2}$ can mean whether there is a gym in the building or not. In problems where a change in the indepdendent variables lead to a linear change in the dependent variables, linear regression is a perfect solution. Our linear hypothesis is that if $y$ is the house rent, then,    
+<center> $y = h_{w}(x) = w_{1} x_{1} +  w_{2} x_{2} + \cdots +  w_{n} x_{n} + w_{n+1}$ </center>
 
 So, if we extend the vector $x$ by one dimension by appending a dummy 1 at the end $x = (x_{1}, x_{2}, \cdots, x_{n}, 1)$, we can express $y$ as follows,   
 <center> $y = w^{T}x = x^{T}w$ </center>     
