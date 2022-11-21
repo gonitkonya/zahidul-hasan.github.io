@@ -42,7 +42,7 @@ Here, we have two equations with two variables.
 <center>$w_{1} \sum_{i= 1}^{m} x_{i}^{2} + w_{2} \sum_{i=1}^{m} x_{i} = \sum_{i=1}^{m} x_{i}y_{i}$ </center> 
 <center>$w_{1} \sum_{i= 1}^{m} x_{i} + w_{2} \sum_{i=1}^{m} 1 = \sum_{i=1}^{m} y_{i}$ </center> 
 Solving for $w_{1}$ and $w_{2}$ yields,   
-<center>$w_{1} = \frac{m(\sum_{i=1}^{m}x_{i}y_{i}) - (\sum_{i=1}^{m}x_{i}) (\sum_{i=1}^{m}x_{i})}{m(\sum_{i=1}^{m}x_{i}^{2}) - (\sum_{i=1}^{m}x_{i})^{2}}, w_{2} = \frac{m(\sum_{i=1}^{m}x_{i}y_{i}) - (\sum_{i=1}^{m}x_{i}) (\sum_{i=1}^{m}x_{i})}{m(\sum_{i=1}^{m}x_{i}^{2}) - (\sum_{i=1}^{m}x_{i})^{2}}$</center>
+<center>$w_{1} = \frac{m(\sum_{i=1}^{m}x_{i}y_{i}) - (\sum_{i=1}^{m}x_{i}) (\sum_{i=1}^{m}x_{i})}{m(\sum_{i=1}^{m}x_{i}^{2}) - (\sum_{i=1}^{m}x_{i})^{2}}, w_{2} = \frac{m(\sum_{i=1}^{m}x_{i}^{2} \sum_{i=1}^{m}y_{i}) - (\sum_{i=1}^{m}x_{i}) (\sum_{i=1}^{m}x_{i}y_{i})}{m(\sum_{i=1}^{m}x_{i}^{2}) - (\sum_{i=1}^{m}x_{i})^{2}}$</center>
 
 
 
