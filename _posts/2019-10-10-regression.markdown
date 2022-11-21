@@ -54,6 +54,8 @@ compute $h_{w}(x)$ because the weights are being updated in each iteration. We n
 There is another approach called <strong>stochastic gradient descent</strong> where in each iteration of the algorithm, we don't use the whole dataset to compute the error. We only randomly select one data point to compute the error. This way, the iterations are faster. So SGD is much faster than BGD. But the problem is with a fixed $\lambda$, the algorithm keeps on going back and forth over the global minimum choices of the weights instead of settling down. But with a monotonously decreasing series of $\lambda$, SGD reaches the global minimum.    
 Batch gradient descent is slow. Stochastic gradient descent is spurious and can induce bias. A middle ground is <strong>mini-batch gradient descent</strong>. Instead of sampling one data point per iteration, we can sample 200-500 data points dependending on the problem instance.     
 <br>
+<strong>Classification using Linear Regression:</strong> If two sets of n-dimensional points are separable by a <a href = "https://en.wikipedia.org/wiki/Hyperplane">hyperplane</a>, then we can use linear regression and hard threshold to classify those points. In the diagram given below, the 2-D points can be separated with a line and thus we can use linear regression to learn such a decision boundary. 
+<img src = "/assets/img/classifier.jpg" height = "70%" width = "70%"> 
 
 
 
