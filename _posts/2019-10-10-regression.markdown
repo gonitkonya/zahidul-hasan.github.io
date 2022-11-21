@@ -67,10 +67,10 @@ Then we can use the squared loss and get the following update rule:
 <center>$w_{i} = w_{i} + \lambda \sum_{j=1}^{m}(y^{(j)} − h_{w}(x^{(j)}))h_{w}(x^{(j)})(1 − h_{w}(x^{(j)}))x^{(j)}_{i}$</center>
 
 A better loss function is the Shannon Entropy: 
-<center> $\sum_{i=1}^{m}-y^{(i)} \log_{(L(h_{w}(x^{(i)})))} -(1-y^{(i)}) \log_{(1 - L(h_{w}(x^{(i)})))}$ </center>
+<center> $\sum_{i=1}^{m}-y^{(i)} \log{(L(h_{w}(x^{(i)})))} -(1-y^{(i)}) \log{(1 - L(h_{w}(x^{(i)})))}$ </center>
 
 Another loss function can be: 
-<center> $\sum_{i=1}^{m}\log_{(1 + e^{-y^{(i)h_{w}(x^{(i)})}})}$ </center>
+<center> $\sum_{i=1}^{m}\log{(1 + e^{-y^{(i)h_{w}(x^{(i)})}})}$ </center>
 
 
 
