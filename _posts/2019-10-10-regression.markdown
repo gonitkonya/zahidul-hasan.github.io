@@ -17,7 +17,7 @@ So, if we extend the vector $x$ by one dimension by appending a dummy 1 at the e
 <center> $y = w^{T}x = x^{T}w$ </center>     
 Where $w = (w_{1}, w_{2}, \cdots, w_{n}, w_{n+1})$    
 So, if we are given $m$ data points $(x^{(1)}, y^{(1)}),(x^{(2)}, y^{(2)}),\cdots, (x^{(m)}, y^{(m)})$, the squared error should be:   
-<center>$ E = \sum_{i=1}^{m} (y^{(i)} - x^{(i)}^{T}w)^{2}$</center>
+<center>$ E = \sum_{i=1}^{m} (y^{(i)} - (x^{(i)})^{T}w)^{2}$</center>
 We can express the above equation in the following form: 
 <center>$ E = ||Y - X^{T}W|| $</center>
 Where $ Y = \begin{bmatrix}
