@@ -20,7 +20,10 @@ So, if we are given $m$ data points $(x^{(1)}, y^{(1)}),(x^{(2)}, y^{(2)}),\cdot
 <center>$ E = \sum_{i=1}^{m} (y^{(i)} - x^{(i)}^{T}w)^{2}$</center>
 We can express the above equation in the following form: 
 <center>$ E = ||Y - X^{T}W|| $</center>
-Where $ Y = \begin{bmatrix} y^{(1)}\\ y^{(i)}\\ . y^{(i)} \end{bmatrix} $
+Where $ Y = \begin{bmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{bmatrix}$
 
 
 
