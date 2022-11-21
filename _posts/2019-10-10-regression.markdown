@@ -34,7 +34,13 @@ The overall complexity of the solution is $\mathcal{O}((m+n)n^{2})$.
 <strong>Univariate Linear Regression</strong> Let's say, we only have one feature. So, our linear hypothesis is very simple.     
 <center>$h_{w}(x) = w_{1}x + w_{2}$</center>
 So, the loss over the whole data set can be formulated as,    
-<center>$E(W) = \sum_{i = 1}^{m} (y_{i} - (w_{1} x_{i} + w_{2}))^{2}</center>
+<center>$E(W) = \sum_{i = 1}^{m} (y_{i} - (w_{1} x_{i} + w_{2}))^{2}$</center>
+We want to find values of $w_{1}$ and $w_{2}$ so that $E$ is minimized. That will happen when $\frac{\partial E}{\partial w_{1}} = 0$ and $\frac{\partial E}{\partial w_{2}} = 0$. These two equations lead to,    
+<center> $2 \sum_{i=1}^{m} (y_{i} - (w_{1} x_{i} + w_{2})) x_{i} = 0$ </center>
+<center> $2 \sum_{i=1}^{m} (y_{i} - (w_{1} x_{i} + w_{2})) = 0$ </center>    
+Here, we have two equations with two variables. Solving for $w_{1}$ and $w_{2}$ yields,   
+<center>$w_{1} = \frac{m(\sum_{i=1}^{m}x_{i}y_{i}) - (\sum_{i=1}^{m}x_{i}) (\sum_{i=1}^{m}x_{i})}{m(\sum_{i=1}^{m}x_{i}^{2}) - (\sum_{i=1}^{m}x_{i})^{2}}, w_{2} = \frac{m(\sum_{i=1}^{m}x_{i}y_{i}) - (\sum_{i=1}^{m}x_{i}) (\sum_{i=1}^{m}x_{i})}{m(\sum_{i=1}^{m}x_{i}^{2}) - (\sum_{i=1}^{m}x_{i})^{2}}$</center>
+
 
 
 
