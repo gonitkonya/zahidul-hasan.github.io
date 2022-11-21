@@ -68,10 +68,10 @@ But how to define error in this case? If we define the error as the total number
 Then we can use the squared loss and get the following update rule:   
 <center>$w_{i} = w_{i} + \lambda \sum_{j=1}^{m}(y^{(j)} − h_{w}(x^{(j)}))h_{w}(x^{(j)})(1 − h_{w}(x^{(j)}))x^{(j)}_{i}$</center>
 
-A better loss function is the Shannon Entropy: 
+A better loss function is the Shannon Entropy when $y^{(i)} \in {-1, 0}$: 
 <center> $\sum_{i=1}^{m}-y^{(i)} \log{(L(h_{w}(x^{(i)})))} -(1-y^{(i)}) \log{(1 - L(h_{w}(x^{(i)})))}$ </center>
 
-Another loss function can be: 
+Another loss function can be when $y^{(i)} \in {-1,+1}$: 
 <center> $\sum_{i=1}^{m}\log{(1 + e^{-y^{(i)}h_{w}(x^{(i)})})}$ </center>
 
 <strong>Drawbacks:</strong> 
