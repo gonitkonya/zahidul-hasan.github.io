@@ -56,7 +56,15 @@ Batch gradient descent is slow. Stochastic gradient descent is spurious and can 
 <br>
 <strong>Classification using Linear Regression:</strong> If two sets of n-dimensional points are separable by a <a href = "https://en.wikipedia.org/wiki/Hyperplane">hyperplane</a>, then we can use linear regression and hard threshold to classify those points. In the diagram given below, the 2-D points can be separated with a line and thus we can use linear regression to learn such a decision boundary. 
 <img src = "/assets/img/classifier.jpg" height = "70%" width = "70%"> 
-
+Let's say we are trying to classify the above points as "good" and "bad". We will express them as +1 and -1 respectively. Then our hypothesis will be:
+<center> $h_{w}(x) = sign(w_{1} x_{1} + w_{2} x_{2} + w_{3})$ </center>   
+But how to define error in this case? If we define the error as the total number of misclassification, then the error function doesn't remain a continuous and differentiable function. However, an update rule of the following form works:    
+<center> $w_{i} = w_{i} + \lambda \sum_{j=1}^{m}(y^{(j)} - h_{w}(x^{(j)}))x^{(j)}$ </center>
+<br> 
+<strong>Classification using Logistic Regression:</strong> The hard threshold function is not continuous and differentiable. To make learning a more predictable endeavour, we can use the logistic function to determine the probability that our output is 1 given that we are trying to classify points into the class $\{0, 1\}$.  
+<center>$L(h_{w}(x)) = \frac{1}{1 + e^{-h_{w}(x)}}$</center>
+Then we can use the squared loss and get the following update rule in the case of stochastic gradient descent:   
+<center>$w_{i} = w_{i} + \lambda (y − h_{w}(x))h_{w}(x)(1 − hw(x))x_{i}$</center>
 
 
 
