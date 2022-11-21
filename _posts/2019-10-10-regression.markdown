@@ -38,7 +38,10 @@ So, the loss over the whole data set can be formulated as,
 We want to find values of $w_{1}$ and $w_{2}$ so that $E$ is minimized. That will happen when $\frac{\partial E}{\partial w_{1}} = 0$ and $\frac{\partial E}{\partial w_{2}} = 0$. These two equations lead to,    
 <center> $2 \sum_{i=1}^{m} (y_{i} - (w_{1} x_{i} + w_{2})) x_{i} = 0$ </center>
 <center> $2 \sum_{i=1}^{m} (y_{i} - (w_{1} x_{i} + w_{2})) = 0$ </center>    
-Here, we have two equations with two variables. Solving for $w_{1}$ and $w_{2}$ yields,   
+Here, we have two equations with two variables.    
+<center>$w_{1} \sum_{i= 1}^{m} x_{i}^{2} + w_{2} \sum_{i=1}^{m} x_{i} = \sum_{i=1}^{m} x_{i}y_{i}$ </center> 
+<center>$w_{1} \sum_{i= 1}^{m} x_{i} + w_{2} \sum_{i=1}^{m} 1 = \sum_{i=1}^{m} y_{i}$ </center> 
+Solving for $w_{1}$ and $w_{2}$ yields,   
 <center>$w_{1} = \frac{m(\sum_{i=1}^{m}x_{i}y_{i}) - (\sum_{i=1}^{m}x_{i}) (\sum_{i=1}^{m}x_{i})}{m(\sum_{i=1}^{m}x_{i}^{2}) - (\sum_{i=1}^{m}x_{i})^{2}}, w_{2} = \frac{m(\sum_{i=1}^{m}x_{i}y_{i}) - (\sum_{i=1}^{m}x_{i}) (\sum_{i=1}^{m}x_{i})}{m(\sum_{i=1}^{m}x_{i}^{2}) - (\sum_{i=1}^{m}x_{i})^{2}}$</center>
 
 
