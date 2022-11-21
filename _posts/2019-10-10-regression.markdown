@@ -28,7 +28,13 @@ In other words,
 <center>$XX^{T}W = XY$ </center>
 If $XX^{T}$ is invertible, then there is a unique solution, $W = (XX^{T})^{-1}XY$. Otherwise, we can get a family of solutions,  
 <center>$W = (XX^{T})^{+}XY + (\mathcal{I} - (XX^{T})^{+}XX^{T})A$</center>
-where $A$ is an arbitrary matrix.      
+where $A$ is an arbitrary matrix and $(XX^{T})^{+}$ is the <a href = "https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse">Moore-Penrose Pseudo-Inverse</a> of $XX^{T}$. The solution with the smallest norm is achieved when $A = 0$.            
+The overall complexity of the solution is $\mathcal{O}((m+n)n^{2})$.      
+<br>
+<strong>Univariate Linear Regression</strong> Let's say, we only have one feature. So, our linear hypothesis is very simple.     
+<center>$h_{w}(x) = w_{1}x + w_{2}$</center>
+So, the loss over the whole data set can be formulated as,    
+<center>$E(W) = \sum_{i = 1}^{m} (y_{i} - (w_{1} x_{i} + w_{2}))^{2}</center>
 
 
 
