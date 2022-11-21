@@ -19,11 +19,16 @@ Where $w = (w_{1}, w_{2}, \cdots, w_{n}, w_{n+1})$
 So, if we are given $m$ data points $(x^{(1)}, y^{(1)}),(x^{(2)}, y^{(2)}),\cdots, (x^{(m)}, y^{(m)})$, the squared error should be:   
 <center>$ E = \sum_{i=1}^{m} (y^{(i)} - (x^{(i)})^{T}w)^{2}$</center>
 We can express the above equation in the following matrix form: 
-<center>$E = ||Y - X^{T}W||$</center>
+<center>$E(W) = ||Y - X^{T}W||$</center>
 Where,      
-$Y = \begin{bmatrix}y^{(1)}\\y^{(2)}\\.\\y^{(m)}\\\end{bmatrix}$, $X = \begin{bmatrix}x^{(1)}_{1} & x^{(2)}_{1} & . & x^{(m)}_{1}\\ x^{(1)}_{2} & x^{(2)}_{2} & . & x^{(m)}_{2}\\ . & . & . & .\\ x^{(1)}_{n+1} & x^{(2)}_{n+1} & . & x^{(m)}_{n+1}\\\end{bmatrix}$, W = \begin{bmatrix}w_{1}\\w_{2}\\.\\w_{n+1}\\\end{bmatrix}
-
-
+$Y = \begin{bmatrix}y^{(1)}\\y^{(2)}\\.\\y^{(m)}\\\end{bmatrix}$, $X = \begin{bmatrix}x^{(1)}_{1} & x^{(2)}_{1} & . & x^{(m)}_{1}\\ x^{(1)}_{2} & x^{(2)}_{2} & . & x^{(m)}_{2}\\ . & . & . & .\\ x^{(1)}_{n+1} & x^{(2)}_{n+1} & . & x^{(m)}_{n+1}\\\end{bmatrix}$, W = \begin{bmatrix}w_{1}\\w_{2}\\.\\w_{n+1}\\\end{bmatrix}      
+We want to solve for a $W$ so that the error is minimized. Since $E$ is convex and differentiable, it admits a global minimum at a certain $W$ where $\nabla E(W) = 0$.
+In other words,    
+<center>$2X(X^{T}W - Y) = 0$ </center>
+<center>$XX^{T}W = XY$ </center>
+If $XX^{T}$ is invertible, then there is a unique solution, $W = (XX^{T})^{-1}XY$. Otherwise, we can get a family of solutions,  
+<center>$W = (XX^{T})^{+}XY + (\mathcal{I} - (XX^{T})^{+}XX^{T})A$</center>
+where $A$ is an arbitrary matrix.      
 
 
 
