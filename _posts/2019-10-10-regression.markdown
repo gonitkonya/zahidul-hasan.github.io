@@ -16,8 +16,9 @@ regression, Support Vector regression, Lasso etc.
 So, if we extend the vector $x$ by one dimension by appending a dummy 1 at the end $x = (x_{1}, x_{2}, \cdots, x_{n}, 1)$, we can express $y$ as follows,   
 <center> $y = w^{T}x$ </center>     
 Where $w = (w_{1}, w_{2}, \cdots, w_{n}, w_{n+1})$    
-So, if we are given $m$ data points $(x^{1}, y^{1}),(x^{2}, y^{2}),\cdots, (x^{m}, y^{m})$, the squared error for all data points should be:   
-<center>$ E = \sum_{i=1}^{m} (y^{i} - w^{T}x^{i})^{2}$</center>
+So, if we are given $m$ data points $(x^{(1)}, y^{(1)}),(x^{(2)}, y^{(2)}),\cdots, (x^{(m)}, y^{(m)})$, the squared error should be:   
+<center>$ E = \sum_{i=1}^{m} (y^{(i)} - w^{T}x^{(i)})^{2}$</center>
+
 
 
 
