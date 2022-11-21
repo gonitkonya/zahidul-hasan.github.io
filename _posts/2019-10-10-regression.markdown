@@ -63,7 +63,7 @@ Let's say we are trying to classify the above points as "good" and "bad". We wil
 But how to define error in this case? If we define the error as the total number of misclassification, then the error function doesn't remain a continuous and differentiable function. However, an update rule of the following form works:    
 <center> $w_{i} = w_{i} + \lambda \sum_{j=1}^{m}(y^{(j)} - h_{w}(x^{(j)}))x^{(j)}_{i}$ </center>
 <br> 
-<strong>Classification using Logistic Regression:</strong> The hard threshold function is not continuous and differentiable. To make learning a more predictable endeavour, we can use the logistic function to determine the probability that our output is 1 given that we are trying to classify points into the class $\{0, 1\}$.  
+<strong>Classification using Logistic Regression:</strong> The hard threshold function is not continuous and differentiable. To make learning a more predictable endeavour, we can use the logistic function to determine the probability that our output is 1 given that we are trying to classify points into the class $\\{0, 1\\}$.  
 <center>$L(h_{w}(x)) = \frac{1}{1 + e^{-h_{w}(x)}}$</center>
 Then we can use the squared loss and get the following update rule:   
 <center>$w_{i} = w_{i} + \lambda \sum_{j=1}^{m}(y^{(j)} − h_{w}(x^{(j)}))h_{w}(x^{(j)})(1 − h_{w}(x^{(j)}))x^{(j)}_{i}$</center>
