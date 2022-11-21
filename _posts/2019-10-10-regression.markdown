@@ -21,8 +21,7 @@ So, if we are given $m$ data points $(x^{(1)}, y^{(1)}),(x^{(2)}, y^{(2)}),\cdot
 We can express the above equation in the following matrix form: 
 <center>$E = ||Y - X^{T}W||$</center>
 Where 
-<center>$Y = \begin{bmatrix}y^{(1)}\\y^{(1)}\\.\\y^{(1)}\\\end{bmatrix}$</center>
-<center>$X = \begin{bmatrix}x^{(1)}_{1} & x^{(2)}_{1} & . & x^{(m)}_{1}\\ x^{(1)}_{2} & x^{(2)}_{2} & . & x^{(m)}_{2}\\ . & . & . & .\\ x^{(1)}_{n+1} & x^{(2)}_{n+1} & . & x^{(m)}_{n+1}\\\end{bmatrix}$</center>
+<center>$Y = \begin{bmatrix}y^{(1)}\\y^{(2)}\\.\\y^{(m)}\\\end{bmatrix}$, $X = \begin{bmatrix}x^{(1)}_{1} & x^{(2)}_{1} & . & x^{(m)}_{1}\\ x^{(1)}_{2} & x^{(2)}_{2} & . & x^{(m)}_{2}\\ . & . & . & .\\ x^{(1)}_{n+1} & x^{(2)}_{n+1} & . & x^{(m)}_{n+1}\\\end{bmatrix}$, W = \begin{bmatrix}w_{1}\\w_{2}\\.\\w_{n+1}\\\end{bmatrix}</center>
 
 
 
