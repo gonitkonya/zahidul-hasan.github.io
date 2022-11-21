@@ -74,6 +74,12 @@ A better loss function is the Shannon Entropy:
 Another loss function can be: 
 <center> $\sum_{i=1}^{m}\log{(1 + e^{-y^{(i)}h_{w}(x^{(i)})})}$ </center>
 
+<strong>Drawbacks:</strong> 
+<ul>
+  <li>The data may not be linearly separable.</li>
+  <li>It doesn't minimize the norm of the weight vector and thus can lead to increased solution complexity and overfitting. The objective to minimize should be: $\gamma ||W||^{2} + ||Y - X^{T}W||^{2}$ for some hyper-parameter $\gamma$. </li>
+  </ul>
+  
 
 
 
