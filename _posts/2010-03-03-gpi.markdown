@@ -16,3 +16,5 @@ The Major two dynamic programming approach to find an optimal policy given full 
 $\quad$ <strong>repeat until</strong> convergence:     
 $\quad\quad$ <strong>for</strong> $s \in S$ <strong>do</strong>:      
 $\quad\quad\quad v(s) = \sum_{r, s'} (r + \gamma v(s'))P(r,s'|s, \pi(s))$      
+$\quad$ <strong>for</strong> $s \in S$ <strong>do</strong>:      
+$\quad\quad \pi(s) = \arg \max_{a} \sum_{r, s'} (r + \gamma v(s'))P(r,s'|s, a)$
