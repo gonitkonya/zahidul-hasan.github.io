@@ -79,11 +79,11 @@ $\quad$ Generate an episode under $\pi$: $S_{0}, A_{0}, R_{0}, S_{1}, \cdots, S_
 $\quad t = T-1$        
 $\quad$ <strong>while</strong> $t \geq 0$ <strong>do</strong>:      
 $\quad\quad G = R_{t} + \gamma G$     
-$\quad\quad$<strong>If $(S_{t}, A_{t})$ is the first occurrence of this state-action pair:        
+$\quad\quad$<strong>If</strong> $(S_{t}, A_{t})$ is the first occurrence of this state-action pair:        
 $\quad\quad\quad V(S_{t}) =$ adjust$(V(S_{t}), G)$       
 $\quad\quad\quad q(S_{t}, A_{t}) =$ adjust$(q(S_{t}, A_{t}), G)$     
-$\quad\quad\quad \pi(S_{t}) =$\arg \max_{a} q(S_{t}, a)$       
-$\quad\quad t = t - 1$     
+$\quad\quad\quad \pi(S_{t}) =$\arg \max_{a} q(S_{t}, a)$        
+$\quad\quad t = t - 1$         
 <br>
 <br>
   <strong>Drawbacks of Monte Carlo:</strong> A few drawbacks are:
