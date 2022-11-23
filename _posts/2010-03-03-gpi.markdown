@@ -21,7 +21,7 @@ $\quad\quad \pi(s) = \arg \max_{a} \sum_{r, s'} (r + \gamma v(s'))P(r,s'|s, a)$
 <br>
 <strong>Value Iteration:</strong> Value iteration updates the state value of state $s$ from the optimal arm $a$. This way, the state values converge to optimal values. And the resulting policy too is optimal.
 <hr>
-<strong> POLICY ITERATION </strong>
+<strong> VALUE ITERATION </strong>
 <hr>
 <strong>repeat until</strong> policy is stable:      
 $\quad$ <strong>repeat until</strong> convergence:     
