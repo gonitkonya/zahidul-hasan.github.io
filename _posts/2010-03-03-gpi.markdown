@@ -39,7 +39,19 @@ $\quad \pi(s) = \arg \max_{a} \sum_{r, s'} (r + \gamma v(s'))P(r,s'|s, a)$
   </ul>
  <br>
  <br>
-<strong>Monte Carlo Methods:</strong> 
-  
-
-
+<strong>Monte Carlo Methods:</strong> When we don't have all the state transition probabilities and the reward structure of the MDP, we can learn from experience. We can sample a lot of trajectories and from them we can estimate the state-values $v_{\pi}(s)$ and the action-values $q_{\pi}(s,a)$ given a policy. In the event when the policy isn't fixed, we can adjust our policy based on the current estimates of $v(s)$ and $q(s,a)$.     
+<br>
+<strong>Monte Carlo Prediction:</strong> We know that, given a trajectory, $G_{t} = R_{t} + \gamma R_{t+1} + \gamma^{2} R_{t+2} + \cdots + \gamma^{T} R_{t+T}$ which can be recurisvely expressed as $G_{t} = R_{t} + \gamma G_{t+1}$. So, we can get $G_{t}$ from $G_{t+1}$. This is how we can update the value of $G_{t}$. But it could also occur that a state is repeated multiple times in a trajectory. One thing to consider is whether we should update it's value at the very first occurrence in the trajectory of in every visit. Hence, we have two approaches to this Monte Carlo prediction.
+<br>
+<hr>
+<strong> FIRST VISIT MONTE CARLO PREDICTION </strong>
+<hr>
+<strong>repeat until</strong> convergence:      
+$\quad$ Generate an episode under $\pi$: S_{0}, A_{0}, R_{0}, S_{1}, \cdots, S_{T-1}, A_{T-1}, R_{T-1}$
+$\quad t = T-1$
+$\quad$ <strong>while</strong> $t geq 0$ <strong>do</strong>:      
+$\quad\quad G = R_{t} + \gamma G$
+$\quad\quad$<strong>If</strong> $S_{t}$ is the first occurrence of this state:
+$\quad\quad V(S_{t}) =$ adjust$(V(S_{t}), G)$
+$\quad\quad t = t - 1$
+<br>
