@@ -86,4 +86,10 @@ $\quad\quad\quad \pi(S_{t}) =$\arg \max_{a} q(S_{t}, a)$
 $\quad\quad t = t - 1$     
 <br>
 <br>
+  <strong>Drawbacks of Monte Carlo:</strong> A few drawbacks are:
+  <ul>
+    <li> The base may reduce, but is susceptible to high variance in the value estimations due to sampling a diverse set of trajectories. </li>
+    <li> Can't utilize the updated policy until the end of the episode. </li>
+  </ul>
+  
 
