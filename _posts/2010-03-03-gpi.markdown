@@ -32,7 +32,7 @@ $\quad\quad\quad v(s) = \max_{a} \sum_{r, s'} (r + \gamma v(s'))P(r,s'|s, a)$
 $\quad \pi(s) = \arg \max_{a} \sum_{r, s'} (r + \gamma v(s'))P(r,s'|s, a)$
 <br>
 <br>
-<strong>Generalized Policy Iteration:</strong> In the above approach, first we evaluate the values of the states following a fixed policy. This part is called "Policy Evaluation". In the latter part, we update the policy based on the values we found. This part is called "Policy Improvement". The general interaction of these two techniques is called Generalized Policy Iteration or GPI.     
+<strong>Generalized Policy Iteration:</strong> In the above approach, first we evaluate the values of the states following a fixed policy. This part is called <strong>Policy Evaluation</strong>. In the latter part, we update the policy based on the values we found. This part is called <strong>Policy Improvement</strong>. The general interaction of these two techniques is called Generalized Policy Iteration or GPI.     
 <br>
 <strong>Drawbacks of DP:</strong> There are several pitfalls of DP - 
 <ul>
