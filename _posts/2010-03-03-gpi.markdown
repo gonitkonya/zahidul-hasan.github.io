@@ -88,7 +88,7 @@ $\quad\quad t = t - 1$
 <br>
   <strong>Drawbacks of Monte Carlo:</strong> A few drawbacks are:
   <ul>
-    <li> The base may reduce, but is susceptible to high variance in the value estimations due to sampling a diverse set of trajectories. </li>
+    <li> The bias may reduce, but is susceptible to high variance in the value estimations due to sampling a diverse set of trajectories. </li>
     <li> Can't utilize the updated policy until the end of the episode. </li>
   </ul>
   
