@@ -47,11 +47,11 @@ $\quad \pi(s) = \arg \max_{a} \sum_{r, s'} (r + \gamma v(s'))P(r,s'|s, a)$
 <strong> FIRST VISIT MONTE CARLO PREDICTION </strong>
 <hr>
 <strong>repeat until</strong> convergence:      
-$\quad$ Generate an episode under $\pi$: S_{0}, A_{0}, R_{0}, S_{1}, \cdots, S_{T-1}, A_{T-1}, R_{T-1}$
-$\quad t = T-1$
+$\quad$ Generate an episode under $\pi$: S_{0}, A_{0}, R_{0}, S_{1}, \cdots, S_{T-1}, A_{T-1}, R_{T-1}$        
+$\quad t = T-1$        
 $\quad$ <strong>while</strong> $t geq 0$ <strong>do</strong>:      
-$\quad\quad G = R_{t} + \gamma G$
-$\quad\quad$<strong>If</strong> $S_{t}$ is the first occurrence of this state:
-$\quad\quad V(S_{t}) =$ adjust$(V(S_{t}), G)$
-$\quad\quad t = t - 1$
+$\quad\quad G = R_{t} + \gamma G$     
+$\quad\quad$<strong>If</strong> $S_{t}$ is the first occurrence of this state:     
+$\quad\quad V(S_{t}) =$ adjust$(V(S_{t}), G)$     
+$\quad\quad t = t - 1$     
 <br>
