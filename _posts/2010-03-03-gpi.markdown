@@ -52,6 +52,36 @@ $\quad t = T-1$
 $\quad$ <strong>while</strong> $t \geq 0$ <strong>do</strong>:      
 $\quad\quad G = R_{t} + \gamma G$     
 $\quad\quad$<strong>If</strong> $S_{t}$ is the first occurrence of this state:     
+$\quad\quad\quad V(S_{t}) =$ adjust$(V(S_{t}), G)$     
+$\quad\quad t = t - 1$     
+<br>
+<hr>
+<strong> EVERY VISIT MONTE CARLO PREDICTION </strong>
+<hr>
+<strong>repeat until</strong> convergence:      
+$\quad$ Generate an episode under $\pi$: $S_{0}, A_{0}, R_{0}, S_{1}, \cdots, S_{T-1}, A_{T-1}, R_{T-1}$        
+$\quad t = T-1$        
+$\quad$ <strong>while</strong> $t \geq 0$ <strong>do</strong>:      
+$\quad\quad G = R_{t} + \gamma G$         
 $\quad\quad V(S_{t}) =$ adjust$(V(S_{t}), G)$     
 $\quad\quad t = t - 1$     
 <br>
+<br>
+<strong>Monte Carlo Control:</strong> One can also use MC methods for control by updating the policy after each episode and by generating the next episode under the new policy. One such approach is MC exploring starts. It combines First Visit MC with Generalized Policy Iteration. Instead of estimating the value $v(s)$, we estimate $q(s,a)$ and update the policy according to that.      
+<hr>
+<strong> MC Exploring Starts </strong>
+<hr>
+<strong>repeat until</strong> convergence:      
+$\quad$ Randomly generate $S_{0}, A_{0}$        
+$\quad$ Generate an episode under $\pi$: $S_{0}, A_{0}, R_{0}, S_{1}, \cdots, S_{T-1}, A_{T-1}, R_{T-1}$        
+$\quad t = T-1$        
+$\quad$ <strong>while</strong> $t \geq 0$ <strong>do</strong>:      
+$\quad\quad G = R_{t} + \gamma G$     
+$\quad\quad$<strong>If $(S_{t}, A_{t})$ is the first occurrence of this state-action pair:
+$\quad\quad\quad V(S_{t}) =$ adjust$(V(S_{t}), G)$
+$\quad\quad\quad q(S_{t}, A_{t}) =$ adjust$(q(S_{t}, A_{t}), G)$
+$\quad\quad\quad \pi(S_{t}) =$\arg \max_{a} q(S_{t}, a)$
+$\quad\quad t = t - 1$     
+<br>
+<br>
+
