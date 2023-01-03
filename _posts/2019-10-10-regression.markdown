@@ -42,7 +42,7 @@ Here, we have two equations with two variables.
 <center>$w_{1} \sum_{i= 1}^{m} x_{i}^{2} + w_{2} \sum_{i=1}^{m} x_{i} = \sum_{i=1}^{m} x_{i}y_{i}$ </center> 
 <center>$w_{1} \sum_{i= 1}^{m} x_{i} + w_{2} \sum_{i=1}^{m} 1 = \sum_{i=1}^{m} y_{i}$ </center> 
 Solving for $w_{1}$ and $w_{2}$ yields,   
-<center>$w_{1} = \frac{m(\sum_{i=1}^{m}x_{i}y_{i}) - (\sum_{i=1}^{m}x_{i}) (\sum_{i=1}^{m}y_{i})}{m(\sum_{i=1}^{m}x_{i}^{2}) - (\sum_{i=1}^{m}x_{i})^{2}}, w_{2} = \frac{(\sum_{i=1}^{m}x_{i}^{2} \sum_{i=1}^{m}y_{i}) - (\sum_{i=1}^{m}x_{i}) (\sum_{i=1}^{m}x_{i}y_{i})}{m(\sum_{i=1}^{m}x_{i}^{2}) - (\sum_{i=1}^{m}x_{i})^{2}}$</center>
+<center>$w_{1} = \frac{m(\sum_{i=1}^{m}x_{i}y_{i}) - (\sum_{i=1}^{m}x_{i}) (\sum_{i=1}^{m}y_{i})}{m(\sum_{i=1}^{m}x_{i}^{2}) - (\sum_{i=1}^{m}x_{i})^{2}}, w_{2} = \frac{(\sum_{i=1}^{m}x_{i}^{2})(\sum_{i=1}^{m}y_{i}) - (\sum_{i=1}^{m}x_{i}) (\sum_{i=1}^{m}x_{i}y_{i})}{m(\sum_{i=1}^{m}x_{i}^{2}) - (\sum_{i=1}^{m}x_{i})^{2}}$</center>
 <br>
 <strong>Linear Regression with Learning:</strong> When your dataset is constantly changing, new data are coming in, we can't use the above approach of solving a system of linear equations. But we can use <strong>gradient descent</strong> to learn better values of the weights. The weight update rule should look like this:   
 <center> $w_{i} = w_{i} - \lambda \frac{\partial E}{\partial w_{i}}$ </center>
