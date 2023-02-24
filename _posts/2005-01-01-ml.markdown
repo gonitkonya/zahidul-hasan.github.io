@@ -19,6 +19,6 @@ The slides of CSE 427: Machine Learning, one of the courses I am teaching at BRA
   <li><a href="https://zahidul-hasan.github.io/ml-seven/">Lecture 7 - Maximum Likelihood Estimation</a></li>
   <li><a href="https://zahidul-hasan.github.io/ml-eight/">Lecture 8 - Gradient Descent</a></li>
   <li><a href="https://zahidul-hasan.github.io/ml-nine/">Lecture 9 - Boosting</a></li>
-  <li><a href="https://zahidul-hasan.github.io/ml-ten/">Lecture 10 - Model Selection</a></li>
+  <li><a href="https://zahidul-hasan.github.io/ml-ten/">Lecture 10 - Model Selection and Validation</a></li>
 </ul>
 </div>
