@@ -11,14 +11,14 @@ The slides of CSE 427: Machine Learning, one of the courses I am teaching at BRA
 <p class="toc_title">Machine Learning</p>
 <ul class="toc_list">
   <li><a href="https://zahidul-hasan.github.io/ml-one/">1. Lecture 1 - What does it mean to learn?</a></li>
-  <li><a href="">2. Lecture 2 - PAC Learnability</a></li>
-  <li><a href="">3. Lecture 3 - The Bias vs Complexity Trade-off</a></li>
-  <li><a href="">4. Lecture 4 - The Vapnik Chervonenkis Dimension</a></li>
-  <li><a href="">5. Lecture 5 - The Computational Complexity of Learning</a></li>
-  <li><a href="">6. Lecture 6 - Linear & Non-linear Models ( Linear Regression, Linear Classification, Logistic Regression, Softmax Regression)</a></li>
-  <li><a href="">7. Lecture 7 - Maximum Likelihood Estimation</a></li>
-  <li><a href="">8. Lecture 8 - Gradient Descent</a></li>
-  <li><a href="">9. Lecture 9 - Boosting</a></li>
-  <li><a href="">10. Lecture 10 - Model Selection</a></li>
+  <li><a href="https://zahidul-hasan.github.io/ml-two/">2. Lecture 2 - PAC Learnability</a></li>
+  <li><a href="https://zahidul-hasan.github.io/ml-three/">3. Lecture 3 - The Bias vs Complexity Trade-off</a></li>
+  <li><a href="https://zahidul-hasan.github.io/ml-four/">4. Lecture 4 - The Vapnik Chervonenkis Dimension</a></li>
+  <li><a href="https://zahidul-hasan.github.io/ml-five/">5. Lecture 5 - The Computational Complexity of Learning</a></li>
+  <li><a href="https://zahidul-hasan.github.io/ml-six/">6. Lecture 6 - Linear & Non-linear Models ( Linear Regression, Linear Classification, Logistic Regression, Softmax Regression)</a></li>
+  <li><a href="https://zahidul-hasan.github.io/ml-seven/">7. Lecture 7 - Maximum Likelihood Estimation</a></li>
+  <li><a href="https://zahidul-hasan.github.io/ml-eight/">8. Lecture 8 - Gradient Descent</a></li>
+  <li><a href="https://zahidul-hasan.github.io/ml-nine/">9. Lecture 9 - Boosting</a></li>
+  <li><a href="https://zahidul-hasan.github.io/ml-ten/">10. Lecture 10 - Model Selection</a></li>
 </ul>
 </div>
