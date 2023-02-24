@@ -5,15 +5,17 @@ date: 2023-01-10 05:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: mmll.png # Add image post (optional)
 ---
+The slides of CSE 427: Machine Learning, one of the courses I am teaching at BRAC University can be found here. Here are the first 10 lectures. I will add more lectures here as the classes of Spring 2023 progress.
+
 <div id="toc_container">
 <p class="toc_title">Machine Learning</p>
 <ul class="toc_list">
-  <li><a href="">1. Lecture 1 - What does it mean to learn?</a></li>
+  <li><a href="https://zahidul-hasan.github.io/ml-one/">1. Lecture 1 - What does it mean to learn?</a></li>
   <li><a href="">2. Lecture 2 - PAC Learnability</a></li>
   <li><a href="">3. Lecture 3 - The Bias vs Complexity Trade-off</a></li>
   <li><a href="">4. Lecture 4 - The Vapnik Chervonenkis Dimension</a></li>
   <li><a href="">5. Lecture 5 - The Computational Complexity of Learning</a></li>
-  <li><a href="">6. Lecture 6 - Linear Models ( Regression and Classification )</a></li>
+  <li><a href="">6. Lecture 6 - Linear & Non-linear Models ( Linear Regression, Linear Classification, Logistic Regression, Softmax Regression)</a></li>
   <li><a href="">7. Lecture 7 - Maximum Likelihood Estimation</a></li>
   <li><a href="">8. Lecture 8 - Gradient Descent</a></li>
   <li><a href="">9. Lecture 9 - Boosting</a></li>
