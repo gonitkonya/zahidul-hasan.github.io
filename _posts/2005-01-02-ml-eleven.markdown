@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Machine Learning: Lecture 11"
+date: 2008-01-02 05:32:20 +0300
+description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+img: mmll.png # Add image post (optional)
+---
+Please use the "fit to page" button next to the + button. Then use the right arrow key to move to next slides. You don't need to bother with the scroll.
+<embed src="/assets/pdfs/ML_Lecture_8___Gradient_Descent.pdf" width="900px" height="600px" />
