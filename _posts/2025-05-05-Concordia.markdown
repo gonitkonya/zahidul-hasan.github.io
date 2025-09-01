@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Starting MASc at Concordia University"
