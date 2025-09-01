@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Adversarial Bandits: Hedge and Exp3"
+title: "Starting MASc at Concordia University"
 date: 2024-01-05 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: enemies.webp # Add image post (optional)
