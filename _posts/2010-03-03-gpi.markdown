@@ -6,7 +6,7 @@ description: You’ll find this post in your `_posts` directory. Go ahead and ed
 img: gppi.png # Add image post (optional)
 ---
 
-The Major two dynamic programming approach to find an optimal policy given full knowledge of the MDP are Policy Iteration and Value Iteration. 
+yo mama The Major two dynamic programming approach to find an optimal policy given full knowledge of the MDP are Policy Iteration and Value Iteration. 
 <br>
 <strong>Policy Iteration:</strong> Start with an initial policy. Then apply Bellman equation repeatedly to determine state-values. From the state-values, greedily choose the action.
 <hr>
